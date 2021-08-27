@@ -1,0 +1,12 @@
+{% extends 'back.html.twig' %}
+{% block title %}
+	{{ service.nom }}
+{% endblock %}
+{% block body %}
+	<img {{ service.img }}>
+	<h1>{{ service.nom }}</h1>
+	<p>{{ service.description }}</p>
+	<p>{{ service.details }}</p>
+	<hr>
+	<a href="/">Retour</a>
+{% endblock %}
