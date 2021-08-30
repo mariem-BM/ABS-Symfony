@@ -1,0 +1,22 @@
+{% extends 'back.html.twig' %}
+{% block title %}Ajouter une réfernce
+{% endblock %}
+{% block body %}
+	{{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+
+	<div class="input-field col s12 m6 l6">
+
+		{{ form_widget(form.refNom, {'attr': {'placeholder': 'Titre de l\'reference'}}) }}
+   
+</div>
+<br>
+<div class="input-field col s12 m12 l12">
+	{{ form_widget(form.imgRef, {'attr': {'placeholder': 'Image de l\'reference'}}) }}
+	</div>
+	<br>
+
+	<div class="input-field col s12 m12 l12">
+		<input type="submit" name="" value="Enregistrer" class="btn btn-primary">
+	</div>
+	{{ form_end(form) }}
+{% endblock %}

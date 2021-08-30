@@ -11,11 +11,31 @@ use App\Entity\Service;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\HttpFoundation\File\Exception\FileException;
+
+use App\Form\ServiceType;
+
+
+
+
 
 class FirstController extends AbstractController
 {
+
     /**
-     * @Route("/", name="first")
+     *@Route("/home", name="home")
+     */
+    public function home()
+    {
+        return $this->render('base.html.twig');
+    }
+
+
+    //****************************************Back*********************************/
+
+
+    /**
+     * @Route("/back", name="first")
      */
     public function index(): Response
     {
@@ -24,79 +44,10 @@ class FirstController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/login", name="login")
-     */
-    public function showAction(): Response
-    {
+    //Userss controller
 
 
-        return  $this->render('Users/login.html.twig', [
-            'controller_name' => 'FirstController',
-        ]);
-    }
 
-
-    //Users list
-
-    /**
-     * @Route("/users", name="users")
-     */
-    public function showUsers(): Response
-    {
-
-
-        return $this->render('Users/users.html.twig', [
-            'controller_name' => 'FirstController',
-        ]);
-    }
-
-
-    //Register Page
-
-    /**
-     * @Route("/register", name="register")
-     */
-    public function Register(): Response
-    {
-
-
-        return $this->render('Users/register.html.twig', [
-            'controller_name' => 'FirstController',
-        ]);
-    }
-
-    //Forget-Password Page
-
-    /**
-     * @Route("/forget-password", name="forget-password")
-     */
-    public function ForgetPassword(): Response
-    {
-
-
-        return $this->render('Users/forget-password.html.twig', [
-            'controller_name' => 'FirstController',
-        ]);
-    }
-
-
-    //Ajout Service
-    /**
-     * @Route("/service/save")
-     */
-    public function save()
-    {
-        $entityManager = $this->getDoctrine()->getManager();
-        $service = new Service();
-        $service->setNom('Service ');
-        $service->setDescription('Description1');
-        $service->setDetails('Details');
-        $service->setImg('img');
-        $entityManager->persist($service);
-        $entityManager->flush();
-        return new Response('Service enregisté avec id ' . $service->getId());
-    }
 
     /**
      *@Route("/service",name="service")
@@ -118,21 +69,32 @@ class FirstController extends AbstractController
      */
     public function new(Request $request)
     {
+
         $service = new Service();
-        $form = $this->createFormBuilder($service)
-            ->add('nom', TextType::class)
-            ->add('description', TextType::class)
-            ->add('details', TextType::class)
-            ->add('img', TextType::class)
-
-            ->add(
-                'save',
-                SubmitType::class,
-                array('label' => 'Créer')
-            )->getForm();
-
+        $form = $this->createForm(ServiceType::class, $service);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
+            $brochureFile = $form->get('img')->getData();
+            if ($brochureFile) {
+                $originalFilename = pathinfo($brochureFile->getClientOriginalName(), PATHINFO_FILENAME);
+                // this is needed to safely include the file name as part of the URL
+                $safeFilename = transliterator_transliterate('Any-Latin; Latin-ASCII; [^A-Za-z0-9_] remove; Lower()', $originalFilename);
+                $newFilename = $safeFilename . '-' . uniqid() . '.' . $brochureFile->guessExtension();
+
+                // Move the file to the directory where brochures are stored
+                try {
+                    $brochureFile->move(
+                        $this->getParameter('brochures_directory'),
+                        $newFilename
+                    );
+                } catch (FileException $e) {
+                    // ... handle exception if something happens during file upload
+                }
+
+                // updates the 'brochureFilename' property to store the PDF file name
+                // instead of its contents
+                $service->setImg($newFilename);
+            }
             $service = $form->getData();
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($service);
@@ -165,15 +127,8 @@ class FirstController extends AbstractController
     public function edit(Request $request, $id)
     {
         $service = new Service();
-        $service = $this->getDoctrine()->getRepository(Service::class)->find($id);
-        $form = $this->createFormBuilder($service)
-            ->add('nom', TextType::class)
-            ->add('description', TextType::class)
-            ->add('details', TextType::class)
-            ->add('img', TextType::class)
-            ->add('save', SubmitType::class, array(
-                'label' => 'Modifier'
-            ))->getForm();
+        $service = $this->getDoctrine()->getRepository(service::class)->find($id);
+        $form = $this->createForm(ServiceType::class, $service);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager = $this->getDoctrine()->getManager();

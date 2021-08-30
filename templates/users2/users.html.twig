@@ -1,0 +1,32 @@
+{% extends 'accounttem.html.twig' %}
+
+{% block title%}
+	Liste des Services
+{% endblock %}
+{% block body %}
+{% if accounts %}
+	<table id="accounts" class="table table-striped">
+		<thead>
+			<tr>
+				<th>Img</th>
+				<th>Nom</th>
+				<th>Description</th>
+				<th>Details</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for account in accounts %}
+				<tr>
+					<td>{{ account.firstname }}</td>
+					<td>{{ account.lastname }}</td>
+					<td>{{ account.email }}</td>
+					<td>{{ account.password }}</td>
+					<td>
+						<a href="/users/{{ account.id }}" class="btn btn-dark">Détails</a>
+					</td>
+				</tr>
+			</a>
+		</tbody>
+	</td>
+</tr></td></tbody></tr>{% endfor %}</tbody></table>{% else %}<p>Aucun Service</p>{% endif %}{% endblock %}

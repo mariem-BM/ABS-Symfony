@@ -54,39 +54,16 @@
 					<span>Dashboard</span>
 				</a>
 			</li>
-			<!-- Heading -->
-			<div class="sidebar-heading">
-				Addons
-			</div>
 
-			<!-- Nav Item - Pages Collapse Menu -->
-			<li class="nav-item">
-				<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-					<i class="fas fa-fw fa-folder"></i>
-					<span>Pages</span>
-				</a>
-				<div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-					<div class="bg-white py-2 collapse-inner rounded">
-						<h6 class="collapse-header">Login Screens:</h6>
-						<a href="{{path('login')}}" class="collapse-item">login</a>
-						<a href="{{path('register')}}" class="collapse-item">register</a>
-						<a href="{{path('forget-password')}}" class="collapse-item">Forgot Password</a>
-
-
-						<div class="collapse-divider"></div>
-						<h6 class="collapse-header">Other Pages:</h6>
-						<a class="collapse-item" href="404.html">404 Page</a>
-						<a class="collapse-item" href="blank.html">Blank Page</a>
-					</div>
-				</div>
-			</li>
+			<hr
+			class="sidebar-divider">
 			<!-- Heading -->
 			<div class="sidebar-heading">
 				Interface de Gestion
 			</div>
 			<!-- Nav Item - Pages Collapse Menu -->
 			<li class="nav-item">
-				<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+				<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages2" aria-expanded="true" aria-controls="collapsePages">
 					<i class="fas fa-fw fa-folder"></i>
 					<span>Gestion des comptes</span>
 				</a>
@@ -94,6 +71,8 @@
 					<div class="bg-white py-2 collapse-inner rounded">
 						<h6 class="collapse-header">Login Screens:</h6>
 						<a href="{{path('users')}}" class="collapse-item">Liste users</a>
+
+						<a href="{{path('refrencesfront')}}" class="collapse-item">refrencesfront</a>
 
 					</div>
 				</div>
@@ -108,10 +87,11 @@
 				</a>
 				<div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
 					<div class="bg-white py-2 collapse-inner rounded">
-						<h6 class="collapse-header">Services Screens:</h6>
+						<h6 class="collapse-header">
+							Interface des services</h6>
 
-						<a href="{{path('service')}}" class="collapse-item">Show services</a>
-						<a href="{{path('service/new')}}" class="collapse-item">Ajout</a>
+						<a href="{{path('service')}}" class="collapse-item">Gestion des services</a>
+						<a href="{{path('service/new')}}" class="collapse-item">Ajouter Service</a>
 					</div>
 				</div>
 			</li>
@@ -125,11 +105,14 @@
 				</a>
 				<div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
 					<div class="bg-white py-2 collapse-inner rounded">
-						<h6 class="collapse-header">Pages Screens:</h6>
-						<a href="{{path('login')}}" class="collapse-item">Gestion Pages</a>
+						<h6 class="collapse-header">Gestion des Pages:</h6>
+						<a href="{{path('pages')}}" class="collapse-item">Gestion des pages</a>
+						<a href="{{path('addpages')}}" class="collapse-item">Ajouter Page</a>
+
 					</div>
 				</div>
 			</li>
+
 			<!-- Gestion Des Réferences -->
 			<!-- Nav Item - Pages Collapse Menu -->
 			<li class="nav-item">
@@ -139,8 +122,9 @@
 				</a>
 				<div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
 					<div class="bg-white py-2 collapse-inner rounded">
-						<h6 class="collapse-header">Réferences Screens:</h6>
-						<a href="{{path('login')}}" class="collapse-item">Gestion Réferences</a>
+						<h6 class="collapse-header">Interface des réferences</h6>
+						<a href="{{path('refrences')}}" class="collapse-item">Gestion des Réferences</a>
+						<a href="{{path('addref')}}" class="collapse-item">Ajouter Réferences</a>
 
 					</div>
 				</div>
@@ -155,7 +139,8 @@
 				<div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
 					<div class="bg-white py-2 collapse-inner rounded">
 						<h6 class="collapse-header">Contacts Screens:</h6>
-						<a href="{{path('login')}}" class="collapse-item">Gestion Contacts</a>
+						<a href="{{path('formulaire')}}" class="collapse-item">Gestion Contacts</a>
+						<a href="{{path('addform')}}" class="collapse-item">Ajouter Contacts</a>
 					</div>
 				</div>
 			</li>
@@ -165,12 +150,13 @@
 			<li class="nav-item">
 				<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
 					<i class="fas fa-fw fa-folder"></i>
-					<span>Gestion Insights</span>
+					<span>Gestion des Insights</span>
 				</a>
 				<div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
 					<div class="bg-white py-2 collapse-inner rounded">
 						<h6 class="collapse-header">Insights Screens:</h6>
-						<a href="{{path('login')}}" class="collapse-item">Gestion Insights</a>
+						<a href="{{path('blog')}}" class="collapse-item">Gestion des insights</a>
+						<a href="{{ path('add')}}" class="collapse-item">Ajouter Insights</a>
 					</div>
 				</div>
 			</li>
@@ -310,7 +296,7 @@
 									</div>
 									<div class="font-weight-bold">
 										<div class="text-truncate">Hi there! I am wondering if you can help me with a
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																								                                            problem I've been having.</div>
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																				                                            problem I've been having.</div>
 										<div class="small text-gray-500">Emily Fowler · 58m</div>
 									</div>
 								</a>
@@ -322,7 +308,7 @@
 									</div>
 									<div>
 										<div class="text-truncate">I have the photos that you ordered last month, how
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																								                                            would you like them sent to you?</div>
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																				                                            would you like them sent to you?</div>
 										<div class="small text-gray-500">Jae Chun · 1d</div>
 									</div>
 								</a>
@@ -334,7 +320,7 @@
 									</div>
 									<div>
 										<div class="text-truncate">Last month's report looks great, I am very happy with
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																								                                            the progress so far, keep up the good work!</div>
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																				                                            the progress so far, keep up the good work!</div>
 										<div class="small text-gray-500">Morgan Alvarez · 2d</div>
 									</div>
 								</a>
@@ -345,7 +331,7 @@
 									</div>
 									<div>
 										<div class="text-truncate">Am I a good boy? The reason I ask is because someone
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																								                                            told me that people say this to all dogs, even if they aren't good...</div>
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																				                                            told me that people say this to all dogs, even if they aren't good...</div>
 										<div class="small text-gray-500">Chicken the Dog · 2w</div>
 									</div>
 								</a>

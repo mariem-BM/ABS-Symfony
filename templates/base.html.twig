@@ -1,19 +1,105 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {# Run `composer require symfony/webpack-encore-bundle`
-           and uncomment the following Encore helpers to start using Symfony UX #}
-        {% block stylesheets %}
-            {#{{ encore_entry_link_tags('app') }}#}
-        {% endblock %}
+<html lang="en">
+	<head>
 
-        {% block javascripts %}
-            {#{{ encore_entry_script_tags('app') }}#}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+		<title>Abshore</title>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta
+		name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+		<link rel="stylesheet" href="{{ asset ('assets/css/styles.css')}}">
+		<link rel="stylesheet" href="{{ asset ('assets/css/styles.scss')}}">
+		<title>
+			{% block title %}Welcome!
+			{% endblock %}
+		</title>
+
+		{% block stylesheets %}{% endblock %}
+	</head>
+
+	<body>
+		<!--code body strats here-->
+
+		<!-- Navbar Section -->
+		{{ include('inc/navbar.html.twig')}}
+
+		<br>
+		<br>
+		<br>
+		<br>
+		<!-- Hero Section 1 -->
+		{{ include('inc/section1.html.twig')}}
+		<!-- End Hero Section 1 -->
+		<br>
+		<br>
+		<br>
+		<br>
+		<!-- Hero Section 2 -->
+		{{ include('inc/section2.html.twig')}}
+		<!-- End Hero Section 2 -->
+		<br>
+		<br>
+		<br>
+		<br>
+		<!-- Hero Section 3 -->
+		{{ include('inc/section3.html.twig')}}
+		<!-- End Hero Section 3 -->
+		<br>
+		<br>
+		<br>
+		<br>
+		<!-- Hero Section 4 -->
+		{{ include('inc/section4.html.twig')}}
+		<!-- End Hero Section 4 -->
+		<br>
+		<br>
+		<br>
+		<br>
+		<!-- Hero Section 5 -->
+		{{ include('inc/section5.html.twig')}}
+		<!-- End Hero Section 5 -->
+		<br>
+		<br>
+		<!-- Hero Section 6  -->
+		{{ include('inc/section6.html.twig')}}
+		<!-- End Hero Section 6 -->
+
+		<br>
+		<br>
+		<br>
+		<br>
+		<!-- Hero Section 7 -->
+		{{ include('inc/section7.html.twig')}}
+		<!-- End Hero Section 7 -->
+		<br>
+		<br>
+		<br>
+		<br>
+		<!-- Hero Section 8 -->
+		{{ include('inc/section8.html.twig')}}
+		<!-- End Hero Section 8 -->
+		<br>
+		<br>
+		<br>
+		<br>
+
+		<!-- Hero Section 9 -->
+		{{ include('inc/section9.html.twig')}}
+		<!-- End Hero Section 9 -->
+		<!-- Hero Section 10 -->
+		{{ include('inc/section10.html.twig')}}
+		<!-- End Hero Section 10 -->
+		<br><br><br><br>
+		<link rel="stylesheet" href="{{ asset ('assets/css/styles.css')}}">
+		<link rel="stylesheet" href="{{ asset ('assets/css/styles.scss')}}">
+		{% block body %}{% endblock %}
+		{% block javascripts %}{% endblock %}
+	</body>
 </html>

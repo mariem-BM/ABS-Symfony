@@ -1,0 +1,33 @@
+{% extends 'template.html.twig' %}
+
+{% block title%}
+	Liste des pages
+{% endblock %}
+{% block body %}
+	{% if pages %}
+		<table id="services" class="table table-striped">
+			<thead>
+				<tr>
+					<th>img</th>
+					<th>Nom</th>
+					<th>Description</th>
+					<th>Details</th>
+					<th>Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for pages in pages %}
+					<tr>
+						<td>{{ Pages.imgPages }}</td>
+						<td>{{ Pages.titre }}</td>
+						<td>{{ Pages.description }}</td>
+						<td>{{ Pages.pagesdetails }}</td>
+						<td>
+							<a href="/pages/{{ Pages.id }}" class="btn btn-dark">Détails</a>
+						</td>
+					</tr>
+				</td>
+			</tbody>
+		</tr>
+	{% endfor %}
+</tbody></table>{% else %}<p>Aucune page</p>{% endif %}{% endblock %}
