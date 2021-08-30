@@ -16,7 +16,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
- 
+
   z-index: 10;
   position: relative;
 }
@@ -37,7 +37,7 @@
   .navbar__bars {
     color: #222121;
     opacity: 1;
-    position: absolute;
+    position: relative;
     top: 22px;
     right: 20px;
     font-size: 2rem;
@@ -215,7 +215,7 @@
 .hero__container--btn {
   
   overflow: visible;
-    position: absolute;
+    position: relative;
     float: right;
     border: 0;
     padding: 0;
@@ -240,7 +240,7 @@
 
 .hero__container--btn:after {
   overflow: visible;
-    position: absolute;
+    position: relative;
     float: right;
     border: 0;
     padding: 0;
@@ -317,7 +317,7 @@
 .hero__container--minibtn {
   
   overflow: visible;
-    position: absolute;
+    position: relative;
     float: center;
     border: 0;
     padding: 0;
@@ -343,7 +343,7 @@
 
 .hero__container--minibtn:after {
   overflow: visible;
-    position: absolute;
+    position: relative;
     float: right;
     border: 0;
     padding: 0;
@@ -539,7 +539,7 @@ text-align: center;
 .bar{
 	width: 100px;
 	height: 6px;
-	position: absolute;
+	position: relative;
 	left: 50%;
 	top: 0%;
 	transform: translateX(-50%);
@@ -614,7 +614,7 @@ border-radius:3px
   width:100%;
   color:white;
   /*background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=) #eee no-repeat center/cover;
- */ position:relative
+ */ position:relative;
 }
 .mhn-slide .mhn-text
 {
@@ -638,7 +638,7 @@ border-radius:3px
 .mhn-slide .owl-nav
 {
   color:#333;
-  position:absolute;
+  position:relative;
   top:0;
   left:0;
   right:0;
@@ -660,7 +660,7 @@ border-radius:3px
 	height:40px;
 	padding:8px;
 	margin-top:-20px;
-	position:absolute;
+	position:relative;
 	border-radius:50%;
 	background-color:#fff;
 	box-shadow:0 4px 4px rgba(0,0,0,.3),0 0 4px rgba(0,0,0,.2)
@@ -831,77 +831,297 @@ font: 12px/10px 'Montserrat', 'trebuchet MS', 'Tahoma';
   border-radius: 40px;
   text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);
 }
-/*****************************************/
-/*user*/
-.sidebar .nav-item .nav-link .img-profile, .topbar .nav-item .nav-link .img-profile {
-  height: 3rem;
-  width: 3rem;
-}
-.rounded-circle {
-  border-radius: 50%!important;
-}
-img {
-  vertical-align: middle;
-  border-style: none;
-}
-*, ::after, ::before {
-  box-sizing: border-box;
-}
-.topbar .dropdown .dropdown-menu {
-  width: auto;
-  right: 0;
-}
 
-.topbar .dropdown .dropdown-menu {
-    width: calc(100% - 1.5rem);
-    right: .75rem;
-}
-.navbar-expand .navbar-nav .dropdown-menu {
+
+
+
+
+.dropup,
+.dropright,
+.dropdown,
+.dropleft {
   position: relative;
 }
-.dropdown .dropdown-menu {
-  font-size: .85rem;
+
+.dropdown-toggle {
+  white-space: nowrap;
 }
-.navbar-nav .dropdown-menu {
-  position: static;
-  float: none;
+
+.dropdown-toggle::after {
+  display: inline-block;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
 }
-.dropdown-menu.show {
-  display: block;
+
+.dropdown-toggle:empty::after {
+  margin-left: 0;
 }
-.animated--grow-in, .sidebar .nav-item .collapse {
-  -webkit-animation-name: growIn;
-  animation-name: growIn;
-  -webkit-animation-duration: .2s;
-  animation-duration: .2s;
-  -webkit-animation-timing-function: transform cubic-bezier(.18,1.25,.4,1),opacity cubic-bezier(0,1,.4,1);
-  animation-timing-function: transform cubic-bezier(.18,1.25,.4,1),opacity cubic-bezier(0,1,.4,1);
-}
-.shadow {
-  box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15)!important;
-}
-.dropdown-menu-right {
-  right: 0;
-  left: auto;
-}
+
 .dropdown-menu {
-  position: absolute;
+  position: relative;
   top: 100%;
   left: 0;
   z-index: 1000;
   display: none;
   float: left;
   min-width: 10rem;
-  padding: .5rem 0;
-  margin: .125rem 0 0;
-  font-size: .85rem;
+  padding: 0.5rem 0;
+  margin: 0.125rem 0 0;
+  font-size: 0.85rem;
   color: #858796;
   text-align: left;
   list-style: none;
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid #e3e6f0;
-  border-radius: .35rem;
+  border-radius: 0.35rem;
 }
+
+.dropdown-menu-left {
+  right: auto;
+  left: 0;
+}
+
+.dropdown-menu-right {
+  right: 0;
+  left: auto;
+}
+
+@media (min-width: 576px) {
+  .dropdown-menu-sm-left {
+    right: auto;
+    left: 0;
+  }
+  .dropdown-menu-sm-right {
+    right: 0;
+    left: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .dropdown-menu-md-left {
+    right: auto;
+    left: 0;
+  }
+  .dropdown-menu-md-right {
+    right: 0;
+    left: auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .dropdown-menu-lg-left {
+    right: auto;
+    left: 0;
+  }
+  .dropdown-menu-lg-right {
+    right: 0;
+    left: auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .dropdown-menu-xl-left {
+    right: auto;
+    left: 0;
+  }
+  .dropdown-menu-xl-right {
+    right: 0;
+    left: auto;
+  }
+}
+
+.dropup .dropdown-menu {
+  top: auto;
+  bottom: 100%;
+  margin-top: 0;
+  margin-bottom: 0.125rem;
+}
+
+.dropup .dropdown-toggle::after {
+  display: inline-block;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0.3em solid;
+  border-left: 0.3em solid transparent;
+}
+
+.dropup .dropdown-toggle:empty::after {
+  margin-left: 0;
+}
+
+.dropright .dropdown-menu {
+  top: 0;
+  right: auto;
+  left: 100%;
+  margin-top: 0;
+  margin-left: 0.125rem;
+}
+
+.dropright .dropdown-toggle::after {
+  display: inline-block;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0.3em solid transparent;
+  border-right: 0;
+  border-bottom: 0.3em solid transparent;
+  border-left: 0.3em solid;
+}
+
+.dropright .dropdown-toggle:empty::after {
+  margin-left: 0;
+}
+
+.dropright .dropdown-toggle::after {
+  vertical-align: 0;
+}
+
+.dropleft .dropdown-menu {
+  top: 0;
+  right: 100%;
+  left: auto;
+  margin-top: 0;
+  margin-right: 0.125rem;
+}
+
+.dropleft .dropdown-toggle::after {
+  display: inline-block;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+}
+
+.dropleft .dropdown-toggle::after {
+  display: none;
+}
+
+.dropleft .dropdown-toggle::before {
+  display: inline-block;
+  margin-right: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0.3em solid transparent;
+  border-right: 0.3em solid;
+  border-bottom: 0.3em solid transparent;
+}
+
+.dropleft .dropdown-toggle:empty::after {
+  margin-left: 0;
+}
+
+.dropleft .dropdown-toggle::before {
+  vertical-align: 0;
+}
+
+.dropdown-menu[x-placement^="top"], .dropdown-menu[x-placement^="right"], .dropdown-menu[x-placement^="bottom"], .dropdown-menu[x-placement^="left"] {
+  right: auto;
+  bottom: auto;
+}
+
+.dropdown-divider {
+  height: 0;
+  margin: 0.5rem 0;
+  overflow: hidden;
+  border-top: 1px solid #eaecf4;
+}
+
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 0.25rem 1.5rem;
+  clear: both;
+  font-weight: 400;
+  color: #3a3b45;
+  text-align: inherit;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+}
+
+.dropdown-item:hover, .dropdown-item:focus {
+  color: #2e2f37;
+  text-decoration: none;
+  background-color: #eaecf4;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+  color: #fff;
+  text-decoration: none;
+  background-color: #4e73df;
+}
+
+.dropdown-item.disabled, .dropdown-item:disabled {
+  color: #b7b9cc;
+  pointer-events: none;
+  background-color: transparent;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.dropdown-header {
+  display: block;
+  padding: 0.5rem 1.5rem;
+  margin-bottom: 0;
+  font-size: 0.875rem;
+  color: #858796;
+  white-space: nowrap;
+}
+
+.dropdown-item-text {
+  display: block;
+  padding: 0.25rem 1.5rem;
+  color: #3a3b45;
+}
+.img-profile,.img-profile {
+  height: 3rem;
+  width: 3rem;
+margin-left: 50px;
+}
+.dropdown-menu {
+  width: calc(100% - 1.5rem);
+  right: 0.75rem;
+}
+@media (min-width: 576px) {
+  .dropdown {
+    position: relative;
+  }
+  .dropdown .dropdown-menu {
+    width: auto;
+    right: 0;
+  }
+  .dropdown-list {
+    width: 20rem !important;
+  }
+  .dropdown-list .dropdown-item .text-truncate {
+    max-width: 13.375rem;
+  }
+}
+
+.topbar .dropdown .dropdown-menu {
+    width: 150px;
+    right: 0;
+}
+.navbar-expand .navbar-nav .dropdown-menu {
+  position: relative;
+}
+
+
+
+
+
+
+
+
 
 /*# sourceMappingURL=styles.css.map */

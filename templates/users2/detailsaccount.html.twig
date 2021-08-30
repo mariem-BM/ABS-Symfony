@@ -1,0 +1,12 @@
+{% extends 'accounttem.html.twig' %}
+{% block title %}
+	{{ account.firstname }}
+	{{ account.lastname }}
+{% endblock %}
+{% block body %}
+
+	<p>{{ account.email }}</p>
+	<p>{{ account.password }}</p>
+	<hr>
+	<a href="/">Retour</a>
+{% endblock %}

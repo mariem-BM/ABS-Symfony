@@ -2,25 +2,25 @@
 
 namespace App\Repository;
 
-use App\Entity\Author;
+use App\Entity\Account;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @method Author|null find($id, $lockMode = null, $lockVersion = null)
- * @method Author|null findOneBy(array $criteria, array $orderBy = null)
- * @method Author[]    findAll()
- * @method Author[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method Account|null find($id, $lockMode = null, $lockVersion = null)
+ * @method Account|null findOneBy(array $criteria, array $orderBy = null)
+ * @method Account[]    findAll()
+ * @method Account[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class AuthorRepository extends ServiceEntityRepository
+class AccountRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, Author::class);
+        parent::__construct($registry, Account::class);
     }
 
     // /**
-    //  * @return Author[] Returns an array of Author objects
+    //  * @return Account[] Returns an array of Account objects
     //  */
     /*
     public function findByExampleField($value)
@@ -37,7 +37,7 @@ class AuthorRepository extends ServiceEntityRepository
     */
 
     /*
-    public function findOneBySomeField($value): ?Author
+    public function findOneBySomeField($value): ?Account
     {
         return $this->createQueryBuilder('a')
             ->andWhere('a.exampleField = :val')

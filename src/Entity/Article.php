@@ -49,12 +49,8 @@ class Article
      */
     private $isPublished;
 
-    
 
-    public function __construct()
-    {
-        $this->categories = new ArrayCollection();
-    }
+
     public function getId(): ?int
     {
         return $this->id;
@@ -131,6 +127,4 @@ class Article
 
         return $this;
     }
-    
-    
 }
