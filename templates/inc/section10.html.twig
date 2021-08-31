@@ -1,47 +1,52 @@
 <div class="hero">
-    <div class="hero__container">
-      <div class="hero__container--left">
-        <img
-          src="{{ asset ('assets/images/contactus.png')}}"
-          height="300px"
-          width="400px"
-        />
-        
-      </div>
-      <div class="hero__container--right">
-        <div id="after_submit"></div>
-<form id="contact_form" action="#" method="POST" enctype="multipart/form-data">
-  <div class="row">
-   
-  <td> 
-  <tr> 
-    <input id="name" class="input" name="name" type="name" placeholder="Your name.." value="" size="30" /><br/>
-    <br/>
-    </td>
-    </tr>
-    <tr>
-    <td>
-    <span id="name_validation" class="error_message"></span>
-        <input id="lname" class="input" name="lname" type="lname" placeholder="Your last name.." value="" size="30" /><br/>
-        <br/>
-    <span id="lname_validation" class="error_message"></span>
-  </div>
-  </td>
- </tr>
-  
-    <input id="email" class="input" name="email" type="email" placeholder="Your email.." value="" size="30" /><br />
-    <br/>
-    <span id="email_validation" class="error_message"></span>
- 
-  
-    <textarea id="message" class="input" name="message" placeholder="Your message.." rows="7" cols="30"></textarea><br />
-    <br/>
-    <span id="message_validation" class="error_message"></span>
-  
-    
-    <input id="submit_button" type="submit" value="Send " />
-</form>
+	<div class="hero__container">
+		<div class="hero__container--left">
+			<img src="{{ asset ('assets/images/contactus.png')}}" height="300px" width="400px"/>
 
-      </div>
-    </div>
-  </div>
+		</div>
+		<div class="hero__container--right">
+
+			<div id="after_submit"></div>
+			<div class="row">
+				{{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+				<tbody>
+					<tr>
+						<td>
+							<div class="col s6">
+								<div class="input-field ">
+									{{ form_widget(form.name, {'attr': {'placeholder': 'Name'}}) }}
+								</div>
+							</div>
+							<br>
+						</td>
+						<td>
+							<div class="col s6">
+								<div class="input-field ">
+									{{ form_widget(form.lastname, {'attr': {'placeholder': 'Lastname'}}) }}
+
+								</div>
+							</div>
+							<br>
+						</td>
+						<td>
+							<div class="input-field col s12">
+								{{ form_widget(form.email, {'attr': {'class': 'materialize-textarea', 'placeholder': 'e-mail'}}) }}
+							</div>
+							<br>
+							<div class="input-field col s12">
+								{{ form_widget(form.message, {'attr': {'placeholder': 'message'}}) }}
+
+
+							</div>
+							<br>
+							<div class="input-field col s12">
+								<input type="submit" name="" value="Enregistrer" class="btn btn-primary"></div>
+						</td>
+					</tr>
+				</tbody>
+
+				{{ form_end(form) }}
+			</div>
+		</div>
+	</div>
+</div>

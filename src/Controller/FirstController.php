@@ -14,21 +14,62 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\HttpFoundation\File\Exception\FileException;
 
 use App\Form\ServiceType;
-
-
+use App\Entity\Article;
+use App\Form\ArticleType;
+use App\Entity\Pages;
+use App\Form\PagesType;
+use App\Entity\References;
+use App\Form\RefrenceType;
+use App\Entity\Formulaire;
+use App\Form\FormulaireType;
 
 
 
 class FirstController extends AbstractController
 {
 
+
     /**
      *@Route("/home", name="home")
      */
-    public function home()
+    public function home(Request $request)
     {
-        return $this->render('base.html.twig');
+        //return $this->render('base.html.twig');
+        $services = $this->getDoctrine()->getRepository(Service::class)->findAll();
+        $articles = $this->getDoctrine()->getRepository(Article::class)->findAll();
+        $pages = $this->getDoctrine()->getRepository(Pages::class)->findAll();
+        $refrencess = $this->getDoctrine()->getRepository(References::class)->findAll();
+        $formulaire = new Formulaire();
+        $form = $this->createForm(FormulaireType::class, $formulaire);
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+
+            $formulaire = $form->getData();
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($formulaire);
+            $entityManager->flush();
+            return $this->redirectToRoute('home');
+        }
+        return $this->render('base.html.twig', [
+            'services' => $services,
+            'refrencess' => $refrencess,
+            'articles' => $articles,
+            'pages' => $pages,
+            'form' => $form->createView(),
+
+        ]);
+
+
+
+        return $this->render('inc/section10.html.twig', [
+            'form' => $form->createView()
+        ]);
     }
+
+
+
+
+
 
 
     //****************************************Back*********************************/
@@ -176,7 +217,7 @@ class FirstController extends AbstractController
     }
 
     /*******************************front */
-     /**
+    /**
      *@Route("/servicefront",name="servicefront")
      */
     public function servicefront()

@@ -1,7 +1,6 @@
 <!-- testmonial_area_start  -->
 <!-- Bootstrap CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -10,35 +9,35 @@
 
 {% block body %}
 	{% if services %}
-<section class="services">
-	<!--heading---------------->
-	<div class="s-heading">
-	<h4>OUR SERVICES</h4>
-	<h1 id="WWO">What We Offer</h1>
-	</div>
-	
-	<!--services-box-container------------------->
-	<div class="s-box-container">
-		{% for service in services %}
-	<!--service-box-1---------------->	
-		<div class="s-box" {% if loop.index0 == 0 %} class="item active" {% else %} class="item" {% endif %}>
-	<!--top-bar-------->
-			<div class="bar"></div>
-	<!--img---------->
-		<img alt="1" src="{{asset('uploads/brochures/'~service.img)}}">
-	<!--servies-name---------->
-		<h1>{{ service.nom }}</h1>
-	<!--details------>
-		<p>{{ service.description }}</p>
-	<!--btn---------->
-		<a class="s-btn" href="{{ service.details }}">See More</a>
-		</div>
-		<!--service-box-1---------------->	
-	{% endfor %}
-	</div>
-	{% else %}
-</section>
-{% endif %}
+		<section class="services">
+
+			<div class="s-heading">
+				<h4>OUR SERVICES</h4>
+				<h1 id="WWO">What We Offer</h1>
+			</div>
+
+
+			<div class="s-box-container">
+				{% for service in services %}
+
+					<div class="s-box" {% if loop.index0 == 0 %} class="item active" {% else %} class="item" {% endif %}>
+
+						<div class="bar"></div>
+
+						<img alt="1" src="{{asset('uploads/brochures/'~service.img)}}">
+
+						<h1>{{ service.nom }}</h1>
+
+						<p>{{ service.description }}</p>
+
+						<a class="s-btn" href="{{ service.details }}">See More</a>
+					</div>
+
+				{% endfor %}
+			</div>
+
+		</section>
+	{% endif %}
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	<script src="{{ asset ('assets/js/script.js')}}"></script>

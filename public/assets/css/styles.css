@@ -110,6 +110,8 @@
 }
 
 .hero {
+  margin-left: 50px;
+  margin-right: 50px;
   background-color: #f6f9fd;
 }
 .hero h2 {
@@ -154,6 +156,8 @@
 .hero__container--left {
   width: 100%;
   line-height: 1.2;
+  align-items: left;
+  text-align: left;
 }
 
 @media screen and (max-width: 768px) {
@@ -171,6 +175,7 @@
 .hero__container--left h1 {
   font-size: 4rem;
   color: #102131;
+  text-align: left;
 }
 
 @media screen and (max-width: 280px) {
@@ -179,6 +184,7 @@
     font-weight: 700;
     font: 25px/40px 'Montserrat', 'trebuchet MS', 'bold';
     color: #222121;
+    text-align: left;
   }
 }
 
@@ -189,6 +195,7 @@
   font-weight: 1700;
   font: 30px/40px 'Montserrat', 'trebuchet MS', 'bold';
   color: #222121;
+  text-align: left;
 }
 
 @media screen and (max-width: 280px) {
@@ -204,6 +211,7 @@
   font-size: 4rem;
   font: 16px/40px 'Montserrat', 'trebuchet MS', 'Tahoma';
   color: #222121;
+  text-align: left;
 }
 
 @media screen and (max-width: 280px) {
@@ -216,7 +224,7 @@
   
   overflow: visible;
     position: relative;
-    float: right;
+    float: left;
     border: 0;
     padding: 0;
     cursor: pointer;
@@ -241,7 +249,7 @@
 .hero__container--btn:after {
   overflow: visible;
     position: relative;
-    float: right;
+    float: left;
     border: 0;
     padding: 0;
     cursor: pointer;
@@ -490,6 +498,8 @@ text-align: left;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
 }
 .s-box{
 	display:flex;
@@ -805,7 +815,7 @@ input[type="name"], input[type="email"], input[type="message"], input[type="lnam
   border-left-color: #2075AD;
   margin: 10px;
 }
-input[type=email], input[type=message] select, textarea {
+input[type=email], input[type=message] select, textarea .input-field {
   border: 1px solid;
   border-radius: 0;
   padding: 10px 15px;
@@ -832,9 +842,33 @@ font: 12px/10px 'Montserrat', 'trebuchet MS', 'Tahoma';
   text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);
 }
 
-
-
-
+.form-control {
+  display: block;
+  width: 300px;
+    height: 40px;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  border: 1px solid;
+  border-radius: 0;
+  padding: 10px 15px;
+  max-width: 100%;
+  border-left-width: 10px;
+  border-left-color: #2075AD;
+  margin: 10px;
+}
+textarea.form-control {
+ 
+  height: 150px;
+}
+/**********************************************/
 
 .dropup,
 .dropright,

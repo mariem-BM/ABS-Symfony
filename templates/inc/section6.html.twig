@@ -9,40 +9,40 @@
 
 {% block body %}
 	{% if articles %}
-  <div class="hero">
-    <div class="hero__container">
-      <div class="hero__container--left">
-        <h2>INSIGHTS</h2>    
-      </div>
-      <div class="hero__container--right">
-        <button class="hero__container--btn"><a href="#">See all insights</a></button>
-    </div>
-  </div>
-  <div class="container-fluid">
-    <div class="row">
-      {% for article in articles %}
-            <div class="col-md-4" {% if loop.index0 == 0 %} class="item active" {% else %} class="item" {% endif %}>
-                <img class="img-responsive center-block" src="{{asset('uploads/brochures/'~article.picture)}}" height="300" width="400" alt=""/>
-                    
-              
-                <p>{{ article.content }}</p>
-                <p>{{ article.publicationDate }}</p>
-                <p>{{ article.lastUpdateDate }}</p>
-                <p>{{ article.isPublished }}</p>
-					
-                    
-                
-              </div>
-            {% endfor %}     
-          
-            {% else %}
-       
-    </div>
-  </div>
-  
- </div>
- 
- {% endif %}
+		<div class="hero">
+			<div class="hero__container">
+				<div class="hero__container--left">
+					<h2>INSIGHTS</h2>
+				</div>
+				<div class="hero__container--right">
+					<button class="hero__container--btn">
+						<a href="#">See all insights</a>
+					</button>
+				</div>
+			</div>
+			<div class="container-fluid">
+				<div class="row">
+					{% for article in articles %}
+						<div class="col-md-4" {% if loop.index0 == 0 %} class="item active" {% else %} class="item" {% endif %}>
+							<img class="img-responsive center-block" src="{{asset('uploads/brochures/'~article.picture)}}" height="300" width="400" alt=""/>
+
+
+							<p>{{ article.content }}</p>
+							<p>{{ article.publicationDate }}</p>
+							<p>{{ article.lastUpdateDate }}</p>
+
+
+						</div>
+					{% endfor %}
+
+			{% else %}
+
+				</div>
+			</div>
+
+		</div>
+
+	{% endif %}
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	<script src="{{ asset ('assets/js/script.js')}}"></script>
