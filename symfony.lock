@@ -219,6 +219,9 @@
             "./config/packages/sensio_framework_extra.yaml"
         ]
     },
+    "sgi/transliterator": {
+        "version": "1.1"
+    },
     "symfony/asset": {
         "version": "v4.4.27"
     },

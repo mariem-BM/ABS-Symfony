@@ -100,6 +100,27 @@ class BlogController extends AbstractController
         $form = $this->createForm(ArticleType::class, $article);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
+            $brochureFile = $form->get('picture')->getData();
+            if ($brochureFile) {
+                $originalFilename = pathinfo($brochureFile->getClientOriginalName(), PATHINFO_FILENAME);
+                // this is needed to safely include the file name as part of the URL
+                $safeFilename = transliterator_transliterate('Any-Latin; Latin-ASCII; [^A-Za-z0-9_] remove; Lower()', $originalFilename);
+                $newFilename = $safeFilename . '-' . uniqid() . '.' . $brochureFile->guessExtension();
+
+                // Move the file to the directory where brochures are stored
+                try {
+                    $brochureFile->move(
+                        $this->getParameter('brochures_directory'),
+                        $newFilename
+                    );
+                } catch (FileException $e) {
+                    // ... handle exception if something happens during file upload
+                }
+
+                // updates the 'brochureFilename' property to store the PDF file name
+                // instead of its contents
+                $article->setPicture($newFilename);
+            }
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->flush();
             return $this->redirectToRoute('blog');
@@ -132,6 +153,6 @@ class BlogController extends AbstractController
 
         //récupérer tous les articles de la table article de la BDet les mettre dans le tableau $articles
         $articles = $this->getDoctrine()->getRepository(Article::class)->findAll();
-        return $this->render('test.html.twig', ['articles' => $articles]);
+        return $this->render('inc/section6.html.twig', ['articles' => $articles]);
     }
 }

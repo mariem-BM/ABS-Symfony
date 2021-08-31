@@ -80,4 +80,37 @@ class FormulaireController extends AbstractController
         $response->send();
         return $this->redirectToRoute('formulaire');
     }
+    /**********************************front */
+     /**
+     * @Route("/formulairefront", name="formulairefront")
+     */
+    public function formulairefront(): Response
+    {
+        $formulaires = $this->getDoctrine()->getRepository(Formulaire::class)->findAll();
+        return $this->render('formulaire/formulaire.html.twig', ['formulaires' => $formulaires]);
+    }
+
+
+    //Ajout 
+    /**
+     * @Route("/addformfront", name="addformfront")
+     */
+    public function addreffront(Request $request)
+    {
+        $formulaire = new Formulaire();
+        $form = $this->createForm(FormulaireType::class, $formulaire);
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+
+            $formulaire = $form->getData();
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->persist($formulaire);
+            $entityManager->flush();
+            return $this->redirectToRoute('formulaire');
+        }
+        return $this->render('formulaire/addform.html.twig', [
+            'form' => $form->createView()
+        ]);
+    }
+
 }

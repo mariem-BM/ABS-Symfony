@@ -9,7 +9,7 @@
 		<meta name="description" content="">
 		<meta name="author" content="">
 
-		<title>SB Admin 2 - Dashboard</title>
+		<title>ABSHORE - Dashboard</title>
 
 		<!-- Custom fonts for this template-->
 		<link rel="stylesheet" href="{{ asset ('theme/vendor/fontawesome-free/css/all.min.css')}}" type="text/css">
@@ -61,6 +61,25 @@
 			<div class="sidebar-heading">
 				Interface de Gestion
 			</div>
+			<!-- Gestion Test -->
+			<!-- Nav Item - Pages Collapse Menu -->
+			<li class="nav-item">
+				<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
+					<i class="fas fa-fw fa-folder"></i>
+					<span>Test</span>
+				</a>
+				<div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+					<div class="bg-white py-2 collapse-inner rounded">
+						<h6 class="collapse-header">
+							Test</h6>
+
+							<a href="{{path('refrencesfront')}}" class="collapse-item">refrencesfront</a>
+							<a href="{{path('blogfront')}}" class="collapse-item">blogfront</a>
+							<a href="{{path('servicefront')}}" class="collapse-item">servicefront</a>
+							<a href="{{path('pagesfront')}}" class="collapse-item">pagefront</a>
+					</div>
+				</div>
+			</li>
 			<!-- Nav Item - Pages Collapse Menu -->
 			<li class="nav-item">
 				<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages2" aria-expanded="true" aria-controls="collapsePages">
@@ -72,7 +91,6 @@
 						<h6 class="collapse-header">Login Screens:</h6>
 						<a href="{{path('users')}}" class="collapse-item">Liste users</a>
 
-						<a href="{{path('refrencesfront')}}" class="collapse-item">refrencesfront</a>
 
 					</div>
 				</div>

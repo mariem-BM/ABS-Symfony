@@ -12,12 +12,14 @@
 				<th>Nom</th>
 				<th>Description</th>
 				<th>Details</th>
+
 				<th>Actions</th>
 			</tr>
 		</thead>
 		<tbody>
 			{% for account in accounts %}
 				<tr>
+					<td>{{ account.profilePicture }}</td>
 					<td>{{ account.firstname }}</td>
 					<td>{{ account.lastname }}</td>
 					<td>{{ account.email }}</td>

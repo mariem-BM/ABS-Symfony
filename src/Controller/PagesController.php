@@ -15,16 +15,7 @@ use Symfony\Component\HttpFoundation\File\Exception\FileException;
 
 class PagesController extends AbstractController
 {
-    /**
-     * @Route("/", name="pages")
-     */
-    public function index(): Response
-    {
-        return $this->render('pages/pages.html.twig', [
-            'controller_name' => 'PagesController',
-        ]);
-    }
-
+ 
     //Show
 
     /**
@@ -114,6 +105,27 @@ class PagesController extends AbstractController
         $form = $this->createForm(PagesType::class, $page);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
+            $brochureFile = $form->get('imgPages')->getData();
+            if ($brochureFile) {
+                $originalFilename = pathinfo($brochureFile->getClientOriginalName(), PATHINFO_FILENAME);
+                // this is needed to safely include the file name as part of the URL
+                $safeFilename = transliterator_transliterate('Any-Latin; Latin-ASCII; [^A-Za-z0-9_] remove; Lower()', $originalFilename);
+                $newFilename = $safeFilename . '-' . uniqid() . '.' . $brochureFile->guessExtension();
+
+                // Move the file to the directory where brochures are stored
+                try {
+                    $brochureFile->move(
+                        $this->getParameter('brochures_directory'),
+                        $newFilename
+                    );
+                } catch (FileException $e) {
+                    // ... handle exception if something happens during file upload
+                }
+
+                // updates the 'brochureFilename' property to store the PDF file name
+                // instead of its contents
+                $page->setImgPages($newFilename);
+            }
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->flush();
             return $this->redirectToRoute('pages');
@@ -138,4 +150,18 @@ class PagesController extends AbstractController
         $response->send();
         return $this->redirectToRoute('pages');
     }
+    /********************************************front */
+     //Show front
+
+    /**
+     *@Route("/pagesfront",name="pagesfront")
+     */
+    public function pagesfront()
+    {
+        //récupérer tous les articles de la table article de la BD
+        // et les mettre dans le tableau $articles
+        $pages = $this->getDoctrine()->getRepository(Pages::class)->findAll();
+        return $this->render('inc/pages.html.twig', ['pages' => $pages]);
+    }
+
 }
