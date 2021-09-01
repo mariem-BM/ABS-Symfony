@@ -546,17 +546,18 @@ text-align: left;
     text-shadow: 0 -1px 0 rgba(0, 0 ,0, .3);
 text-align: center;
 }
-.bar{
-	width: 100px;
-	height: 6px;
-	position: relative;
-	left: 50%;
-	top: 0%;
-	transform: translateX(-50%);
-	background-color:#4a90e2; 
-	border-radius: 0px 0px 10px 10px;
-	display: none;
-	animation: bar 0.5s;
+
+  .bar {
+    width: 100px;
+    height: 6px;
+    position: relative;
+    left: 20%;
+    top: -20%;
+    transform: translateX(-50%);
+    background-color: #4a90e2;
+    border-radius: 0px 0px 10px 10px;
+    display: none;
+    animation: bar 0.5s;
 }
 .s-box:hover{
 	box-shadow: 2px 2px 30px rgba(0,0,0,0.08);
@@ -1151,11 +1152,89 @@ margin-left: 50px;
 }
 
 
+.hgroup, section {
+  display: block;
+  display: grid;
+  /* grid-template-rows: 200px 200px 200px 200px 200px 200px; */
+  grid-template-columns: 200px 200px 200px 200px 200px 200px;
+}
+
+
+.container {
+    max-width: 1140px;
+    margin-right: 150px;
+    margin-left: 30px;
+}
 
 
 
 
+.container-fluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: 50px;
+    margin-left: 25px;
+}
+
+
+a:not([href]):not([tabindex]) {
+    text-decoration: none;
+    color: #025875;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+/***************************************** Footer ********************************************************/
+
+.site-footer {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+  font-size: 16px;
+    font-weight: bold;
+    color:rgba(87, 105, 117, 0.9);;
+}
+.site-footer>* {
+  flex: 0 0 33.333%;
+  min-width: 300px;
+  text-align: center;
+  box-sizing: border-box;
+  font-family: Montserrat ;
+  border-top: rgba(87,105,117,0.90);
+  border-width: 5px;
+  color: #313131;
+}
+#imgfooter {
+  display: block;
+  margin-right: 100px;
+  
+  height: 70px;
+  width: 200px;
+}
+
+#follow {
+  font-size: 16px;
+  font-family: Montserrat ;
+  color: #313131;
+}
 
 
 
+  #footer_img1 {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    height: 240px;
+    width: 200px;
+  }
+
+  #copyright { 
+font-size: 18px;
+  }
+  #facebook, #insta, #gog, #link{
+    padding-right: 6px!important;
+  }
+
+  
 /*# sourceMappingURL=styles.css.map */

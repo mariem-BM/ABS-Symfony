@@ -49,6 +49,11 @@ class Article
      */
     private $isPublished;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $readmore;
+
 
 
     public function getId(): ?int
@@ -124,6 +129,18 @@ class Article
     public function setIsPublished(bool $isPublished): self
     {
         $this->isPublished = $isPublished;
+
+        return $this;
+    }
+
+    public function getReadmore(): ?string
+    {
+        return $this->readmore;
+    }
+
+    public function setReadmore(string $readmore): self
+    {
+        $this->readmore = $readmore;
 
         return $this;
     }

@@ -24,9 +24,8 @@ class ArticleType extends AbstractType
             ->add('picture', FileType::class, array('data_class' => null))
             ->add('title', TextType::class)
             ->add('content', TextareaType::class)
-            ->add('isPublished', CheckboxType::class)
-           
-        ;
+            ->add('readmore', TextareaType::class)
+            ->add('isPublished', CheckboxType::class);
     }
 
 

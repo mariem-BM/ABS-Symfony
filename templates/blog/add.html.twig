@@ -18,6 +18,11 @@
 	</div>
 
 	<div class="input-field col s12 m12 l12">
+		{{ form_widget(form.readmore, {'attr': {'class': 'materialize-textarea', 'placeholder': 'Read more'}}) }}
+	</div>
+
+
+	<div class="input-field col s12 m12 l12">
 		<p>
 			<label>
 				{{ form_widget(form.isPublished, {'attr': {'class': 'filled-in'}}) }}

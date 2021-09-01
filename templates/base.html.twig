@@ -84,22 +84,23 @@
 		<br>
 		<!-- Hero Section 8 -->
 		{{ include('inc/section8.html.twig')}}
-		<!-- End Hero Section 8 -->
-		<br>
-		<br>
-		<br>
+		<!-- End Hero Section 8 --><br><br><br>
 		<br>
 
 		<!-- Hero Section 9 -->
 		{{ include('inc/section9.html.twig')}}
 		<!-- End Hero Section 9 -->
-		<!-- Hero Section 10 -->
-		{{ include('inc/section10.html.twig')}}
+		<!-- Hero Section 10 -->{{ include('inc/section10.html.twig')}}
 		<!-- End Hero Section 10 -->
-		<br><br><br><br>
-		<link rel="stylesheet" href="{{ asset ('assets/css/styles.css')}}">
-		<link rel="stylesheet" href="{{ asset ('assets/css/styles.scss')}}">
-		{% block body %}{% endblock %}
-		{% block javascripts %}{% endblock %}
-	</body>
-</html>
+		<br>
+		<br>
+		<br>
+
+		<!-- Hero Section 10 -->
+		{{ include('inc/footer.html.twig')}}
+
+		<br>
+
+		<link rel="stylesheet" href="{{ asset ('assets/css/styles.css')}}"> <link rel="stylesheet" href="{{ asset ('assets/css/styles.scss')}}"> {% block body %}{% endblock %}{% block javascripts %}{% endblock %}
+		</body>
+	</html>
