@@ -1,0 +1,22 @@
+{{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+  
+      <div class="input-field col s12 m12 l12">
+		{{ form_widget(form.email, {'attr': {'class': 'materialize-textarea', 'placeholder': 'Le contenu de email'}}) }}
+		{{ form_label(form.email, 'email') }}
+	</div>
+
+   
+    <div class="input-field col s12 m12 l12">
+		{{ form_widget(form.roles, {'attr': {'class': 'filled-in'}}) }}
+		{{ form_label(form.roles, 'roles') }}
+
+	</div>
+
+    <div class="input-field col s12 m12 l12">
+		{{ form_widget(form.password, {'attr': {'class': 'filled-in'}}) }}
+		{{ form_label(form.password, 'password') }}
+
+	</div>
+    
+    <button class="btn">{{ button_label|default('Save') }}</button>
+{{ form_end(form) }}
