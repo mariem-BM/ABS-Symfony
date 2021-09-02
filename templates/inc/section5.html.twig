@@ -1,31 +1,40 @@
-<div class="hero">
-    <div class="hero__container">
-      <div class="hero__container--left">
-        
-        <img
-          src="{{ asset ('assets/images/Icon 1.png')}}"
-          alt="alien2"
-          class="hero__container--img2"
-        
-        />
-      </div>
-      <div class="hero__container--right">
-        
-        <p><b>"</b> 
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-            laudan tium totam rem aperiam.
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-            laudan tium totam rem aperiam.
-            <b>"</b> </p>
-            
-          <br>
-        <br>
-         <br>
-         <h2>Asma Brini
-            Chief executive officer</h2>
-        <br>
-        <br>
-        <button class="hero__container--btnleft"><a href="#">See the team</a></button>
-    </div>
-  </div>
-  </div>
+{% if pages %}
+	<div class="hero">
+		<div class="hero__container">
+			<div class="hero__container--left">
+
+				{% for page in pages %}
+					{% if page.id == 8 %}
+
+
+						<div class="" alt="alien2">
+							<img alt="executive" src="{{asset('uploads/brochures/'~page.imgPages)}}" height="420px" width="420px">
+						</div>
+					</div>
+					<div class="hero__container--right">
+
+						<p id="exec_descrip">
+							<b>"</b>
+							{{ page.description }}
+							<b>"</b>
+						</p>
+
+						<br>
+						<br>
+						<br>
+
+						<h1>{{ page.titre }}</h1>
+
+						<br>
+						<br>
+						<button class="hero__container--btnleft">
+							<a href="{{ page.pagesdetails }}">See the team</a>
+
+						</button>
+					</div>
+				</div>
+			</div>
+
+		{% endif %}
+	{% endfor %}
+{% endif %}
