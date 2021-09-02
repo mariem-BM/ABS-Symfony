@@ -1,3 +1,7 @@
+<?php
+error_reporting(E_ALL); 
+ini_set("display_errors", 1);
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -17,11 +21,11 @@
 		<link rel="stylesheet" href="{{ asset ('assets/css/styles.css')}}">
 		<link rel="stylesheet" href="{{ asset ('assets/css/styles.scss')}}">
 		<title>
-			{% block title %}Welcome!
-			{% endblock %}
+			Welcome!
+			
 		</title>
 
-		{% block stylesheets %}{% endblock %}
+	
 	</head>
 
 	<body>
@@ -100,6 +104,6 @@
 		<!-- Hero Section 10 -->
 
 
-		<link rel="stylesheet" href="{{ asset ('assets/css/styles.css')}}"> <link rel="stylesheet" href="{{ asset ('assets/css/styles.scss')}}"> {% block body %}{% endblock %}{% block javascripts %}{% endblock %}
+		<link rel="stylesheet" href="{{ asset ('assets/css/styles.css')}}"> <link rel="stylesheet" href="{{ asset ('assets/css/styles.scss')}}"> 
 		</body>
 	</html>
