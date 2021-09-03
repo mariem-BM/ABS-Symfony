@@ -1371,23 +1371,26 @@ a:not([href]):not([tabindex]) {
   min-width: 300px;
   text-align: center;
   box-sizing: border-box;
+  font-size: 21px;
   font-family: Montserrat;
+  font-weight: lighter;
   border-top: rgba(87, 105, 117, 0.9);
   border-width: 5px;
-  color: #313131;
+  color: #102131;
 }
 #imgfooter {
   display: block;
   margin-right: 100px;
 
   height: 70px;
-  width: 200px;
+  width: 250px;
 }
 
 #follow {
-  font-size: 16px;
+  font-size: 22px;
+  font-weight: lighter;
   font-family: Montserrat;
-  color: #313131;
+  color: #102131;
 }
 
 #footer_img1 {
@@ -1399,7 +1402,10 @@ a:not([href]):not([tabindex]) {
 }
 
 #copyright {
-  font-size: 18px;
+  font-size: 19px;
+  color: #102131;
+  font-family: Montserrat;
+  font-weight: normal;
 }
 #facebook,
 #insta,
@@ -1413,5 +1419,12 @@ a:not([href]):not([tabindex]) {
 }
 
 /*************************************** future dark mode css****************************/
+
+#register,
+#profile,
+#login {
+  font-size: 12px;
+  color: #0c0c0c;
+}
 
 /*# sourceMappingURL=styles.css.map */
