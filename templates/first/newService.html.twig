@@ -2,29 +2,26 @@
 {% block title %}Ajouter Service
 {% endblock %}
 {% block body %}
-	{{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
-	<div class="input-field col s12 m12 l12">
-		{{ form_widget(form.img) }}
-	</div>
-
-	<div class="input-field col s12 m6 l6">
-		{{ form_widget(form.nom, {'attr': {'placeholder': 'Titre de l\'service'}}) }}
-    {{ form_label(form.nom, 'Le titre de votre service') }}
-</div>
-
-
+{{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
 <div class="input-field col s12 m12 l12">
-    {{ form_widget(form.description, {'attr': {'class': 'materialize-textarea', 'placeholder': 'Le contenu de l\'article'}}) }}
+
+	{{ form_widget(form.img, {'attr': {'placeholder': 'Service Image'}}) }}
+</div>
+<br>
+<div class="input-field col s12 m6 l6">
+	{{ form_widget(form.nom, {'attr': {'placeholder': 'Titre de l\'service'}}) }}
+</div>
+<br>	<div class="input-field col s12 m12 l12">
+		 {{ form_widget(form.description, {'attr': {'class': 'materialize-textarea', 'placeholder': 'Service description'}}) }}
 	</div>
-
+<br>
 	<div class="input-field col s12 m12 l12">
-		{{ form_widget(form.details, {'attr': {'class': 'filled-in'}}) }}
-
-
+		{{ form_widget(form.details, {'attr': {'class': 'filled-in', 'placeholder': 'Service details '}}) }}
 	</div>
-
 	<div class="input-field col s12 m12 l12">
-		<input type="submit" name="" value="Enregistrer" class="btn btn-primary">
+		<br>
+		<br>
+		<input type="submit" name="" value="Add Service" class="btn btn-primary">
 	</div>
 	{{ form_end(form) }}
 {% endblock %}

@@ -6,17 +6,17 @@
 
 	<div class="input-field col s12 m6 l6">
 
-		{{ form_widget(form.refNom, {'attr': {'placeholder': 'Titre de l\'reference'}}) }}
-   
-</div>
-<br>
-<div class="input-field col s12 m12 l12">
-	{{ form_widget(form.imgRef, {'attr': {'placeholder': 'Image de l\'reference'}}) }}
+		{{ form_widget(form.refNom, {'attr': {'placeholder': 'Refrence title '}}) }}
+
+	</div>
+	<br>
+	<div class="input-field col s12 m12 l12">
+		{{ form_widget(form.imgRef, {'attr': {'placeholder': 'Refrence Image '}}) }}
 	</div>
 	<br>
 
 	<div class="input-field col s12 m12 l12">
-		<input type="submit" name="" value="Enregistrer" class="btn btn-primary">
+		<input type="submit" name="" value="Add Refrence" class="btn btn-primary">
 	</div>
 	{{ form_end(form) }}
 {% endblock %}

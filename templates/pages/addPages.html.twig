@@ -4,32 +4,34 @@
 {% block title %}Ajouter Page
 {% endblock %}
 {% block body %}
-{{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
-<div class="input-field col s12 m12 l12">
-	{{ form_widget(form.imgPages) }}
-</div>
+	{{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+	<div class="input-field col s12 m12 l12">
 
-<div class="input-field col s12 m6 l6">
-	{{ form_widget(form.titre, {'attr': {'placeholder': 'Titre de l\'article'}}) }}
-    {{ form_label(form.titre, 'Le titre de votre article') }}
-</div>
+		{{ form_widget(form.imgPages, {'attr': {'placeholder': 'Page title'}}) }}
+	</div>
+	<br>
+	<div class="input-field col s12 m6 l6">
 
-<div class="input-field col s12 m6 l6">
-    {{ form_widget(form.description) }}
-    {{ form_label(form.description, 'Choisissez un ou plusieurs categories') }}
-</div>
+		{{ form_widget(form.titre, {'attr': {'placeholder': 'Page title'}}) }}
 
-<div class="input-field col s12 m6 l6">
-    {{ form_widget(form.pagesdetails) }}
-    {{ form_label(form.pagesdetails, 'Choisissez un ou plusieurs categories') }}
-</div>
+	</div>
+	<br>
+	<div class="input-field col s12 m6 l6">
 
+		{{ form_widget(form.description, {'attr': {'placeholder': 'Page Description'}}) }}
 
+	</div>
+	<br>
+	<div class="input-field col s12 m6 l6">
 
+		{{ form_widget(form.pagesdetails, {'attr': {'placeholder': 'Page Details'}}) }}
 
+	</div>
+	<br>
+	<br>
 
 	<div class="input-field col s12 m12 l12">
-		<input type="submit" name="" value="Enregistrer" class="btn btn-primary">
+		<input type="submit" name="" value="Add Page" class="btn btn-primary">
 	</div>
 	{{ form_end(form) }}
 {% endblock %}
