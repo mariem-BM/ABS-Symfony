@@ -12,36 +12,38 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use  Symfony\Component\Form\Extension\Core\Type\FormType;
 use  Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\CallbackTransformer;
+
 class UserType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('email',EmailType::class)
-            ->add('password',PasswordType::class)
-        ;
+            ->add('firstname', TextType::class)
+            ->add('lastname', TextType::class)
+            ->add('email', EmailType::class)
+            ->add('password', PasswordType::class);
         $builder
-        ->add('roles', ChoiceType::class, [
-            'required' => true,
-            'multiple' => false,
-            'expanded' => false,
-            'choices'  => [
-                'User' => 'ROLE_USER',
-                'Admin' => 'ROLE_ADMIN',
-            ],
-        ]);
+            ->add('roles', ChoiceType::class, [
+                'required' => true,
+                'multiple' => false,
+                'expanded' => false,
+                'choices'  => [
+                    'User' => 'ROLE_USER',
+                    'Admin' => 'ROLE_ADMIN',
+                ],
+            ]);
 
-    $builder->get('roles')
-        ->addModelTransformer(new CallbackTransformer(
-            function ($rolesArray) {
-                // transform the array to a string
-                return count($rolesArray)? $rolesArray[0]: null;
-            },
-            function ($rolesString) {
-                // transform the string back to an array
-                return [$rolesString];
-            }
-        ));
+        $builder->get('roles')
+            ->addModelTransformer(new CallbackTransformer(
+                function ($rolesArray) {
+                    // transform the array to a string
+                    return count($rolesArray) ? $rolesArray[0] : null;
+                },
+                function ($rolesString) {
+                    // transform the string back to an array
+                    return [$rolesString];
+                }
+            ));
     }
 
     public function configureOptions(OptionsResolver $resolver)
@@ -49,7 +51,7 @@ class UserType extends AbstractType
         $resolver->setDefaults([
             'compound' => true,
             'data_class' => User::class,
-            
+
         ]);
     }
 }
