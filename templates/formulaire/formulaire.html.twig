@@ -3,7 +3,7 @@
 {% block title%}
 	Liste des formulaires
 {% endblock %}
-{% block body %}
+{% block content %}
 	{% if formulaires %}
 		<table id="formulaires" class="table table-striped">
 			<thead>
@@ -23,10 +23,10 @@
 						<td>{{ formulaire.email }}</td>
 						<td>{{ formulaire.message }}</td>
 						<td>
-						
+
 							<a href="/formulaire/edit/{{ formulaire.id }}" class="btn btn-dark">Modifier</a>
 							<a href="/formulaire/delete/{{ formulaire.id }}" class="btn btn-danger" onclick="return confirm('Etes-
-																																																																																																																																								vous sûr de supprimer cet article?');">Delete</a>
+																																																																																																																																																vous sûr de supprimer cet article?');">Delete</a>
 
 						</td>
 					</tr>
