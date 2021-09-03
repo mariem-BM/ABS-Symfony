@@ -80,9 +80,7 @@ class FirstController extends AbstractController
      */
     public function index(): Response
     {
-        return $this->render('first/index.html.twig', [
-            'controller_name' => 'FirstController',
-        ]);
+        return $this->render('template.html.twig');
     }
 
     //Userss controller
@@ -160,7 +158,7 @@ class FirstController extends AbstractController
         );
     }
 
-    
+
     //Edit Service
 
     /**

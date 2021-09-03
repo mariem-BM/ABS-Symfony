@@ -48,4 +48,55 @@ $(document).ready(function(){
             }
         }]
     });
+
+
 });
+
+(function () {
+	"use strict";
+  
+	var carousels = function () {
+	  $(".owl-carousel1").owlCarousel({
+		loop: true,
+		center: true,
+		margin: 0,
+		responsiveClass: true,
+		nav: false,
+		responsive: {
+		  0: {
+			items: 1,
+			nav: false
+		  },
+		  680: {
+			items: 2,
+			nav: false,
+			loop: false
+		  },
+		  1000: {
+			items: 3,
+			nav: true
+		  }
+		}
+	  });
+	};
+  
+	(function ($) {
+	  carousels();
+	})(jQuery);
+  })();
+  /**************************************************3thebbbbbbbbbbbbbbbbbbb*************************************************** */
+  window.addEventListener('load', function () {
+	new Glider(document.querySelector('.glider'), {
+	  slidesToScroll: 10,
+	  slidesToShow: 9,
+	  rewind: true,
+	  scrollLock: true,
+	  scrollLockDelay: 300,
+	  draggable: true,
+	  dots: '.dots',
+	  arrows: {
+		prev: '.glider-prev',
+		next: '.glider-next'
+	  }
+	});
+  })

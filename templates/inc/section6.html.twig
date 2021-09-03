@@ -1,35 +1,37 @@
 {% if articles %}
-	<div class="hero">
-		<div class="hero__container">
-			<div class="hero__container--left">
-				<h2>INSIGHTS</h2>
+	<div class="owl-carousel owl-carousel1 owl-theme">
+		<div class="hero">
+			<div class="hero__container">
+				<div class="hero__container--left">
+					<h2>INSIGHTS</h2>
+				</div>
+				<div class="hero__container--right">
+					<button class="hero__container--btn">
+						<a href="#">See all insights</a>
+					</button>
+				</div>
 			</div>
-			<div class="hero__container--right">
-				<button class="hero__container--btn">
-					<a href="#">See all insights</a>
-				</button>
+			<div class="container-fluid">
+				<div class="row">
+					{% for article in articles %}
+						<div class="col-md-4" {% if loop.index0 == 0 %} class="item active" {% else %} class="item" {% endif %}>
+							<img class="img-responsive center-block" src="{{asset('uploads/brochures/'~article.picture)}}" height="300" width="400" alt=""/>
+
+
+							<p>{{ article.content }}</p>
+							<a {{ article.readmore}}>Read more...</a>
+							<p>{{ article.publicationDate }}</p>
+							<p>{{ article.lastUpdateDate }}</p>
+
+
+						</div>
+
+					{% endfor %}
+
+
+				</div>
 			</div>
+
 		</div>
-		<div class="container-fluid">
-			<div class="row">
-				{% for article in articles %}
-					<div class="col-md-4" {% if loop.index0 == 0 %} class="item active" {% else %} class="item" {% endif %}>
-						<img class="img-responsive center-block" src="{{asset('uploads/brochures/'~article.picture)}}" height="300" width="400" alt=""/>
-
-
-						<p>{{ article.content }}</p>
-						<a {{ article.readmore}}>Read more...</a>
-						<p>{{ article.publicationDate }}</p>
-						<p>{{ article.lastUpdateDate }}</p>
-
-
-					</div>
-				{% endfor %}
-
-
-			</div>
-		</div>
-
 	</div>
-
 {% endif %}
