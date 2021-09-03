@@ -1,4 +1,4 @@
-<?php 
+<?php
 // src/Controller/SecurityController.php
 namespace App\Controller;
 
@@ -15,19 +15,34 @@ class SecurityController extends AbstractController
     public function login(AuthenticationUtils $authenticationUtils): Response
     {
         $error = $authenticationUtils->getLastAuthenticationError();
-            $lastUsername = $authenticationUtils->getLastUsername();
+        $lastUsername = $authenticationUtils->getLastUsername();
 
-            return $this->render('security/login.html.twig', [
-                'last_username' => $lastUsername,
-                'error' => $error,
-                ]);
+        return $this->render('security/login.html.twig', [
+            'last_username' => $lastUsername,
+            'error' => $error,
+        ]);
     }
 
     /**
      * @Route("/logout", name="app_logout")
      */
-    public function logout(): void
+    public function logout()
     {
-        throw new \LogicException('This method can be blank - it will be intercepted by the logout key on your firewall.');
+        throw new \LogicException('base.html.twig');
+        return $this->render('base.html.twig');
+    }
+    /**
+     * @Route("/profile", name="profile")
+     */
+    public function profile(AuthenticationUtils $authenticationUtils): Response
+    {
+        $error = $authenticationUtils->getLastAuthenticationError();
+        $lastUsername = $authenticationUtils->getLastUsername();
+
+        return $this->render('user/profile.html.twig', [
+            'last_username' => $lastUsername,
+            'error' => $error,
+        ]);
+        return $this->render('user/profile.html.twig');
     }
 }

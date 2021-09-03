@@ -1,0 +1,34 @@
+{% extends 'base1.html.twig' %}
+
+{% block title %}Log in!
+{% endblock %}
+
+{% block body %}
+	{% if app.user %}
+
+		<h1>Profile</h1>
+
+		<table class="table">
+			<tbody>
+				<tr>
+					<th>Id</th>
+					<td>{{ app.user.id }}</td>
+				</tr>
+				<tr>
+					<th>Email</th>
+					<td>{{ app.user.email }}</td>
+				</tr>
+				<tr>
+					<th>Roles</th>
+					<td>{{ app.user.roles ? app.user.roles|json_encode : '' }}</td>
+				</tr>
+				<tr>
+					<th>Password</th>
+					<td>{{ app.user.password }}</td>
+				</tr>
+			</tbody>
+		</table>
+	{% endif %}
+
+	<a href="{{ path('app_logout') }}" class="btn btn-primary">Logout</a>
+{% endblock %}

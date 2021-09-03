@@ -2,6 +2,19 @@
 
 <div class="input-field col s12 m12 l12">
 
+	{{ form_widget(form.firstname, {'attr': {'class': 'materialize-textarea', 'placeholder': 'Firstname'}}) }}
+
+</div>
+<br>
+<div class="input-field col s12 m12 l12">
+
+	{{ form_widget(form.lastname, {'attr': {'class': 'materialize-textarea', 'placeholder': 'Lastname'}}) }}
+
+</div>
+<br>
+
+<div class="input-field col s12 m12 l12">
+
 	{{ form_widget(form.email, {'attr': {'class': 'materialize-textarea', 'placeholder': 'Email'}}) }}
 
 </div>
@@ -9,14 +22,14 @@
 
 <div class="input-field col s12 m12 l12">
 
-	{{ form_widget(form.roles, {'attr': {'class': 'filled-in', 'placeholder': 'Roles'}}) }}
+	{{ form_widget(form.roles, {'attr': {'class': 'materialize-textarea', 'placeholder': 'Roles'}}) }}
 
 
 </div>
 <br>
 <div class="input-field col s12 m12 l12">
 
-	{{ form_widget(form.password, {'attr': {'class': 'filled-in', 'placeholder': 'Password'}}) }}
+	{{ form_widget(form.password, {'attr': {'class': 'materialize-textarea', 'placeholder': 'Password'}}) }}
 
 
 </div>
