@@ -18,8 +18,11 @@ ini_set("display_errors", 1);
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+
+
 		<link rel="stylesheet" href="{{ asset ('assets/css/styles.css')}}">
-		<link rel="stylesheet" href="{{ asset ('assets/css/styles.scss')}}">
+		
+
 		<title>
 			Welcome!
 			
@@ -70,13 +73,18 @@ ini_set("display_errors", 1);
 		<br>
 		<!-- Hero Section 6  -->
 		{{ include('inc/section6.html.twig')}}
+		<br>                                                                                                       
+		<br>
+			
 		<!-- End Hero Section 6 -->
 		<br>
 		<br>
 		<br>
 		<br>
 		<!-- Hero Section 7 -->
-		{{ include('inc/section7.html.twig')}}
+		                                                 
+		<!-- caroussel-->
+	{{ include('carousel.html.twig')}}
 		<!-- End Hero Section 7 -->
 		<br>
 		<br>
@@ -84,6 +92,7 @@ ini_set("display_errors", 1);
 		<br>
 		<!-- Hero Section 8 -->
 		{{ include('inc/section8.html.twig')}}
+	
 		<!-- End Hero Section 8 -->
 		<br>
 		<br>
@@ -102,7 +111,21 @@ ini_set("display_errors", 1);
 		{{ include('inc/footer.html.twig')}}
 		<!-- Hero Section 10 -->
 
+
+<script src="{{asset('https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js')}}">
+
 <script src="{{asset('assets/js/script.js')}}"></script>
-		<link rel="stylesheet" href="{{ asset ('assets/css/styles.css')}}"> <link rel="stylesheet" href="{{ asset ('assets/css/styles.scss')}}"> 
+<script src="{{asset('assets/js/scripts.js')}}"></script>
+<link rel="stylesheet" href="{{ asset ('assets/css/carousel.css')}}">
+		<link rel="stylesheet" href="{{ asset ('assets/css/styles.css')}}">
+	
+
+		<script src="{{asset('assets/js/jquery-3.3.1.min.js')}}"></script>
+		<script src="{{asset('assets/js/jquery-migrate-3.0.0.min.js')}}"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+        <script src="{{asset('assets/js/jquery.backstretch.min.js')}}"></script>
+        <script src="{{asset('assets/js/wow.min.js')}}"></script>
+
 		</body>
 	</html>
