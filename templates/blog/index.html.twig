@@ -5,6 +5,8 @@
 {% endblock %}
 {% block content  %}
 {% if articles %}
+
+
 	<table id="articles" class="table table-striped">
 		<thead>
 			<tr>
@@ -20,12 +22,18 @@
 			</tr>
 		</thead>
 		<tbody>
+
+
+
 			{% for article in articles %}
+
+       		
+			</a>
 				<tr>
 
 					<td>
 
-						<href="{{asset('uploads/brochures/'~article.picture)}}"></td>
+						  <href="{{asset('uploads/brochures/'~article.picture)}}"></td>
 					</td>
 					<td>{{ article.title }}</td>
 					<td>{{ article.content }}</td>

@@ -46,6 +46,32 @@
   }
 }
 
+/*****ipad pro ********/
+@media screen and (max-width: 1024px) {
+  .navbar__logo {
+    margin-left: -50px;
+  }
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width: 1824px) {
+  /* Styles */
+  .navbar__logo {
+    margin-left: -460px;
+  }
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width: 360px) {
+  /* Styles */
+  .navbar__logo {
+    margin-left: -50px;
+    /* size: 24px; */
+    height: 35px;
+    width: 120px;
+    margin-left: -170px;
+  }
+}
 .navbar__menu {
   list-style: none;
   text-align: center;
@@ -58,6 +84,15 @@
   }
 }
 
+/***Desktops and laptops *************/
+@media only screen and (min-width: 1224px) {
+  .navbar__logo {
+    margin-left: 24px;
+    height: 76px;
+    width: 175px;
+    margin-right: 293px;
+  }
+}
 .navbar__menu--links {
   color: #222121;
   -webkit-box-pack: center;

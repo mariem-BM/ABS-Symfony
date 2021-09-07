@@ -53,10 +53,12 @@
            
 					
 						{% for article in articles %}
-						   
+						    
+							
+							
 							
 							 <div class="carousel-item col-md-4 {% if loop.index0 == 0 %} active {% endif %}">
-							
+							<a href="{{ path('blogfront', {slug: article.slug}) }}">
 									<img class="img-responsive center-block" src="{{asset('uploads/brochures/'~article.picture)}}" height="300" width="400" alt=""/>
 
 <br>
@@ -66,7 +68,7 @@
 							<p>{{ article.lastUpdateDate }}</p>
 
 								</div>
-							
+							</a>
 						{% endfor %}
  
 					</div>

@@ -14,7 +14,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\HttpFoundation\File\Exception\FileException;
-
+use Twig\Extra\String\StringExtension;
 
 
 
@@ -150,6 +150,7 @@ class BlogController extends AbstractController
      */
     public function articlefront(): Response
     {
+
 
         //récupérer tous les articles de la table article de la BDet les mettre dans le tableau $articles
         $articles = $this->getDoctrine()->getRepository(Article::class)->findAll();
