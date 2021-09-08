@@ -1,36 +1,41 @@
 {% if refrencess %}
-<div class="hero">
+	<div class="hero" id="bgS7">
+		<br>
+		<br>
 		<h2>REFERENCES</h2>
+		<br>
 		<br>
 		<br>
 		<div class="container-fluid">
 			<div id="carouselExample2" class="carousel slide" data-ride="carousel" data-interval="2250">
-        <div class="carousel-inner row w-10 mxauto" role="listbox">
-           
-					
-						{% for refrences in refrencess %}
-						   
-							
-							 <div class="carousel-item col-md-4 {% if loop.index0 == 0 %} active {% endif %}">
-							
-									<img  src="{{asset('uploads/brochures/'~refrences.imgRef)}}" class="img-fluid mx-auto d-block" height="150" width="150" alt=""/>
+				<div class="carousel-inner row w-10 mxauto" role="listbox">
 
-								</div>
-							
-						{% endfor %}
- 
-					</div>
-					   <a class="carousel-control-prev" href="#carouselExample2" role="button" data-slide="prev">
-            <i class="fa fa-chevron-left fa-lg text-muted"></i>
-            <span class="sr-only">Previous</span>
-        </a>
-                                        <a class="carousel-control-next text-faded" href="#carouselExample2" role="button" data-slide="next">
-            <i class="fa fa-chevron-right fa-lg text-muted"></i>
-            <span class="sr-only">Next</span>
-        </a>
-					
+
+					{% for refrences in refrencess %}
+
+
+						<div class="carousel-item col-md-4 {% if loop.index0 == 0 %} active {% endif %}">
+							<a href="{{ path('refrencesfront') }}">
+
+								<img src="{{asset('uploads/brochures/'~refrences.imgRef)}}" class="img-fluid mx-auto d-block" height="150" width="150" alt=""/>
+
+
+							</a>
+						</div>
+					{% endfor %}
 
 				</div>
-		</div>	
+				<a class="carousel-control-prev" href="#carouselExample2" id="prev_ref" role="button" data-slide="prev">
+					<i class="fa fa-chevron-left fa-lg text-muted"></i>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="carousel-control-next text-faded" href="#carouselExample2" id="next_ref" role="button" data-slide="next">
+					<i class="fa fa-chevron-right fa-lg text-muted"></i>
+					<span class="sr-only">Next</span>
+				</a>
+
+
+			</div>
+		</div>
 	</div>
 {% endif %}

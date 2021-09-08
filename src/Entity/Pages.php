@@ -4,6 +4,8 @@ namespace App\Entity;
 
 use App\Repository\PagesRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
+
 
 /**
  * @ORM\Entity(repositoryClass=PagesRepository::class)
@@ -36,6 +38,8 @@ class Pages
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $imgPages;
+
+
 
     public function getId(): ?int
     {

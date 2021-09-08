@@ -10,12 +10,13 @@ use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\Pages;
 use App\Form\PagesType;
 use Symfony\Component\HttpFoundation\File\Exception\FileException;
+use Twig\Extra\String\StringExtension;
 
 
 
 class PagesController extends AbstractController
 {
- 
+
     //Show
 
     /**
@@ -151,7 +152,7 @@ class PagesController extends AbstractController
         return $this->redirectToRoute('pages');
     }
     /********************************************front */
-     //Show front
+    //Show front
 
     /**
      *@Route("/pagesfront",name="pagesfront")
@@ -160,8 +161,9 @@ class PagesController extends AbstractController
     {
         //récupérer tous les articles de la table article de la BD
         // et les mettre dans le tableau $articles
-        $pages = $this->getDoctrine()->getRepository(Pages::class)->findAll();
-        return $this->render('inc/pages.html.twig', ['pages' => $pages]);
-    }
 
+        $pages = $this->getDoctrine()->getRepository(Pages::class)->findAll();
+
+        return $this->render('inc/section1.html.twig', ['pages' => $pages]);
+    }
 }

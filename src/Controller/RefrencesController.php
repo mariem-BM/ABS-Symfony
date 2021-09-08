@@ -12,6 +12,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\HttpFoundation\File\Exception\FileException;
+use Twig\Extra\String\StringExtension;
 
 class RefrencesController extends AbstractController
 {
@@ -132,6 +133,6 @@ class RefrencesController extends AbstractController
     {
         //récupérer tous les articles de la table article de la BDet les mettre dans le tableau $articles
         $refrencess = $this->getDoctrine()->getRepository(References::class)->findAll();
-        return $this->render('inc/section7.html.twig', ['refrencess' => $refrencess]);
+        return $this->render('carousel.html.twig', ['refrencess' => $refrencess]);
     }
 }

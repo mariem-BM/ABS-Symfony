@@ -6,8 +6,8 @@
 
 				{% for page in pages %}
 					{% if page.id == 6  %}
-
-
+			
+			           <a href="{{ path('pagesfront') }}">         
 						<h2>{{ page.titre }}</h2>
 						<br>
 						<br>
@@ -22,6 +22,7 @@
 						<img alt="2" src="{{asset('uploads/brochures/'~page.imgPages)}}">
 						</div>
 					</div>
+					</a>
 				</div>
 			{% endif %}
 		{% endfor %}

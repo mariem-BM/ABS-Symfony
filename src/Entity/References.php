@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\ReferencesRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * @ORM\Entity(repositoryClass=ReferencesRepository::class)
@@ -28,10 +29,7 @@ class References
      */
     private $imgRef;
 
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
+
 
     public function getRefNom(): ?string
     {
@@ -55,5 +53,10 @@ class References
         $this->imgRef = $imgRef;
 
         return $this;
+    }
+
+    public function getId(): ?int
+    {
+        return $this->id;
     }
 }

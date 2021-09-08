@@ -144,9 +144,39 @@
 }
 
 .hero {
-  margin-left: 50px;
-  margin-right: 50px;
+  /*margin-left: 50px;
+  margin-right: 50px;*/
   background-color: #f6f9fd;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.heroc {
+  /*margin-left: 50px;
+  margin-right: 50px;*/
+  background-color: #f6f9fd;
+}
+.heroc h2 {
+  font-size: 4rem;
+  font: 40px/40px "Montserrat", "trebuchet MS", "bold";
+  color: #222121;
+  text-align: center;
+}
+.hero__containeri {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-items: center;
+  margin: 0 auto;
+
+  z-index: 1;
+  width: 100%;
+  max-width: 1200px;
+  padding-right: 24px;
+  padding-left: 24px;
 }
 .hero h2 {
   font-size: 4rem;
@@ -478,8 +508,6 @@
 /*services css*/
 /* CSS Document */
 body {
-  margin: 0px;
-  padding: 0px;
   background-color: #f6f9fd;
   font-family: calibri;
 }
@@ -535,6 +563,7 @@ a {
   margin: 30px;
   position: relative;
   background: white;
+  margin-left: 60px;
 }
 .s-box img {
   height: 75px;
@@ -1406,7 +1435,7 @@ a:not([href]):not([tabindex]) {
   min-width: 300px;
   text-align: center;
   box-sizing: border-box;
-  font-size: 21px;
+  font-size: 18px;
   font-family: Montserrat;
   font-weight: lighter;
   border-top: rgba(87, 105, 117, 0.9);
@@ -1417,12 +1446,12 @@ a:not([href]):not([tabindex]) {
   display: block;
   margin-right: 100px;
 
-  height: 70px;
+  height: 100px;
   width: 250px;
 }
 
 #follow {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: lighter;
   font-family: Montserrat;
   color: #102131;
@@ -1432,12 +1461,12 @@ a:not([href]):not([tabindex]) {
   display: block;
   margin-right: auto;
   margin-left: auto;
-  height: 240px;
+
   width: 200px;
 }
 
 #copyright {
-  font-size: 19px;
+  font-size: 16px;
   color: #102131;
   font-family: Montserrat;
   font-weight: normal;
@@ -1596,6 +1625,136 @@ a:not([href]):not([tabindex]) {
     background-color: rgba(156, 156, 156, 0.25);
     box-shadow: 0 0 1px rgba(255, 255, 255, 0.25);
   }
+}
+
+/*INSGHTS css*/
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: #f6f9fd;
+  font-family: calibri;
+}
+a {
+  text-decoration: none;
+}
+
+.i-heading {
+  text-align: left;
+}
+.i-heading h1 {
+  color: #576975;
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin: 0px;
+  text-align: left;
+}
+.i-heading p {
+  color: rgba(87, 105, 117, 0.6);
+  font-size: 1rem;
+  margin: 5px;
+  text-align: left;
+}
+#carrouselI {
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 600px 600px 600px;
+  margin: 50px;
+}
+.i-box {
+  justify-content: space-between;
+  align-items: center;
+
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background: #f6f9fd;
+  display: grid;
+  grid-template-columns: 600px 600px 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  width: 400px;
+  height: 400px;
+  box-sizing: border-box;
+  margin: 40px;
+  position: relative;
+  background: white;
+  justify-content: space-between;
+}
+
+.i-box img {
+  height: 300px;
+  width: 400px;
+}
+.i-box h1 {
+  color: #576975;
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+.i-box p {
+  color: rgba(87, 105, 117, 0.9);
+  text-align: center;
+}
+.i-btn {
+  overflow: visible;
+  position: relative;
+  float: right;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  height: 40px;
+  width: 140px;
+  font: 16px/40px "Montserrat", "trebuchet MS", "Tahoma";
+  color: #f7f7f7;
+  background: #2075ad;
+  border-radius: 40px;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.i-box:hover {
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.08);
+  transition: all ease 0.3s;
+}
+.i-btn:hover {
+  background-color: #4a90e2;
+  border: 1px solid #4a90e2;
+  color: #ffffff;
+  transition: all ease 0.3s;
+}
+.i-box:hover .bar {
+  display: block;
+}
+@keyframes bar {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 100px;
+  }
+}
+hr,
+#hr2 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  margin-left: 70px;
+  margin-right: 70px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#form_mg {
+  margin-left: -500px;
+}
+
+#seeIns {
+  margin-left: 900px;
 }
 
 /*# sourceMappingURL=styles.css.map */

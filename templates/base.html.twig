@@ -1,86 +1,64 @@
 {% extends "FrontBase.html.twig" %}
 {% block content %}
-		<!--code body strats here-->
+	<!--code body strats here-->
 
-		<!-- Navbar Section -->
-		
+	<!-- Navbar Section -->
 
-		<br>
-		<br>
-		<br>
-		<br>
-		
-	
 
-		<!--*************************************************************-->
-		{{ include('inc/section1.html.twig')}}
-		
-		<!-- End Hero Section 1 -->
-		<br>
-		<br>
-		<br>
-		<br>
-		<!-- Hero Section 2 -->
-		{{ include('inc/section2.html.twig')}}
-		<!-- End Hero Section 2 -->
-		<br>
-		<br>
-		<br>
-		<br>
-		<!-- Hero Section 3 -->
-		{{ include('inc/section3.html.twig')}}
-		<!-- End Hero Section 3 -->
-		<br>
-		<br>
-		<br><br>
-		<!-- Hero Section 4 -->{{ include('inc/section4.html.twig')}}
-		<!-- End Hero Section 4 --><br>
-		<br>
-		
-		<!-- Hero Section 5 -->{{ include('inc/section5.html.twig')}}
-		<!-- End Hero Section 5 -->
+	<!--*************************************************************-->
+	{{ include('inc/section1.html.twig')}}
+
+	<!-- End Hero Section 1 -->
+
+	<!-- Hero Section 2 -->
+	{{ include('inc/section2.html.twig')}}
 	<br>
-		<br>
-		<!-- Hero Section 6  -->
-		
+	<br>
 
-    {# if the controller is associated with a route, use the path() or url() functions #}
-    
+	<!-- End Hero Section 2 -->
+
+	<!-- Hero Section 3 -->{{ render(controller(
+        'App\\Controller\\FirstController::servicefront'
+    )) }}
+	<!-- End Hero Section 3 -->
+
+	<!-- Hero Section 4 -->
+	{{ include('inc/section4.html.twig')}}
+	<!-- End Hero Section 4 -->
+	<br>
+
+
+	<!-- Hero Section 5 -->
+	{{ include('inc/section5.html.twig')}}
+	<!-- End Hero Section 5 -->
+
+	<!-- Hero Section 6  -->
+
+
+	{# if the controller is associated with a route, use the path() or url() functions #}
+
 	{{ render(controller(
         'App\\Controller\\BlogController::articlefront'
     )) }}
-   
-    
 
 
-		<!-- End Hero Section 6 -->
-		<br>
-		<br>
-		<br>
-		<br>
-		<!-- Hero Section 7 -->
-		{{ include('carousel.html.twig')}}
-		<!-- End Hero Section 7 -->
-		<br>
-		<br>
-		<br>
-		<br>
-		<!-- Hero Section 8 -->
-		{{ include('inc/section8.html.twig')}}
-		<!-- End Hero Section 8 -->
-		<br>
-		<br>
-		<br>
-		<br>
+	<!-- End Hero Section 6 -->
 
-		<!-- Hero Section 9 -->
-		{{ include('inc/section9.html.twig')}}
+	<br>
+	<!-- Hero Section 7 -->
+	{{ render(controller(
+        'App\\Controller\\RefrencesController::refrencesfront'
+    )) }}
+	<!-- End Hero Section 7 -->
 
-		<br>
-		<!-- End Hero Section 9 -->
-		<!-- Hero Section 10 -->
-		{{ include('inc/section10.html.twig')}}
+	<!-- Hero Section 8 -->
+	{{ include('inc/section8.html.twig')}}
+	<!-- End Hero Section 8 -->
 
-		
+	<!-- Hero Section 9 -->
+	{{ include('inc/section9.html.twig')}}
 
-	{% endblock %}
+	<br>
+	<!-- End Hero Section 9 -->
+	<!-- Hero Section 10 -->
+{{ include('inc/section10.html.twig')}}{% endblock %}
