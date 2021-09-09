@@ -1,0 +1,37 @@
+<svg id="XMLID_1_" xmlns="http://www.w3.org/2000/svg" width="340.752" height="385.308" viewBox="0 0 340.752 385.308">
+  <g id="XMLID_8_" transform="translate(0.5)">
+    <g id="XMLID_23_" transform="translate(147.083 256.492)">
+      <g id="XMLID_27_" transform="translate(0 41.915)">
+        <path id="XMLID_28_" d="M54.538,59.334V67.05l-16.4-16.4L21.66,67.05V59.334L34.241,46.823v-.07l3.893-3.823,3.823,3.823v.07Z" transform="translate(-21.66 -42.93)" fill="aqua"/>
+      </g>
+      <g id="XMLID_24_">
+        <path id="XMLID_26_" d="M54.538,53.3v7.785l-16.4-16.474L21.66,61.089V53.3L34.241,40.793h0L38.134,36.9l3.823,3.893h0Z" transform="translate(-21.66 -36.9)" fill="aqua"/>
+        <path id="XMLID_25_" d="M54.538,57.284v7.785L38.134,48.6,21.66,65.069V57.284l16.474-16.4Z" transform="translate(-21.66 -13.215)" fill="aqua"/>
+      </g>
+    </g>
+    <g id="XMLID_11_">
+      <g id="XMLID_16_" transform="translate(225.938 74.599)">
+        <rect id="XMLID_22_" width="19.88" height="27.874" transform="translate(19.88 243.667) rotate(180)" fill="#22fff9"/>
+        <rect id="XMLID_21_" width="19.88" height="27.874" transform="translate(19.88 200.508) rotate(180)" fill="#22fff9" opacity="0.64"/>
+        <rect id="XMLID_20_" width="19.88" height="27.874" transform="translate(19.88 157.349) rotate(180)" fill="#22fff9" opacity="0.4"/>
+        <rect id="XMLID_19_" width="19.88" height="27.874" transform="translate(19.88 114.191) rotate(180)" fill="#22fff9" opacity="0.34"/>
+        <rect id="XMLID_18_" width="19.88" height="27.874" transform="translate(19.88 71.032) rotate(180)" fill="#22fff9" opacity="0.22"/>
+        <rect id="XMLID_17_" width="19.88" height="27.874" transform="translate(19.88 27.874) rotate(180)" fill="#22fff9" opacity="0.15"/>
+      </g>
+      <g id="XMLID_12_">
+        <path id="XMLID_15_" d="M327.545,38.706V343.021H.5v34.407H293.9V1.24" transform="translate(-0.5 7.379)" fill="none" stroke="#22fff9" stroke-miterlimit="10" stroke-width="1"/>
+        <path id="XMLID_14_" d="M41.45,8.619a8.619,8.619,0,1,1,8.619,8.619A8.618,8.618,0,0,1,41.45,8.619Z" transform="translate(243.194)" fill="#22fff9"/>
+        <path id="XMLID_13_" d="M46.31,13.989a8.619,8.619,0,1,1,8.619,8.619A8.618,8.618,0,0,1,46.31,13.989Z" transform="translate(272.116 31.957)" fill="#22fff9"/>
+      </g>
+    </g>
+    <path id="XMLID_10_" d="M164.02,66.667,150.813,53.46H.81V66.667Z" transform="translate(1.345 318.141)" fill="aqua"/>
+    <path id="XMLID_9_" d="M47.55,187.04l13.207-13.207v-150H47.55Z" transform="translate(279.495 141.812)" fill="aqua"/>
+  </g>
+  <g id="XMLID_2_" transform="translate(50.756 77.087)">
+    <rect id="XMLID_7_" width="123.589" height="7.785" transform="translate(0 91.962)" fill="#22fff9"/>
+    <rect id="XMLID_6_" width="76.253" height="7.785" transform="translate(47.336 68.954)" fill="#22fff9" opacity="0.4"/>
+    <rect id="XMLID_5_" width="97.87" height="7.785" transform="translate(25.719 46.016)" fill="#22fff9" opacity="0.34"/>
+    <rect id="XMLID_4_" width="85.636" height="7.785" transform="translate(37.952 23.008)" fill="#22fff9" opacity="0.22"/>
+    <rect id="XMLID_3_" width="53.662" height="7.785" transform="translate(69.927)" fill="#22fff9" opacity="0.15"/>
+  </g>
+</svg>

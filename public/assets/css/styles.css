@@ -1,3 +1,6 @@
+#content {
+  margin: 0px;
+}
 .navbar__logo,
 .navbar__menu,
 .navbar__menu--links {
@@ -18,7 +21,7 @@
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-
+  margin-left: -90px;
   z-index: 10;
   position: relative;
 }
@@ -47,11 +50,19 @@
 }
 /***********************gal s5***********************/
 @media screen and (max-width: 360px) {
+  #bodyy {
+    margin-left: 40px;
+    margin-right: -336px;
+  }
+  #content {
+    margin-left: 150px;
+  }
   #logoF {
     text-align: left;
     height: 40px;
     margin-left: 12px;
   }
+
   #menu_bar {
     margin-right: 30px;
   }
@@ -59,6 +70,9 @@
     -ms-grid-columns: 300px;
     grid-template-columns: 300px;
     height: 100%;
+  }
+  #id_heroC {
+    grid-template-columns: 300px;
   }
 
   #h2sections {
@@ -292,17 +306,19 @@
     display: block;
     height: 200px;
   }
-
-  #minibody {
-    width: 360px;
+  #seeIns {
+    margin-right: 900px;
   }
-
-  
 }
 /*****ipad pro ********/
 @media screen and (max-width: 1024px) {
   .navbar__logo {
-    margin-left: -50px;
+    margin-left: 20px;
+    margin-right: -60px;
+  }
+  #navid {
+    margin-left: 20px;
+    margin-right: -40px;
   }
 }
 
@@ -332,11 +348,11 @@
 }
 
 /***Desktops and laptops *************/
-@media only screen and (min-width: 1224px) {
+@media only screen and (max-width: 1224px) {
   .navbar__logo {
     margin-left: 24px;
-    height: 76px;
-    width: 175px;
+    height: 81px;
+    width: 284px;
     margin-right: 293px;
   }
 }
@@ -396,6 +412,7 @@
   background-color: #f6f9fd;
   margin-top: 100px;
   margin-bottom: 100px;
+  margin-left: -20px;
 }
 .heroc {
   /*margin-left: 50px;
@@ -2069,10 +2086,11 @@ hr,
     top: 22px;
     right: 20px;
     font-size: 2rem;
+    margin-right: -350px;
   }
   .navbar__logo {
     text-align: left;
-    margin-right: 510px;
+    margin-right: 350px;
     height: 70px;
   }
 }
