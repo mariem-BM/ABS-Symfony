@@ -40,12 +40,30 @@ class UserFixtures extends Fixture
     public function load(ObjectManager $manager)
     {
         $usersList = [
-            [
+                     [
 
                 'firstname' => 'Maryem',
                 'lastname' => 'BM',
                 'email' => 'mariembenmassoud123@gmail.com',
                 'password' => 'password',
+                'role' => 'ROLE_ADMIN',
+
+            ],
+            [
+
+                'firstname' => 'eya',
+                'lastname' => 'eya',
+                'email' => 'eya@gmail.com',
+                'password' => '123',
+                'role' => 'ROLE_USER',
+
+            ],
+            [
+
+                'firstname' => 'admin',
+                'lastname' => 'admin',
+                'email' => 'admin@gmail.com',
+                'password' => 'admin',
                 'role' => 'ROLE_ADMIN',
 
             ],
