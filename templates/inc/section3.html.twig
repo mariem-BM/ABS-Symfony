@@ -1,6 +1,6 @@
 {% if services %}
 	<div class="hero">
-		<section class="services">
+		<section class="services" id="service-section">
 			<br>
 			<div class="s-heading">
 				<h4>OUR SERVICES</h4>
@@ -9,20 +9,20 @@
 			</div>
 
 
-			<div class="s-box-container">
+			<div class="s-box-container" id="sboxcontainer">
 				{% for service in services %}
 
-					<div class="s-box" {% if loop.index0 == 0 %} class="item active" {% else %} class="item" {% endif %} href="{{ path('servicefront') }}">
+					<div id="sbox" class="s-box" {% if loop.index0 == 0 %} class="item active" {% else %} class="item" {% endif %} href="{{ path('servicefront') }}">
 
 						<div class="bar"></div>
 
-						<img alt="1" src="{{asset('uploads/brochures/'~service.img)}}">
+						<img id="sboximg" alt="1" src="{{asset('uploads/brochures/'~service.img)}}">
 
-						<h1>{{ service.nom }}</h1>
+						<h1 id="#sboxh1">{{ service.nom }}</h1>
 
-						<p>{{ service.description }}</p>
+						<p id="sboxp">{{ service.description }}</p>
 
-						<a class="s-btn" href="{{ service.details }}">See More</a>
+						<a id="sbtn" class="s-btn" href="{{ service.details }}">See More</a>
 
 					</div>
 

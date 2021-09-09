@@ -45,7 +45,260 @@
     font-size: 2rem;
   }
 }
+/***********************gal s5***********************/
+@media screen and (max-width: 360px) {
+  #logoF {
+    text-align: left;
+    height: 40px;
+    margin-left: 12px;
+  }
+  #menu_bar {
+    margin-right: 30px;
+  }
+  #id_heroC {
+    -ms-grid-columns: 300px;
+    grid-template-columns: 300px;
+    height: 100%;
+  }
 
+  #h2sections {
+    font: 17px/24px "Montserrat", "trebuchet MS", "bold";
+    color: #222121;
+  }
+  #work_btn {
+    height: 20px;
+    width: 105px;
+    font: 11px/20px "Montserrat", "trebuchet MS", "Tahoma";
+
+    border-radius: 40px;
+  }
+
+  #imgSection {
+    height: 250px;
+  }
+
+  /******* Section 2 ***********/
+  #titreS2 {
+    font: 18px/24px "Montserrat", "trebuchet MS", "bold";
+    font-weight: bold;
+  }
+
+  #P_Sections,
+  #exec_descrip {
+    font: 13px/24px "Montserrat", "trebuchet MS", "bold";
+  }
+  #service-section {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    background: #f6f6fd;
+  }
+
+  #sboxcontainer {
+    width: 470px;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 100px;
+    margin-right: 150px;
+  }
+  #sbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    width: 200px;
+    height: 250px;
+    box-sizing: border-box;
+    margin: 15px;
+    position: relative;
+    background: white;
+  }
+
+  #sbtn {
+    overflow: visible;
+    position: relative;
+    float: right;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    height: 20px;
+    width: 60px;
+    font: 10px/20px "Montserrat", "trebuchet MS", "Tahoma";
+    color: #f7f7f7;
+    background: #2075ad;
+    border-radius: 20px;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+    text-align: center;
+  }
+  #WWO {
+    color: black;
+    margin-right: 162px;
+    font-size: 20px;
+  }
+  #sboximg {
+    width: 50px;
+    height: 50px;
+  }
+  #sboxh1 {
+    font-size: 15px;
+  }
+  #sboxp {
+    font-size: 13px;
+  }
+  #imgSection2 {
+    height: 200px;
+    width: 250px;
+  }
+
+  #insights_ibox {
+    justify-content: space-between;
+    align-items: center;
+
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: #f6f9fd;
+    display: grid;
+    grid-template-columns: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    width: 300px;
+    height: 300px;
+    box-sizing: border-box;
+    margin: 40px;
+    position: relative;
+    background: white;
+  }
+  #insights_ibox img {
+    height: 100px;
+    width: 150px;
+    margin-right: 120px;
+  }
+  #insights_ibox h1 {
+    color: #576975;
+    letter-spacing: 0.5px;
+    font-size: 2rem;
+    margin-bottom: 4px;
+  }
+  #insights_ibox p {
+    color: rgba(87, 105, 117, 0.9);
+    text-align: left;
+    font-size: 0.8rem;
+    margin-left: 20px;
+    margin-right: 140px;
+  }
+  #insights_ibox a {
+    letter-spacing: 0.5px;
+    font-size: 1rem;
+    margin-bottom: 2px;
+    margin-right: 180px;
+  }
+  #img_contact {
+    height: 30px;
+    width: 33px;
+  }
+  #minicontainer {
+    display: grid;
+
+    grid-template-columns: 0.25fr 0.25fr;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    z-index: 1;
+    width: 200px;
+    max-width: 1200px;
+  }
+  #id_heroContact {
+    -ms-grid-columns: 300px;
+    grid-template-columns: 200px;
+    height: 100%;
+  }
+  #contact_btn {
+    height: 20px;
+    width: 105px;
+    font: 11px/20px "Montserrat", "trebuchet MS", "Tahoma";
+    border-radius: 40px;
+    margin-right: 191px;
+  }
+  #imgcontact {
+    height: 200px;
+    width: 300px;
+  }
+  #formcontact {
+    width: 221px;
+    margin-right: 102px;
+  }
+  #footermini {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgba(87, 105, 117, 0.9);
+  }
+
+  #imgfooter {
+    display: block;
+    margin-right: 100px;
+
+    height: 50px;
+    width: 125px;
+  }
+  #footerp {
+    font-size: 15px;
+    font-weight: lighter;
+    font-family: Montserrat;
+    color: #102131;
+  }
+  #follow {
+    font-size: 13px;
+    font-weight: lighter;
+    font-family: Montserrat;
+    color: #102131;
+  }
+
+  #footer_img1 {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 200px;
+    height: 150px;
+  }
+
+  #copyright {
+    font-size: 11px;
+    color: #102131;
+    font-family: Montserrat;
+    font-weight: normal;
+  }
+  #facebook,
+  #insta,
+  #gog,
+  #link {
+    padding-right: 6px !important;
+  }
+
+  #exec_descrip {
+    font-size: 12.5px;
+  }
+  #miniarticle {
+    display: block;
+    height: 200px;
+  }
+
+  #minibody {
+    width: 360px;
+  }
+
+  
+}
 /*****ipad pro ********/
 @media screen and (max-width: 1024px) {
   .navbar__logo {
@@ -61,27 +314,21 @@
   }
 }
 
-/* Large screens ----------- */
+/* Large screens ----------- 
 @media only screen and (min-width: 360px) {
-  /* Styles */
+ 
   .navbar__logo {
     margin-left: -50px;
-    /* size: 24px; */
+   
     height: 35px;
     width: 120px;
     margin-left: -170px;
   }
-}
+}*/
 .navbar__menu {
   list-style: none;
   text-align: center;
   margin-right: 24px;
-}
-
-@media screen and (max-width: 768px) {
-  .navbar__menu {
-    display: none;
-  }
 }
 
 /***Desktops and laptops *************/
@@ -1756,5 +2003,171 @@ hr,
 #seeIns {
   margin-left: 900px;
 }
+@media only screen and (max-width: 768px) {
+  .services {
+    width: 100%;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    background: #f6f6fd;
+  }
+
+  .s-box-container {
+    width: 470px;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+  }
+  .s-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    width: 150px;
+
+    height: 200px;
+    box-sizing: border-box;
+    margin: 15px;
+    position: relative;
+    background: white;
+  }
+
+  .s-btn {
+    overflow: visible;
+    position: relative;
+    float: right;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    height: 20px;
+    width: 40px;
+    font: 5px/10px "Montserrat", "trebuchet MS", "Tahoma";
+    color: #f7f7f7;
+    background: #2075ad;
+    border-radius: 20px;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+    text-align: center;
+  }
+
+  .s-box img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/*****************************************************************************************/
+
+@media screen and (max-width: 768px) {
+  .navbar__bars {
+    color: #222121;
+    opacity: 1;
+    position: absolute;
+    top: 22px;
+    right: 20px;
+    font-size: 2rem;
+  }
+  .navbar__logo {
+    text-align: left;
+    margin-right: 510px;
+    height: 70px;
+  }
+}
+
+.navbar__menu {
+  list-style: none;
+  text-align: center;
+  margin-right: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar__menu {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero__container {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero__container--left {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .hero__container--left {
+    line-height: 1.5;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .hero__container--left h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font: 25px/40px "Montserrat", "trebuchet MS", "bold";
+    color: #222121;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .hero__container--left h2 {
+    font-size: 2rem;
+    font: 16px/40px "Montserrat", "trebuchet MS", "bold";
+    color: #222121;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .hero__container--left p {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .hero__container--right h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font: 25px/40px "Montserrat", "trebuchet MS", "bold";
+    color: #222121;
+    text-align: left;
+  }
+}
+@media screen and (max-width: 280px) {
+  .hero__container--right h2 {
+    font-size: 2rem;
+    font: 16px/40px "Montserrat", "trebuchet MS", "bold";
+    color: #222121;
+    text-align: left;
+  }
+}
+@media screen and (max-width: 280px) {
+  .hero__container--right p {
+    font-size: 1.5rem;
+    text-align: left;
+  }
+}
+@media (max-width: 1050px) {
+  .s-box-container {
+    flex-wrap: wrap;
+  }
+  .services {
+    height: auto;
+  }
+  .s-heading {
+    margin: 15px;
+  }
+  .s-box {
+    flex-grow: 1;
+  }
+}
 /*# sourceMappingURL=styles.css.map */

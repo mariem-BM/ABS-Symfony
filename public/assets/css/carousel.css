@@ -120,3 +120,15 @@ Attribution required
   background: white;
   height: 290px;
 }
+
+@media screen and (max-width: 360px) {
+  /* show 1 item */
+  .carousel-inner .active,
+  .carousel-inner .active + .carousel-item {
+    display: block;
+  }
+  #bgS7 {
+    background: white;
+    height: 320px;
+  }
+}

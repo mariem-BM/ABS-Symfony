@@ -8,19 +8,19 @@
 				<br>
 				<br>
 				<br>
-				<h2>{{ page.titre }}</h2>
-				<div class="hero__container">
+				<h2 id="h2sections">{{ page.titre }}</h2>
+				<div class="hero__container" id="id_heroContact">
 
 					<div class="hero__container--left">
 
-						<div class="hero__minicontainer">
+						<div class="hero__minicontainer" id="minicontainer">
 							<div class="hero__minicontainer--left">
-								<img alt="Get_direction" src="{{asset('uploads/brochures/'~page.imgPages)}}" height="55px" width="55px"/>
+								<img id="img_contact" alt="Get_direction" src="{{asset('uploads/brochures/'~page.imgPages)}}" height="55px" width="55px"/>
 							</div>
 							<div class="hero__minicontainer--right">
-								<p>{{ page.description }}</p>
+								<p id="P_Sections">{{ page.description }}</p>
 
-								<button class="hero__container--minibtn">
+								<button id="contact_btn" class="hero__container--minibtn">
 									<a href="{{ page.pagesdetails }}">Get direction</a>
 								</button>
 							</div>
@@ -36,12 +36,12 @@
 					<div class="hero__container--right">
 						<div class="hero__minicontainer">
 							<div class="hero__minicontainer--left">
-								<img alt="Get_direction" src="{{asset('uploads/brochures/'~page.imgPages)}}" height="55px" width="55px"/>
+								<img id="img_contact" alt="Get_direction" src="{{asset('uploads/brochures/'~page.imgPages)}}" height="55px" width="55px"/>
 							</div>
 							<div class="hero__minicontainer--right">
-								<p>{{ page.description }}</p>
+								<p id="P_Sections">{{ page.description }}</p>
 
-								<button class="hero__container--minibtn">
+								<button id="contact_btn" class="hero__container--minibtn">
 									<a href="{{ page.pagesdetails }}">Get direction</a>
 
 								</button>

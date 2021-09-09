@@ -1,36 +1,33 @@
 {% if pages %}
 
 	<div class="hero">
-		<div class="hero__container">
+		<div class="hero__container" id="id_heroC">
 			<div class="hero__container--left">
 				{% for page in pages %}
 					{% if page.id == 7 %}
-   <a href="{{ path('pagesfront') }}"> 
-						<h2>{{ page.titre }}</h2>
-						<br>
-						<br>
-						<br>
+						<a href="{{ path('pagesfront') }}">
+							<h2 id="titreS2">{{ page.titre }}</h2>
+							<br>
+							<br>
+							<br>
 
-						<p>{{ page.description }}</p>
-						<br>
-						<br>
-						<br>
+							<p id="P_Sections">{{ page.description }}</p>
+							<br>
+							<br>
+							<br>
 
-						<button class="hero__container--btn">
-							<a href="{{ page.pagesdetails }}">See our Story</a>
-
+							<button id="work_btn" class=" hero__container--btn">
+								<a href="{{ page.pagesdetails }}">See our Story</a>
+							</p>
 						</button>
 					</div>
 					<div class="hero__container--right">
-						<img alt="alien" src="{{asset('uploads/brochures/'~page.imgPages)}}">
+						<img id="imgSection" alt="alien" src="{{asset('uploads/brochures/'~page.imgPages)}}">
 
 					</div>
 				</div>
-				</a>
-			</div>
+			</a>
+		</div>
 
-		{% endif %}
-	{% endfor %}
-
-
-{% endif %}
+	{% endif %}
+{% endfor %}{% endif %}

@@ -1,27 +1,27 @@
 {% if pages %}
 
 	<div class="hero">
-		<div class="hero__container">
+		<div class="hero__container" id="id_heroC">
 			<div class="hero__container--left">
 
 				{% for page in pages %}
 					{% if page.id == 6  %}
-			
-			           <a href="{{ path('pagesfront') }}">         
-						<h2>{{ page.titre }}</h2>
-						<br>
-						<br>
-						<br>
 
-						<button class="hero__container--btn">
-							<a href="{{ page.pagesdetails }}">Work with us</a>
+						<a href="{{ path('pagesfront') }}">
+							<h2 id="h2sections">{{ page.titre }}</h2>
+							<br>
+							<br>
+							<br>
 
+							<button class="hero__container--btn" id="work_btn">
+								<a href="{{ page.pagesdetails }}">Work with us</a>
+
+							</div>
+
+							<div class="hero__container--right">
+								<img id="imgSection" src="{{asset('uploads/brochures/'~page.imgPages)}}" alt="2"/>
+							</div>
 						</div>
-
-						<div class="hero__container--right">
-						<img alt="2" src="{{asset('uploads/brochures/'~page.imgPages)}}">
-						</div>
-					</div>
 					</a>
 				</div>
 			{% endif %}

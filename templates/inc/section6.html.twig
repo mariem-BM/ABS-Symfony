@@ -1,6 +1,6 @@
 {% if articles %}
 	<div class="hero">
-		<div class="hero__containeri">
+		<div class="hero__containeri" id="id_heroC">
 			<div class="hero__container--left">
 				<h2>INSIGHTS</h2>
 			</div>
@@ -21,7 +21,7 @@
 
 
 						<div class="carousel-item col-md-4 {% if loop.index0 == 0 %} active {% endif %}" href="{{ path('blogfront') }}">
-							<div class=" i-box">
+							<div class=" i-box" id="insights_ibox">
 								<img src="{{asset('uploads/brochures/'~article.picture)}}" alt=""/>
 
 								<br>

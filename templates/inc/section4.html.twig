@@ -1,21 +1,21 @@
 {% if pages %}
 
 	<div class="hero">
-		<div class="hero__container">
+		<div class="hero__container" id="id_heroC">
 			<div class="hero__container--left">
 				{% for page in pages %}
 					{% if page.id == 5 %}
 
-						<h1>{{ page.titre }}</h1>
+						<h1 id="titreS2">{{ page.titre }}</h1>
 						<br>
 						<br>
 						<br>
 
-						<p>{{ page.description }}</p>
+						<p id="P_Sections">{{ page.description }}</p>
 						<br>
 						<br>
 						<br>
-						<button class="hero__container--btn">
+						<button id="work_btn" class=" hero__container--btn">
 							<a href="{{ page.pagesdetails }}">See our Story</a>
 
 						</button>
@@ -23,7 +23,7 @@
 
 					</div>
 					<div class="hero__container--right">
-						<img alt="2" src="{{asset('uploads/brochures/'~page.imgPages)}}">
+						<img id="imgSection2" alt="2" src="{{asset('uploads/brochures/'~page.imgPages)}}">
 
 
 					</div>

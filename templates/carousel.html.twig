@@ -2,7 +2,7 @@
 	<div class="hero" id="bgS7">
 		<br>
 		<br>
-		<h2>REFERENCES</h2>
+		<h2 id="titreS2">REFERENCES</h2>
 		<br>
 		<br>
 		<br>
@@ -14,10 +14,10 @@
 					{% for refrences in refrencess %}
 
 
-						<div class="carousel-item col-md-4 {% if loop.index0 == 0 %} active {% endif %}">
+						<div id="cars_item"class="carousel-item col-md-4 {% if loop.index0 == 0 %} active {% endif %}">
 							<a href="{{ path('refrencesfront') }}">
 
-								<img src="{{asset('uploads/brochures/'~refrences.imgRef)}}" class="img-fluid mx-auto d-block" height="150" width="150" alt=""/>
+								<img id="imgSection2" src="{{asset('uploads/brochures/'~refrences.imgRef)}}" class="img-fluid mx-auto d-block" height="150" width="150" alt=""/>
 
 
 							</a>
