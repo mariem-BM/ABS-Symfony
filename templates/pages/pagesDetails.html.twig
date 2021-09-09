@@ -1,0 +1,12 @@
+{% extends 'back.html.twig' %}
+{% block title %}
+	{{ page.titre }}
+{% endblock %}
+{% block content  %}
+	<img {{ page.imgPages }} class="responsive-img">
+	<h1>{{ page.titre }}</h1>
+	<p>{{ page.description }}</p>
+	<p>{{ page.pagesdetails }}</p>
+	<hr>
+	<a href="/pages">Retour</a>
+{% endblock %}

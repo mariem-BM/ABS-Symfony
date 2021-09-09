@@ -1,0 +1,9 @@
+{% extends 'back.html.twig' %}
+{% block title %}Modifier Refrence
+{% endblock %}
+{% block content  %}
+	{{ form_start(form) }}
+	{{ form_widget(form) }}
+	<button type="submit" class="btn btn-success">Modifier</button>
+	{{ form_end(form) }}
+{% endblock %}

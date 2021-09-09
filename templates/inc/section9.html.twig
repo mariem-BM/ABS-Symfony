@@ -1,0 +1,58 @@
+{% if pages %}
+	<div class="heroc">
+		<br>
+		<br>
+		<br>
+		{% for page in pages %}
+			{% if page.id == 9 %}
+				<br>
+				<br>
+				<br>
+				<h2 id="h2sections">{{ page.titre }}</h2>
+				<div class="hero__container" id="id_heroContact">
+
+					<div class="hero__container--left">
+
+						<div class="hero__minicontainer" id="minicontainer">
+							<div class="hero__minicontainer--left">
+								<img id="img_contact" alt="Get_direction" src="{{asset('uploads/brochures/'~page.imgPages)}}" height="55px" width="55px"/>
+							</div>
+							<div class="hero__minicontainer--right">
+								<p id="P_Sections">{{ page.description }}</p>
+
+								<button id="contact_btn" class="hero__container--minibtn">
+									<a href="{{ page.pagesdetails }}">Get direction</a>
+								</button>
+							</div>
+						</div>
+
+
+					</div>
+
+				{% endif %}
+
+
+				{% if page.id == 10 %}
+					<div class="hero__container--right">
+						<div class="hero__minicontainer">
+							<div class="hero__minicontainer--left">
+								<img id="img_contact" alt="Get_direction" src="{{asset('uploads/brochures/'~page.imgPages)}}" height="55px" width="55px"/>
+							</div>
+							<div class="hero__minicontainer--right">
+								<p id="P_Sections">{{ page.description }}</p>
+
+								<button id="contact_btn" class="hero__container--minibtn">
+									<a href="{{ page.pagesdetails }}">Get direction</a>
+
+								</button>
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+		{% endif %}
+	{% endfor %}
+
+{% endif %}

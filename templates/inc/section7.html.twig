@@ -1,0 +1,20 @@
+{% if refrencess %}
+	<div class="hero" id="bgS7">
+
+		<h2>REFERENCES</h2>
+		<br>
+		<br>
+		<div class="container">
+			<section class="customer-logos slider">
+				{% for refrences in refrencess %}
+
+					<div {% if loop.index0 == 0 %} class="item active" {% else %} class="item" {% endif %}>
+						<img class="img-responsive center-block" src="{{asset('uploads/brochures/'~refrences.imgRef)}}" height="150" width="150" alt=""/>
+					</div>
+				{% endfor %}
+			</section>
+
+		</div>
+
+	</div>
+{% endif %}

@@ -1,0 +1,40 @@
+{% if pages %}
+	<div class="hero">
+		<div class="hero__container">
+			<div class="hero__container--left">
+
+				{% for page in pages %}
+					{% if page.id == 8 %}
+
+
+						<div class="" alt="alien2">
+							<img id="imgSection2" alt="executive" src="{{asset('uploads/brochures/'~page.imgPages)}}" height="420px" width="420px">
+						</div>
+					</div>
+					<div class="hero__container--right">
+
+						<p id="exec_descrip">
+							<b>"</b>
+							{{ page.description }}
+							<b>"</b>
+						</p>
+
+						<br>
+						<br>
+						<br>
+
+						<h1 id="titreS2">{{ page.titre }}</h1>
+
+						<br>
+						<br>
+						<button id="work_btn" class="hero__container--btnleft">
+							<a href="{{ page.pagesdetails }}">See the team</a>
+
+						</button>
+					</div>
+				</div>
+			</div>
+
+		{% endif %}
+	{% endfor %}
+{% endif %}

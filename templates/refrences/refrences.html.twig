@@ -1,0 +1,35 @@
+{% extends "back.html.twig" %}
+
+{% block title%}
+	Liste des Article
+{% endblock %}
+{% block content  %}
+{% if refrencess %}
+	<table id="refrencess" class="table table-striped">
+		<thead>
+			<tr>
+				<th>picture</th>
+				<th>title</th>
+
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for refrences in refrencess %}
+				<tr>
+
+					<td>{{ refrences.imgRef }}</td>
+
+					<td>{{ refrences.refNom }}</td>
+
+
+					<td>
+
+						<a href="/refrences/edit/{{ refrences.id }}" class="btn btn-dark">Modifier</a>
+						<a href="/refrences/delete/{{ refrences.id }}" class="btn btn-danger" onclick="return confirm('Etes-vous sûr vous sûr de supprimer cette réference?');">Delete</a>
+					</td>
+				</tr>
+			</td>
+		</tbody>
+	</tr>
+</td></tbody></tr>{% endfor %}</tbody></table>{% else %}<p>Aucun Service</p>{% endif %}{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'back.html.twig' %}
+{% block title %}
+	{{ service.nom }}
+{% endblock %}
+{% block content  %}
+	<img {{ article.picture }} class="responsive-img">
+	<h1>{{ article.title }}</h1>
+	<p>{{ article.content }}</p>
+
+	<p>{{ article.publicationDate }}</p>
+	<p>{{ article.lastUpdateDate }}</p>
+	<p>{{ article.isPublished }}</p>
+
+	<hr>
+	<a href="/" class="btn btn-primary">Retour</a>
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'back.html.twig' %}
+{% block title %}Ajouter Service
+{% endblock %}
+{% block content  %}
+	{{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+	<tbody>
+		<tr>
+			<td>
+				<div class="input-field col s12 m12 l12">
+
+					{{ form_widget(form.name, {'attr': {'placeholder': 'Name'}}) }}
+				</div>
+				<br>
+			</td>
+			<td>
+				<div class="input-field col s12 m6 l6">
+					{{ form_widget(form.lastname, {'attr': {'placeholder': 'Lastname'}}) }}
+
+				</div>
+				<br>
+			</td>
+			<td>
+				<div class="input-field col s12 m12 l12">
+					{{ form_widget(form.email, {'attr': {'class': 'materialize-textarea', 'placeholder': 'e-mail'}}) }}
+				</div>
+				<br>
+				<div class="input-field col s12 m12 l12">
+					{{ form_widget(form.message, {'attr': {'placeholder': 'message'}}) }}
+
+
+				</div>
+				<br>
+				<div class="input-field col s12 m12 l12">
+					<input type="submit" name="" value="Enregistrer" class="btn btn-primary"></div>
+			</td>
+		</tr>
+	</tbody>
+	{{ form_end(form) }}
+{% endblock %}

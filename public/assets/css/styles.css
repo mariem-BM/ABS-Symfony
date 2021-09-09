@@ -1,0 +1,2146 @@
+#content {
+  margin: 0px;
+}
+.navbar__logo,
+.navbar__menu,
+.navbar__menu--links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.navbar {
+  background: #f6f9fd;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  z-index: 10;
+  position: relative;
+}
+
+.navbar__logo {
+  color: #222121;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+  margin-left: 24px;
+}
+
+.navbar__bars {
+  opacity: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar__bars {
+    color: #222121;
+    opacity: 1;
+    position: relative;
+    top: 22px;
+    right: 20px;
+    font-size: 2rem;
+  }
+}
+/***********************gal s5***********************/
+@media screen and (max-width: 360px) {
+  #logoF {
+    text-align: left;
+    height: 40px;
+    margin-left: 12px;
+  }
+
+  #menu_bar {
+    margin-right: 30px;
+  }
+  #id_heroC {
+    -ms-grid-columns: 300px;
+    grid-template-columns: 300px;
+    height: 100%;
+  }
+  #id_heroC {
+    grid-template-columns: 300px;
+  }
+
+  #h2sections {
+    font: 17px/24px "Montserrat", "trebuchet MS", "bold";
+    color: #222121;
+  }
+  #work_btn {
+    height: 20px;
+    width: 105px;
+    font: 11px/20px "Montserrat", "trebuchet MS", "Tahoma";
+
+    border-radius: 40px;
+  }
+
+  #imgSection {
+    height: 250px;
+  }
+
+  /******* Section 2 ***********/
+  #titreS2 {
+    font: 18px/24px "Montserrat", "trebuchet MS", "bold";
+    font-weight: bold;
+  }
+
+  #P_Sections,
+  #exec_descrip {
+    font: 13px/24px "Montserrat", "trebuchet MS", "bold";
+  }
+  #service-section {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    background: #f6f6fd;
+  }
+
+  #sboxcontainer {
+    width: 470px;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 100px;
+    /* margin-right: 150px;*/
+  }
+  #sbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    width: 200px;
+    height: 250px;
+    box-sizing: border-box;
+    margin: 15px;
+    position: relative;
+    background: white;
+  }
+
+  #sbtn {
+    overflow: visible;
+    position: relative;
+    float: right;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    height: 20px;
+    width: 60px;
+    font: 10px/20px "Montserrat", "trebuchet MS", "Tahoma";
+    color: #f7f7f7;
+    background: #2075ad;
+    border-radius: 20px;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+    text-align: center;
+  }
+  #WWO {
+    color: black;
+    margin-right: 162px;
+    font-size: 20px;
+  }
+  #sboximg {
+    width: 50px;
+    height: 50px;
+  }
+  #sboxh1 {
+    font-size: 15px;
+  }
+  #sboxp {
+    font-size: 13px;
+  }
+  #imgSection2 {
+    height: 200px;
+    width: 250px;
+  }
+
+  #insights_ibox {
+    justify-content: space-between;
+    align-items: center;
+
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: #f6f9fd;
+    display: grid;
+    grid-template-columns: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    width: 300px;
+    height: 300px;
+    box-sizing: border-box;
+    margin: 40px;
+    position: relative;
+    background: white;
+  }
+  #insights_ibox img {
+    height: 100px;
+    width: 150px;
+    /*  margin-right: 120px;*/
+  }
+  #insights_ibox h1 {
+    color: #576975;
+    letter-spacing: 0.5px;
+    font-size: 2rem;
+    margin-bottom: 4px;
+  }
+  #insights_ibox p {
+    color: rgba(87, 105, 117, 0.9);
+    text-align: left;
+    font-size: 0.8rem;
+    margin-left: 20px;
+    /* margin-right: 140px;*/
+  }
+  #insights_ibox a {
+    letter-spacing: 0.5px;
+    font-size: 1rem;
+    margin-bottom: 2px;
+  }
+  #img_contact {
+    height: 30px;
+    width: 33px;
+  }
+  #minicontainer {
+    display: grid;
+
+    grid-template-columns: 0.25fr 0.25fr;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    z-index: 1;
+    width: 200px;
+    max-width: 1200px;
+  }
+  #id_heroContact {
+    -ms-grid-columns: 300px;
+    grid-template-columns: 200px;
+    height: 100%;
+  }
+  #contact_btn {
+    height: 20px;
+    width: 105px;
+    font: 11px/20px "Montserrat", "trebuchet MS", "Tahoma";
+    border-radius: 40px;
+    margin-right: 191px;
+  }
+  #imgcontact {
+    height: 200px;
+    width: 300px;
+  }
+  #formcontact {
+    width: 221px;
+    margin-right: 102px;
+  }
+  #footermini {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgba(87, 105, 117, 0.9);
+  }
+
+  #imgfooter {
+    display: block;
+    margin-right: 100px;
+
+    height: 50px;
+    width: 125px;
+  }
+  #footerp {
+    font-size: 15px;
+    font-weight: lighter;
+    font-family: Montserrat;
+    color: #102131;
+  }
+  #follow {
+    font-size: 13px;
+    font-weight: lighter;
+    font-family: Montserrat;
+    color: #102131;
+  }
+
+  #footer_img1 {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 200px;
+    height: 150px;
+  }
+
+  #copyright {
+    font-size: 11px;
+    color: #102131;
+    font-family: Montserrat;
+    font-weight: normal;
+  }
+  #facebook,
+  #insta,
+  #gog,
+  #link {
+    padding-right: 6px !important;
+  }
+
+  #exec_descrip {
+    font-size: 12.5px;
+  }
+  #miniarticle {
+    display: block;
+    height: 200px;
+  }
+}
+/*****ipad pro ********/
+@media screen and (max-width: 1024px) {
+  .navbar__logo {
+    margin-left: 20px;
+  }
+  #navid {
+    margin-left: 20px;
+  }
+}
+
+.navbar__menu {
+  list-style: none;
+  text-align: center;
+}
+
+/***Desktops and laptops *************/
+@media only screen and (max-width: 1224px) {
+  .navbar__logo {
+    margin-left: 24px;
+    height: 81px;
+    width: 284px;
+  }
+}
+.navbar__menu--links {
+  color: #222121;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  font: 15px/40px "Montserrat", "trebuchet MS", "Tahoma";
+}
+
+.navbar__menu--links:hover {
+  color: #222121;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+/*button fou9aneya fel header*/
+.navbar__menu #button {
+  overflow: visible;
+  float: right;
+  border: 1px;
+  border-radius: 4px;
+  border-style: solid;
+  padding: 1px;
+  cursor: pointer;
+  height: 30px;
+  width: 140px;
+  font: 15px/40px "Montserrat", "trebuchet MS", "Tahoma";
+  color: #102131;
+  background: #f6f9fd;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+  border-color: #102131;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 22px;
+}
+
+.navbar__menu #button:hover {
+  background: #f6f9fd;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.hero {
+  /*margin-left: 50px;
+  margin-right: 50px;*/
+  background-color: #f6f9fd;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+.heroc {
+  /*margin-left: 50px;
+  margin-right: 50px;*/
+  background-color: #f6f9fd;
+}
+.heroc h2 {
+  font-size: 4rem;
+  font: 40px/40px "Montserrat", "trebuchet MS", "bold";
+  color: #222121;
+  text-align: center;
+}
+.hero__containeri {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-items: center;
+  margin: 0 auto;
+
+  z-index: 1;
+  width: 100%;
+  max-width: 1200px;
+  padding-right: 24px;
+  padding-left: 24px;
+}
+.hero h2 {
+  font-size: 4rem;
+  font: 40px/40px "Montserrat", "trebuchet MS", "bold";
+  color: #222121;
+  text-align: center;
+}
+.hero p {
+  font-size: 2rem;
+  font: 15px/20px "Montserrat", "trebuchet MS", "bold";
+  color: #222121;
+  text-align: center;
+}
+
+.hero__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-items: center;
+  margin: 0 auto;
+  height: 80vh;
+  z-index: 1;
+  width: 100%;
+  max-width: 1200px;
+  padding-right: 24px;
+  padding-left: 24px;
+}
+
+@media screen and (max-width: 768px) {
+  .hero__container {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    height: 100%;
+  }
+}
+
+.hero__container--left {
+  width: 100%;
+  line-height: 1.2;
+  align-items: left;
+  text-align: left;
+}
+
+@media screen and (max-width: 768px) {
+  .hero__container--left {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .hero__container--left {
+    line-height: 1.5;
+  }
+}
+
+.hero__container--left h1 {
+  font-size: 4rem;
+  color: #102131;
+  text-align: left;
+}
+
+@media screen and (max-width: 280px) {
+  .hero__container--left h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font: 25px/40px "Montserrat", "trebuchet MS", "bold";
+    color: #222121;
+    text-align: left;
+  }
+}
+
+.hero__container--left h2 {
+  font-size: 2rem;
+
+  margin-top: 1rem;
+  font-weight: 1700;
+  font: 30px/40px "Montserrat", "trebuchet MS", "bold";
+  color: #222121;
+  text-align: left;
+}
+
+@media screen and (max-width: 280px) {
+  .hero__container--left h2 {
+    font-size: 2rem;
+    font: 16px/40px "Montserrat", "trebuchet MS", "bold";
+    color: #222121;
+  }
+}
+
+.hero__container--left p {
+  font-size: 4rem;
+  font: 16px/40px "Montserrat", "trebuchet MS", "Tahoma";
+  color: #222121;
+  text-align: left;
+}
+
+@media screen and (max-width: 280px) {
+  .hero__container--left p {
+    font-size: 1.5rem;
+  }
+}
+
+.hero__container--btn {
+  overflow: visible;
+  position: relative;
+  float: left;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  height: 40px;
+  width: 210px;
+  font: 16px/40px "Montserrat", "trebuchet MS", "Tahoma";
+  /*font-size: 1rem;*/
+  color: #f7f7f7;
+  /*text-transform: uppercase;*/
+  background: #2075ad;
+  border-radius: 40px;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+}
+/*button louta fel body*/
+.hero__container--btn a {
+  position: relative;
+  z-index: 2;
+  color: #f7f7f7;
+  text-decoration: none;
+}
+
+.hero__container--btn:after {
+  overflow: visible;
+  position: relative;
+  float: left;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  height: 40px;
+  width: 210px;
+  font: 16px/40px "Montserrat", "trebuchet MS", "Tahoma";
+  /*font-size: 1rem;*/
+  color: #f7f7f7;
+  /*text-transform: uppercase;*/
+  background: #2373a8;
+  border-radius: 40px;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+}
+
+.hero__container--btn:hover:after {
+  width: 100%;
+}
+.hero__container--btnleft {
+  overflow: visible;
+  position: relative;
+  float: left;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  height: 40px;
+  width: 210px;
+  font: 16px/40px "Montserrat", "trebuchet MS", "Tahoma";
+  /*font-size: 1rem;*/
+  color: #f7f7f7;
+  /*text-transform: uppercase;*/
+  background: #2075ad;
+  border-radius: 40px;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+}
+/*button louta fel body*/
+.hero__container--btnleft a {
+  position: relative;
+  z-index: 2;
+  color: #f7f7f7;
+  text-decoration: none;
+}
+
+.hero__container--btnleft:after {
+  overflow: visible;
+  position: relative;
+  float: left;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  height: 40px;
+  width: 210px;
+  font: 16px/40px "Montserrat", "trebuchet MS", "Tahoma";
+  /*font-size: 1rem;*/
+  color: #f7f7f7;
+  /*text-transform: uppercase;*/
+  background: #2373a8;
+  border-radius: 40px;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+}
+
+.hero__container--btnleft:hover:after {
+  width: 100%;
+}
+.hero__container--right {
+  text-align: center;
+}
+.hero__container--right h1 {
+  font-size: 4rem;
+  color: #102131;
+  text-align: left;
+}
+.hero__container--minibtn {
+  overflow: visible;
+  position: relative;
+  float: center;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  height: 30px;
+  width: 140px;
+  font: 12px/20px "Montserrat", "trebuchet MS", "Tahoma";
+  /*font-size: 1rem;*/
+  color: #f7f7f7;
+  /*text-transform: uppercase;*/
+  background: #2075ad;
+  border-radius: 40px;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+/*button louta fel body*/
+.hero__container--minibtn a {
+  position: relative;
+  z-index: 2;
+  color: #f7f7f7;
+  text-decoration: none;
+}
+
+.hero__container--minibtn:after {
+  overflow: visible;
+  position: relative;
+  float: right;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  height: 40px;
+  width: 210px;
+  font: 16px/40px "Montserrat", "trebuchet MS", "Tahoma";
+  /*font-size: 1rem;*/
+  color: #f7f7f7;
+  /*text-transform: uppercase;*/
+  background: #2373a8;
+  border-radius: 40px;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+}
+
+.hero__container--minibtn:hover:after {
+  width: 100%;
+}
+@media screen and (max-width: 280px) {
+  .hero__container--right h1 {
+    font-size: 1.5rem;
+
+    font: 25px/40px "Montserrat", "trebuchet MS", "bold";
+    color: #222121;
+    text-align: left;
+  }
+}
+
+.hero__container--right h2 {
+  font-size: 2rem;
+  margin-top: 1rem;
+  font: 30px/40px "Montserrat", "trebuchet MS", "bold";
+  color: #222121;
+  text-align: left;
+}
+
+@media screen and (max-width: 280px) {
+  .hero__container--right h2 {
+    font-size: 2rem;
+    font: 16px/40px "Montserrat", "trebuchet MS", "bold";
+    color: #222121;
+    text-align: left;
+  }
+}
+
+.hero__container--right p {
+  font-size: 4rem;
+  font: 16px/40px "Montserrat", "trebuchet MS", "Tahoma";
+  color: #222121;
+  text-align: left;
+}
+
+@media screen and (max-width: 280px) {
+  .hero__container--right p {
+    font-size: 1.5rem;
+    text-align: left;
+  }
+}
+
+.hero__container--right b {
+  font-size: 4rem;
+}
+
+.hero__container--img {
+  height: 100%;
+  width: 100%;
+}
+.hero__container--img2 {
+  height: 400px;
+  width: 400px;
+}
+.hero__minicontainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+
+  z-index: 1;
+  width: 200px;
+  max-width: 1200px;
+}
+.hero__minicontainer--left {
+  line-height: 1.2;
+}
+.hero__minicontainer--right {
+  line-height: 1.2;
+  width: 300px;
+}
+/***********************************************************************************************************************/
+/*services css*/
+/* CSS Document */
+body {
+  background-color: #f6f9fd;
+  font-family: calibri;
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+}
+.services {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  padding-left: 90px;
+  padding-right: 90px;
+  background: #f6f6fd;
+}
+.s-heading {
+  text-align: left;
+}
+.s-heading h1 {
+  color: #576975;
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin: 0px;
+  text-align: left;
+}
+.s-heading p {
+  color: rgba(87, 105, 117, 0.6);
+  font-size: 1rem;
+  margin: 5px;
+  text-align: left;
+}
+.s-box-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
+}
+.s-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  width: 300px;
+  padding: 20px 25px;
+  height: 400px;
+  box-sizing: border-box;
+  margin: 30px;
+  position: relative;
+  background: white;
+  margin-left: 60px;
+}
+.s-box img {
+  height: 75px;
+}
+.s-box h1 {
+  color: #576975;
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+.s-box p {
+  color: rgba(87, 105, 117, 0.9);
+  text-align: center;
+}
+.s-btn {
+  overflow: visible;
+  position: relative;
+  float: right;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  height: 40px;
+  width: 140px;
+  font: 16px/40px "Montserrat", "trebuchet MS", "Tahoma";
+  color: #f7f7f7;
+  background: #2075ad;
+  border-radius: 40px;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.bar {
+  width: 100px;
+  height: 6px;
+  position: relative;
+  left: 20%;
+  top: -20%;
+  transform: translateX(-50%);
+  background-color: #4a90e2;
+  border-radius: 0px 0px 10px 10px;
+  display: none;
+  animation: bar 0.5s;
+}
+.s-box:hover {
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.08);
+  transition: all ease 0.3s;
+}
+.s-btn:hover {
+  background-color: #4a90e2;
+  border: 1px solid #4a90e2;
+  color: #ffffff;
+  transition: all ease 0.3s;
+}
+.s-box:hover .bar {
+  display: block;
+}
+@keyframes bar {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 100px;
+  }
+}
+@media (max-width: 1050px) {
+  .s-box-container {
+    flex-wrap: wrap;
+  }
+  .services {
+    height: auto;
+  }
+  .s-heading {
+    margin: 15px;
+  }
+  .s-box {
+    flex-grow: 1;
+  }
+}
+
+#WWO {
+  color: black;
+}
+/*****************************************************************************************/
+@-webkit-keyframes L_circle_rotate {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes L_circle_rotate {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes L_stroke_rotate {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  12.5% {
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+  }
+  25% {
+    -webkit-transform: rotate(270deg);
+    transform: rotate(270deg);
+  }
+  37.5% {
+    -webkit-transform: rotate(405deg);
+    transform: rotate(405deg);
+  }
+  50% {
+    -webkit-transform: rotate(540deg);
+    transform: rotate(540deg);
+  }
+  62.5% {
+    -webkit-transform: rotate(675deg);
+    transform: rotate(675deg);
+  }
+  75% {
+    -webkit-transform: rotate(810deg);
+    transform: rotate(810deg);
+  }
+  87.5% {
+    -webkit-transform: rotate(945deg);
+    transform: rotate(945deg);
+  }
+  100% {
+    -webkit-transform: rotate(1080deg);
+    transform: rotate(1080deg);
+  }
+}
+@keyframes L_stroke_rotate {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  12.5% {
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+  }
+  25% {
+    -webkit-transform: rotate(270deg);
+    transform: rotate(270deg);
+  }
+  37.5% {
+    -webkit-transform: rotate(405deg);
+    transform: rotate(405deg);
+  }
+  50% {
+    -webkit-transform: rotate(540deg);
+    transform: rotate(540deg);
+  }
+  62.5% {
+    -webkit-transform: rotate(675deg);
+    transform: rotate(675deg);
+  }
+  75% {
+    -webkit-transform: rotate(810deg);
+    transform: rotate(810deg);
+  }
+  87.5% {
+    -webkit-transform: rotate(945deg);
+    transform: rotate(945deg);
+  }
+  100% {
+    -webkit-transform: rotate(1080deg);
+    transform: rotate(1080deg);
+  }
+}
+@-webkit-keyframes L_stroke_left_grow {
+  0%,
+  100% {
+    -webkit-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+  }
+  50% {
+    -webkit-transform: rotate(-140deg);
+    transform: rotate(-140deg);
+  }
+}
+@keyframes L_stroke_left_grow {
+  0%,
+  100% {
+    -webkit-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+  }
+  50% {
+    -webkit-transform: rotate(-140deg);
+    transform: rotate(-140deg);
+  }
+}
+@-webkit-keyframes L_stroke_right_grow {
+  0%,
+  100% {
+    -webkit-transform: rotate(5deg);
+    transform: rotate(5deg);
+  }
+  50% {
+    -webkit-transform: rotate(140deg);
+    transform: rotate(140deg);
+  }
+}
+@keyframes L_stroke_right_grow {
+  0%,
+  100% {
+    -webkit-transform: rotate(5deg);
+    transform: rotate(5deg);
+  }
+  50% {
+    -webkit-transform: rotate(140deg);
+    transform: rotate(140deg);
+  }
+}
+.loader-circle {
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  color: #444;
+  margin-top: -1em;
+  margin-left: -1em;
+  position: absolute;
+  -webkit-animation: L_circle_rotate 1.568s linear infinite both;
+  animation: L_circle_rotate 1.568s linear infinite both;
+}
+.loader-circle .loader-stroke-left:before,
+.loader-circle .loader-stroke-right:before,
+.loader-circle:before {
+  content: "";
+  display: block;
+  border-style: solid;
+  border-width: 0.21429em;
+  border-color: currentColor;
+}
+.loader-circle,
+.loader-circle .loader-stroke-left,
+.loader-circle .loader-stroke-left:before,
+.loader-circle .loader-stroke-right,
+.loader-circle .loader-stroke-right:before,
+.loader-circle:before {
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+.loader-circle .loader-stroke-left:before,
+.loader-circle .loader-stroke-right {
+  position: absolute;
+  clip: rect(0 2em 2em 1em);
+}
+.loader-circle .loader-stroke-left,
+.loader-circle .loader-stroke-right:before {
+  position: absolute;
+  clip: rect(0 1em 2em 0);
+}
+.loader-circle:before {
+  position: absolute;
+  clip: rect(0 1.05em 1em 0.95em);
+}
+.loader-circle .loader-stroke-left,
+.loader-circle .loader-stroke-right,
+.loader-circle:before {
+  -webkit-animation: L_stroke_rotate 5332ms cubic-bezier(0.4, 0, 0.2, 1)
+    infinite both;
+  animation: L_stroke_rotate 5332ms cubic-bezier(0.4, 0, 0.2, 1) infinite both;
+}
+.loader-circle .loader-stroke-right:before {
+  -webkit-animation: L_stroke_right_grow 1333ms cubic-bezier(0.4, 0, 0.2, 1)
+    infinite both;
+  animation: L_stroke_right_grow 1333ms cubic-bezier(0.4, 0, 0.2, 1) infinite
+    both;
+}
+.loader-circle .loader-stroke-left:before {
+  -webkit-animation: L_stroke_left_grow 1333ms cubic-bezier(0.4, 0, 0.2, 1)
+    infinite both;
+  animation: L_stroke_left_grow 1333ms cubic-bezier(0.4, 0, 0.2, 1) infinite
+    both;
+}
+.mhn-slide .mhn-item {
+  width: 100%;
+  padding: 10px;
+}
+.mhn-slide .mhn-inner {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.16), 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  border-radius: 3px;
+}
+.mhn-slide .mhn-item img {
+  display: none;
+}
+.mhn-slide .mhn-img {
+  min-height: 200px;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  color: white;
+  /*background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=) #eee no-repeat center/cover;
+ */
+  position: relative;
+}
+.mhn-slide .mhn-text {
+  text-align: center;
+  padding: 0 10px;
+}
+.mhn-slide .mhn-text h4 {
+  font-weight: 700;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.mhn-slide .mhn-text p {
+  max-height: 4.5em;
+  overflow: hidden;
+}
+.mhn-slide .owl-stage-outer {
+  z-index: 1;
+}
+.mhn-slide .owl-nav {
+  color: #333;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.mhn-slide .owl-nav svg {
+  color: currentColor;
+}
+.mhn-slide .owl-nav .disabled {
+  display: none;
+}
+.mhn-slide .owl-prev,
+.mhn-slide .owl-next {
+  top: 110px;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  margin-top: -20px;
+  position: relative;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3), 0 0 4px rgba(0, 0, 0, 0.2);
+}
+.mhn-slide .owl-prev {
+  left: -10px;
+}
+.mhn-slide .owl-next {
+  right: -10px;
+}
+/*********************************************************************************************************************/
+/* Slider */
+
+.slick-slide {
+  margin: 0px 20px;
+}
+
+.slick-slide img {
+  width: 100%;
+}
+
+.slick-slider {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+.slick-list:focus {
+  outline: none;
+}
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+}
+.slick-track:before,
+.slick-track:after {
+  display: table;
+  content: "";
+}
+.slick-track:after {
+  clear: both;
+}
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide {
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 1px;
+}
+[dir="rtl"] .slick-slide {
+  float: right;
+}
+.slick-slide img {
+  display: block;
+}
+.slick-slide.slick-loading img {
+  display: none;
+}
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+.slick-initialized .slick-slide {
+  display: block;
+}
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+  display: none;
+}
+/*****************************************************************************************************************/
+/*contact us*/
+input[type="name"],
+input[type="email"],
+input[type="message"],
+input[type="lname"] textarea,
+select {
+  color: #666666;
+  border-color: #cccccc;
+}
+input[type="name"],
+input[type="email"],
+input[type="message"],
+input[type="lname"],
+select,
+textarea {
+  border: 1px solid;
+  border-radius: 0;
+  padding: 10px 15px;
+  max-width: 100%;
+  border-left-width: 10px;
+  border-left-color: #2075ad;
+  margin: 10px;
+}
+input[type="email"],
+input[type="message"] select,
+textarea .input-field {
+  border: 1px solid;
+  border-radius: 0;
+  padding: 10px 15px;
+  width: 400px;
+  border-left-width: 10px;
+  border-left-color: #2075ad;
+  margin: 10px;
+}
+input[type="submit" i] {
+  overflow: visible;
+  position: relative;
+  float: left;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  height: 40px;
+  width: 140px;
+  font: 12px/10px "Montserrat", "trebuchet MS", "Tahoma";
+  /*font-size: 1rem;*/
+  color: #f7f7f7;
+  /*text-transform: uppercase;*/
+  background: #2075ad;
+  border-radius: 40px;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+}
+
+.form-control {
+  display: block;
+  width: 300px;
+  height: 40px;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  border: 1px solid;
+  border-radius: 0;
+  padding: 10px 15px;
+  max-width: 100%;
+  border-left-width: 10px;
+  border-left-color: #2075ad;
+  margin: 10px;
+}
+textarea.form-control {
+  height: 150px;
+}
+/**********************************************/
+
+.dropup,
+.dropright,
+.dropdown,
+.dropleft {
+  position: relative;
+}
+
+.dropdown-toggle {
+  white-space: nowrap;
+}
+
+.dropdown-toggle::after {
+  display: inline-block;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
+}
+
+.dropdown-toggle:empty::after {
+  margin-left: 0;
+}
+
+.dropdown-menu {
+  position: relative;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 10rem;
+  padding: 0.5rem 0;
+  margin: 0.125rem 0 0;
+  font-size: 0.85rem;
+  color: #858796;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #e3e6f0;
+  border-radius: 0.35rem;
+}
+
+.dropdown-menu-left {
+  right: auto;
+  left: 0;
+}
+
+.dropdown-menu-right {
+  right: 0;
+  left: auto;
+}
+
+@media (min-width: 576px) {
+  .dropdown-menu-sm-left {
+    right: auto;
+    left: 0;
+  }
+  .dropdown-menu-sm-right {
+    right: 0;
+    left: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .dropdown-menu-md-left {
+    right: auto;
+    left: 0;
+  }
+  .dropdown-menu-md-right {
+    right: 0;
+    left: auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .dropdown-menu-lg-left {
+    right: auto;
+    left: 0;
+  }
+  .dropdown-menu-lg-right {
+    right: 0;
+    left: auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .dropdown-menu-xl-left {
+    right: auto;
+    left: 0;
+  }
+  .dropdown-menu-xl-right {
+    right: 0;
+    left: auto;
+  }
+}
+
+.dropup .dropdown-menu {
+  top: auto;
+  bottom: 100%;
+  margin-top: 0;
+  margin-bottom: 0.125rem;
+}
+
+.dropup .dropdown-toggle::after {
+  display: inline-block;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0.3em solid;
+  border-left: 0.3em solid transparent;
+}
+
+.dropup .dropdown-toggle:empty::after {
+  margin-left: 0;
+}
+
+.dropright .dropdown-menu {
+  top: 0;
+  right: auto;
+  left: 100%;
+  margin-top: 0;
+  margin-left: 0.125rem;
+}
+
+.dropright .dropdown-toggle::after {
+  display: inline-block;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0.3em solid transparent;
+  border-right: 0;
+  border-bottom: 0.3em solid transparent;
+  border-left: 0.3em solid;
+}
+
+.dropright .dropdown-toggle:empty::after {
+  margin-left: 0;
+}
+
+.dropright .dropdown-toggle::after {
+  vertical-align: 0;
+}
+
+.dropleft .dropdown-menu {
+  top: 0;
+  right: 100%;
+  left: auto;
+  margin-top: 0;
+  margin-right: 0.125rem;
+}
+
+.dropleft .dropdown-toggle::after {
+  display: inline-block;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+}
+
+.dropleft .dropdown-toggle::after {
+  display: none;
+}
+
+.dropleft .dropdown-toggle::before {
+  display: inline-block;
+  margin-right: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0.3em solid transparent;
+  border-right: 0.3em solid;
+  border-bottom: 0.3em solid transparent;
+}
+
+.dropleft .dropdown-toggle:empty::after {
+  margin-left: 0;
+}
+
+.dropleft .dropdown-toggle::before {
+  vertical-align: 0;
+}
+
+.dropdown-menu[x-placement^="top"],
+.dropdown-menu[x-placement^="right"],
+.dropdown-menu[x-placement^="bottom"],
+.dropdown-menu[x-placement^="left"] {
+  right: auto;
+  bottom: auto;
+}
+
+.dropdown-divider {
+  height: 0;
+  margin: 0.5rem 0;
+  overflow: hidden;
+  border-top: 1px solid #eaecf4;
+}
+
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 0.25rem 1.5rem;
+  clear: both;
+  font-weight: 400;
+  color: #3a3b45;
+  text-align: inherit;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  color: #2e2f37;
+  text-decoration: none;
+  background-color: #eaecf4;
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+  color: #fff;
+  text-decoration: none;
+  background-color: #4e73df;
+}
+
+.dropdown-item.disabled,
+.dropdown-item:disabled {
+  color: #b7b9cc;
+  pointer-events: none;
+  background-color: transparent;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.dropdown-header {
+  display: block;
+  padding: 0.5rem 1.5rem;
+  margin-bottom: 0;
+  font-size: 0.875rem;
+  color: #858796;
+  white-space: nowrap;
+}
+
+.dropdown-item-text {
+  display: block;
+  padding: 0.25rem 1.5rem;
+  color: #3a3b45;
+}
+.img-profile,
+.img-profile {
+  height: 3rem;
+  width: 3rem;
+  margin-left: 50px;
+}
+.dropdown-menu {
+  width: calc(100% - 1.5rem);
+  right: 0.75rem;
+}
+@media (min-width: 576px) {
+  .dropdown {
+    position: relative;
+  }
+  .dropdown .dropdown-menu {
+    width: auto;
+    right: 0;
+  }
+  .dropdown-list {
+    width: 20rem !important;
+  }
+  .dropdown-list .dropdown-item .text-truncate {
+    max-width: 13.375rem;
+  }
+}
+
+.topbar .dropdown .dropdown-menu {
+  width: 150px;
+  right: 0;
+}
+.navbar-expand .navbar-nav .dropdown-menu {
+  position: relative;
+}
+
+.hgroup,
+section {
+  display: block;
+  display: grid;
+  /* grid-template-rows: 200px 200px 200px 200px 200px 200px; */
+  grid-template-columns: 200px 200px 200px 200px 200px 200px;
+}
+
+.container {
+  max-width: 1140px;
+ 
+}
+
+.container-fluid {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+a:not([href]):not([tabindex]) {
+  text-decoration: none;
+  color: #025875;
+  font-weight: bold;
+  font-size: x-large;
+}
+
+/***************************************** Footer ********************************************************/
+
+.site-footer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 16px;
+  font-weight: bold;
+  color: rgba(87, 105, 117, 0.9);
+}
+.site-footer > * {
+  flex: 0 0 33.333%;
+  min-width: 300px;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-family: Montserrat;
+  font-weight: lighter;
+  border-top: rgba(87, 105, 117, 0.9);
+  border-width: 5px;
+  color: #102131;
+}
+#imgfooter {
+  display: block;
+  margin-right: 100px;
+
+  height: 100px;
+  width: 250px;
+}
+
+#follow {
+  font-size: 18px;
+  font-weight: lighter;
+  font-family: Montserrat;
+  color: #102131;
+}
+
+#footer_img1 {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+
+  width: 200px;
+}
+
+#copyright {
+  font-size: 16px;
+  color: #102131;
+  font-family: Montserrat;
+  font-weight: normal;
+}
+#facebook,
+#insta,
+#gog,
+#link {
+  padding-right: 6px !important;
+}
+
+#exec_descrip {
+  font-size: 14.5px;
+}
+
+/*************************************** future dark mode css****************************/
+
+#register,
+#profile,
+#login {
+  font-size: 12px;
+  color: #0c0c0c;
+}
+/*********************************************3thebbbbbbb*************************************************/
+.content {
+  width: 78%;
+  justify-content: center;
+  margin: auto;
+}
+.glider-contain {
+  width: 100%;
+  margin: 4em auto;
+  position: relative;
+}
+.glider {
+  margin: 0 auto;
+  position: relative;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  transform: translateZ(0);
+}
+.glider-track {
+  transform: translateZ(0);
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  z-index: 1;
+}
+.glider.draggable {
+  user-select: none;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+.glider.draggable .glider-slide img {
+  user-select: none;
+  pointer-events: none;
+}
+.glider.drag {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+.glider-slide {
+  user-select: none;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+}
+.glider-slide img {
+  max-width: 100%;
+}
+.glider::-webkit-scrollbar {
+  opacity: 0;
+  height: 0;
+}
+.glider-prev,
+.glider-next {
+  user-select: none;
+  position: absolute;
+  outline: none;
+  background: none;
+  padding: 0;
+  z-index: 2;
+  font-size: 40px;
+  text-decoration: none;
+  left: -23px;
+  border: 0;
+  top: 30%;
+  cursor: pointer;
+  color: #fff;
+  opacity: 1;
+  line-height: 1;
+  transition: opacity 0.5s cubic-bezier(0.17, 0.67, 0.83, 0.67),
+    color 0.5s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}
+.glider-prev:hover,
+.glider-next:hover,
+.glider-prev:focus,
+.glider-next:focus {
+  color: #bdc0c7;
+}
+.glider-next {
+  right: -23px;
+  left: auto;
+}
+.glider-next.disabled,
+.glider-prev.disabled {
+  opacity: 0.25;
+  color: #666;
+  cursor: default;
+}
+.glider-slide {
+  min-width: 150px;
+}
+.glider-hide {
+  opacity: 0;
+}
+.glider-dots {
+  user-select: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0;
+}
+.glider-dot {
+  border: 0;
+  padding: 0;
+  user-select: none;
+  outline: none;
+  display: block;
+  cursor: pointer;
+  color: #ccc;
+  border-radius: 999px;
+  background: #ccc;
+  width: 12px;
+  height: 12px;
+  margin: 7px;
+}
+.glider-dot:hover,
+.glider-dot:focus,
+.glider-dot.active {
+  background: #a89cc8;
+}
+@media (max-width: 36em) {
+  .glider::-webkit-scrollbar {
+    opacity: 1;
+    -webkit-appearance: none;
+    width: 7px;
+    height: 3px;
+  }
+  .glider::-webkit-scrollbar-thumb {
+    opacity: 1;
+    border-radius: 99px;
+    background-color: rgba(156, 156, 156, 0.25);
+    box-shadow: 0 0 1px rgba(255, 255, 255, 0.25);
+  }
+}
+
+/*INSGHTS css*/
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: #f6f9fd;
+  font-family: calibri;
+}
+a {
+  text-decoration: none;
+}
+
+.i-heading {
+  text-align: left;
+}
+.i-heading h1 {
+  color: #576975;
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin: 0px;
+  text-align: left;
+}
+.i-heading p {
+  color: rgba(87, 105, 117, 0.6);
+  font-size: 1rem;
+  margin: 5px;
+  text-align: left;
+}
+#carrouselI {
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 600px 600px 600px;
+  margin: 50px;
+}
+.i-box {
+  justify-content: space-between;
+  align-items: center;
+
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background: #f6f9fd;
+  display: grid;
+  grid-template-columns: 600px 600px 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  width: 400px;
+  height: 400px;
+  box-sizing: border-box;
+  margin: 40px;
+  position: relative;
+  background: white;
+  justify-content: space-between;
+}
+
+.i-box img {
+  height: 300px;
+  width: 400px;
+}
+.i-box h1 {
+  color: #576975;
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+.i-box p {
+  color: rgba(87, 105, 117, 0.9);
+  text-align: center;
+}
+.i-btn {
+  overflow: visible;
+  position: relative;
+  float: right;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+  height: 40px;
+  width: 140px;
+  font: 16px/40px "Montserrat", "trebuchet MS", "Tahoma";
+  color: #f7f7f7;
+  background: #2075ad;
+  border-radius: 40px;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.i-box:hover {
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.08);
+  transition: all ease 0.3s;
+}
+.i-btn:hover {
+  background-color: #4a90e2;
+  border: 1px solid #4a90e2;
+  color: #ffffff;
+  transition: all ease 0.3s;
+}
+.i-box:hover .bar {
+  display: block;
+}
+@keyframes bar {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 100px;
+  }
+}
+hr,
+#hr2 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  margin-left: 70px;
+  margin-right: 70px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#form_mg {
+  margin-left: -500px;
+}
+
+@media only screen and (max-width: 768px) {
+  .services {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    background: #f6f6fd;
+  }
+
+  .s-box-container {
+    width: 470px;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+  }
+  .s-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    width: 150px;
+
+    height: 200px;
+    box-sizing: border-box;
+    margin: 15px;
+    position: relative;
+    background: white;
+  }
+
+  .s-btn {
+    overflow: visible;
+    position: relative;
+    float: right;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    height: 20px;
+    width: 40px;
+    font: 5px/10px "Montserrat", "trebuchet MS", "Tahoma";
+    color: #f7f7f7;
+    background: #2075ad;
+    border-radius: 20px;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+    text-align: center;
+  }
+
+  .s-box img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/*****************************************************************************************/
+
+@media screen and (max-width: 768px) {
+  .navbar__bars {
+    color: #222121;
+    opacity: 1;
+    position: absolute;
+    top: 22px;
+    right: 20px;
+    font-size: 2rem;
+  }
+  .navbar__logo {
+    text-align: left;
+
+    height: 70px;
+  }
+}
+
+.navbar__menu {
+  list-style: none;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar__menu {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero__container {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero__container--left {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .hero__container--left {
+    line-height: 1.5;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .hero__container--left h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font: 25px/40px "Montserrat", "trebuchet MS", "bold";
+    color: #222121;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .hero__container--left h2 {
+    font-size: 2rem;
+    font: 16px/40px "Montserrat", "trebuchet MS", "bold";
+    color: #222121;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .hero__container--left p {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .hero__container--right h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font: 25px/40px "Montserrat", "trebuchet MS", "bold";
+    color: #222121;
+    text-align: left;
+  }
+}
+@media screen and (max-width: 280px) {
+  .hero__container--right h2 {
+    font-size: 2rem;
+    font: 16px/40px "Montserrat", "trebuchet MS", "bold";
+    color: #222121;
+    text-align: left;
+  }
+}
+@media screen and (max-width: 280px) {
+  .hero__container--right p {
+    font-size: 1.5rem;
+    text-align: left;
+  }
+}
+@media (max-width: 1050px) {
+  .s-box-container {
+    flex-wrap: wrap;
+  }
+  .services {
+    height: auto;
+  }
+  .s-heading {
+    margin: 15px;
+  }
+  .s-box {
+    flex-grow: 1;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
