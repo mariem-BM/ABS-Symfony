@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Sep 06, 2021 at 12:44 PM
+-- Generation Time: Sep 09, 2021 at 12:18 PM
 -- Server version: 5.7.31
 -- PHP Version: 7.4.9
 
@@ -37,17 +37,21 @@ CREATE TABLE IF NOT EXISTS `article` (
   `last_update_date` datetime DEFAULT NULL,
   `is_published` tinyint(1) DEFAULT NULL,
   `readmore` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `article`
 --
 
-INSERT INTO `article` (`id`, `picture`, `title`, `content`, `publication_date`, `last_update_date`, `is_published`, `readmore`) VALUES
-(3, 'tech-612f49f77ceb6.png', '1st insight', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry', NULL, NULL, 1, 'Read more'),
-(4, 'ia-612e24cd57faa.png', '2nd insight', 'Lorem Ipsum is simply dummy\r\ntext of the printing Lorem Ipsum is simply dummy\r\ntext of the printing ….', NULL, NULL, 1, ''),
-(5, 'moteurrecommandation700-612e24ec9bbe9.png', '3rd insight', 'Lorem Ipsum is simply dummy\r\ntext of the printing Lorem Ipsum is simply dummy\r\ntext of the printing ….', NULL, NULL, 1, '');
+INSERT INTO `article` (`id`, `picture`, `title`, `content`, `publication_date`, `last_update_date`, `is_published`, `readmore`, `slug`) VALUES
+(3, 'imgpsh_fullsize_anim-6138c0e409d52.png', '1st insight', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry', NULL, NULL, 1, 'Read more', ''),
+(4, 'ia-61386ebd3bcbb.svg', '2nd insight', 'Lorem Ipsum is simply dummy\r\ntext of the printing Lorem Ipsum is simply dummy\r\ntext of the printing ….', NULL, NULL, 1, 'Read more...', ''),
+(5, 'moteurrecommandation700-61386ecdcf4d4.svg', '3rd insight', 'Lorem Ipsum is simply dummy\r\ntext of the printing Lorem Ipsum is simply dummy\r\ntext of the printing ….', NULL, NULL, 1, 'Read more...', ''),
+(6, 'tech-61386f495f856.svg', '.', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco', NULL, NULL, 1, 'Read more...', ''),
+(7, 'ia-6136309e662fa.png', '..', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco', NULL, NULL, 1, 'ili yji', ''),
+(8, 'moteurrecommandation700-61386f63ab26b.svg', '...', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco labo', NULL, NULL, 1, 'Read more...', '');
 
 -- --------------------------------------------------------
 
@@ -108,10 +112,10 @@ CREATE TABLE IF NOT EXISTS `pages` (
 
 INSERT INTO `pages` (`id`, `titre`, `description`, `pagesdetails`, `img_pages`) VALUES
 (4, 'Artificial Intelligence', 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem\r\naccusantium doloremque laudan\r\ntium totam rem aperiam.', 'Work with us', 'group13328-6130a190ce1f4.png'),
-(5, 'Expert & solid team for happy clients', 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem\r\naccusantium doloremque laudan\r\ntium totam rem aperiam', 'See Our Story', 'group1290-6130a14cf154a.png'),
-(6, 'REVOLUTIONS BRING DISRUPTIONS AND DISRUPTIONS BRING OPPORTUNITIES', 'REVOLUTIONS BRING DISRUPTIONS AND DISRUPTIONS BRING OPPORTUNITIES', 'Work with us', 'vector-6130a451db0ab.png'),
-(7, 'International Digital Services Company (ESN)', 'Founded in 2012, ABSHORE has a rich and varied experience in the\r\nprovision of services and participates in all phases of the project, from the\r\nstudy of needs to maintenance, including design, development,\r\ndeployment and construction. \'exploitation.\r\n\r\nABSHORE supports its clients in the areas of Performance Management,\r\nDigital Transformation and Big Data.\r\n\r\nEstablished in Tunisia and France, ABSHORE contributes to major\r\ninternational account projects, and offers its services both nearshore and\r\non site with its partners and customer', 'See our Story', '4-6130a832a481a.png'),
-(8, 'Asma Brini                                Chief  executive officer', 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque\r\n            laudan tium totam rem aperiam.\r\n            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque\r\n            laudan tium totam rem aperiam.', 'See the Team', 'icon1-6130d5a303148.png'),
+(5, 'Expert & solid team for happy clients', 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem\r\naccusantium doloremque laudan\r\ntium totam rem aperiam', 'See Our Story', 'group1290-6138e07bcbeef.png'),
+(6, 'REVOLUTIONS BRING DISRUPTIONS AND DISRUPTIONS BRING OPPORTUNITIES', 'REVOLUTIONS BRING DISRUPTIONS AND DISRUPTIONS BRING OPPORTUNITIES', 'Work with us', 'slider1-61386a7ea4f67.svg'),
+(7, 'International Digital Services Company (ESN)', 'Founded in 2012, ABSHORE has a rich and varied experience in the\r\nprovision of services and participates in all phases of the project, from the\r\nstudy of needs to maintenance, including design, development,\r\ndeployment and construction. \'exploitation.\r\n\r\nABSHORE supports its clients in the areas of Performance Management,\r\nDigital Transformation and Big Data.\r\n\r\nEstablished in Tunisia and France, ABSHORE contributes to major\r\ninternational account projects, and offers its services both nearshore and\r\non site with its partners and customer', 'See our Story', '4-6138e08a15d59.png'),
+(8, 'Asma Brini                                Chief  executive officer', 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque\r\n            laudan tium totam rem aperiam.\r\n            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque\r\n            laudan tium totam rem aperiam.', 'See the Team', 'icon1-613880d6c3103.png'),
 (9, 'CONTACT US', 'ABSHORE TUNISIE\r\n6, rue du Lac Tibériade – 1er étage\r\nBureau N°02, 1053 Les Berges du Lac,\r\nTunis, Tunisie', 'Get direction', 'placeholder-6130af78361e8.png'),
 (10, 'CONTACT US', 'ABSHORE FRANCE\r\n41 Rue de la Découverte, 31670 ,\r\nLabège, France', 'Get direction', 'placeholder-6130c4cb5281d.png');
 
@@ -127,21 +131,26 @@ CREATE TABLE IF NOT EXISTS `references` (
   `ref_nom` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `img_ref` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `references`
 --
 
 INSERT INTO `references` (`id`, `ref_nom`, `img_ref`) VALUES
-(8, NULL, 'logo_biat_fr_3150x150-612cea49aa1bc.png'),
-(9, 'orange', 'orangelogovector150x150-612cea90a8e1f.png'),
-(10, 'Fitting Box', 'logofittingbox150x150-612ceab1c16ca.png'),
-(11, 'TFI', 'sanstitre1-612ceacd6a86c.png'),
-(12, 'SFR', 'sfrlogo150x150-612ceadc66941.png'),
-(13, 'FIFA', 'fifalogodesignhistoryandevolutionwkuq7omm2161994150x150-612ceaf28e8fd.png'),
-(14, 'hkk', 'capture-6135edd07ab92.png'),
-(15, 'fffffffff', 'capture-6135edfd5ed6a.png');
+(8, 'biat', 'logo_biat_fr_3150x150-61386da84e47e.svg'),
+(9, 'orange', 'orangelogovector150x150-61386ddb05804.svg'),
+(10, 'Fitting Box', 'logofittingbox150x150-61386dea282a3.svg'),
+(11, 'TFI', 'tf1-61386df385b75.svg'),
+(12, 'SFR', 'sfrlogo150x150-61386dfde87ad.svg'),
+(13, 'FIFA', 'fifalogo150x150-61386e090618b.svg'),
+(17, 'orange2', 'orangelogovector150x150-61386e121d531.svg'),
+(18, 'Fitting Box2', 'logofittingbox150x150-61386e1dc86b7.svg'),
+(19, 'biat2', 'logo_biat_fr_3150x150-61386e2709d3d.svg'),
+(20, 'fifa2', 'fifalogo150x150-61386e327e0b3.svg'),
+(21, 'sfr2', 'sfrlogo150x150-61386e3ef0721.svg'),
+(22, 'tf12', 'tf1-61386e4913402.svg'),
+(23, 'fifa3', 'fifalogo150x150-61386e5570d3b.svg');
 
 -- --------------------------------------------------------
 

@@ -20,7 +20,7 @@ use Symfony\Component\Security\Http\Util\TargetPathTrait;
 
 
 
-class LoginFormAuthenticator extends AbstractFormLoginAuthenticator 
+class LoginFormAuthenticator extends AbstractFormLoginAuthenticator
 {
     use TargetPathTrait;
     private $userRepository;
@@ -43,7 +43,7 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator
 
     public function getCredentials(Request $request)
     {
-        
+
         $credentials = [
             'csrf_token' => $request->request->get('_csrf_token'),
             'email' => $request->request->get('email'),
@@ -56,16 +56,13 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator
         );
 
         return $credentials;
-        
-        
     }
 
     public function getUser($credentials, UserProviderInterface $userProvider)
     {
         $token = new CsrfToken('authenticate', $credentials['csrf_token']);
 
-        if (!$this->csrfTokenManager->isTokenValid($token)) 
-        {
+        if (!$this->csrfTokenManager->isTokenValid($token)) {
             throw new InvalidCsrfTokenException();
         }
 
@@ -79,11 +76,10 @@ class LoginFormAuthenticator extends AbstractFormLoginAuthenticator
 
     public function onAuthenticationSuccess(Request $request, TokenInterface $token, $providerKey)
     {
-        if ($targetPath = $this->getTargetPath($request->getSession(), $providerKey)) 
-        {
+        if ($targetPath = $this->getTargetPath($request->getSession(), $providerKey)) {
             return new RedirectResponse($targetPath);
         }
-        return new RedirectResponse($this->router->generate('home'));
+        return new RedirectResponse($this->router->generate('first'));
     }
 
     protected function getLoginUrl()

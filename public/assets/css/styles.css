@@ -774,6 +774,7 @@
 body {
   background-color: #f6f9fd;
   font-family: calibri;
+  overflow-x: hidden;
 }
 a {
   text-decoration: none;
