@@ -4,7 +4,7 @@ namespace App\Entity;
 
 use App\Repository\FormulaireRepository;
 use Doctrine\ORM\Mapping as ORM;
-
+use Symfony\Component\Validator\Constraints as Assert;
 /**
  * @ORM\Entity(repositoryClass=FormulaireRepository::class)
  */
@@ -19,21 +19,43 @@ class Formulaire
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="add your name!"),
+    * @Assert\Length(
+    * min = 3,
+    * max = 50,
+    * minMessage = "Le nom doit comporter au moins {{ limit }} caractères",
+    * maxMessage = "Le nom doit comporter au plus {{ limit }} caractères"
+    * )
      */
     private $name;
 
     /**
      * @ORM\Column(type="string", length=255)
+     *  @Assert\NotBlank(message="add your Last name!"),
+    * @Assert\Length(
+    * min = 3,
+    * max = 50,
+    * minMessage = "Le prenom doit comporter au moins {{ limit }} caractères",
+    * maxMessage = "Le prenom doit comporter au plus {{ limit }} caractères"
+    * )
      */
     private $lastname;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="add your email!")
      */
     private $email;
 
     /**
      * @ORM\Column(type="string", length=255)
+     *  @Assert\NotBlank(message="don't forget what you wanted to tell us!"),
+    * @Assert\Length(
+    * min = 10,
+    * max = 500,
+    * minMessage = "Le message doit comporter au moins {{ limit }} caractères",
+    * maxMessage = "Le message doit comporter au plus {{ limit }} caractères"
+    * )
      */
     private $message;
 

@@ -12,34 +12,48 @@ use Symfony\Component\Validator\Constraints as Assert;
 class Service
 {
    /**
-* @ORM\Id()
-* @ORM\GeneratedValue()
-* @ORM\Column(type="integer")
-*/
-private $id;
-/**
-* @ORM\Column(type="string", length=255)
-* @Assert\Length(
-* min = 5,
-* max = 50,
-* minMessage = "Le nom d'un service doit comporter au moins {{ limit }} caractères",
-* maxMessage = "Le nom d'un service doit comporter au plus {{ limit }} caractères"
-* )
-*/
-private $nom;
+    * @ORM\Id()
+    * @ORM\GeneratedValue()
+    * @ORM\Column(type="integer")
+    */
+    private $id;
+    /**
+    * @ORM\Column(type="string", length=255)
+    *@Assert\NotBlank(message="Get creative and think of a title!"),
+    * @Assert\Length(
+    * min = 3,
+    * max = 30,
+    * minMessage = "Le nom d'un service doit comporter au moins {{ limit }} caractères",
+    * maxMessage = "Le nom d'un service doit comporter au plus {{ limit }} caractères"
+    * )
+    */
+    private $nom;
 
     /**
-     * @ORM\Column(type="string", length=255)
-     */
+    * @ORM\Column(type="string", length=255)
+    * @Assert\NotBlank(message="Get creative and think of a description!"),
+    * @Assert\Length(
+    * min = 5,
+    * max = 500,
+    * minMessage = "La description d'un service doit comporter au moins {{ limit }} caractères",
+    * maxMessage = "La description d'un service doit comporter au plus {{ limit }} caractères"
+    * )
+    */
     private $description;
 
     /**
-     * @ORM\Column(type="string", length=255)
-     */
+    * @ORM\Column(type="string", length=255)
+    * @Assert\NotBlank(message="Get creative and think of details!"),
+    * @Assert\Length(
+    * min = 5,
+    * minMessage = "Les details d'un service doit comporter au moins {{ limit }} caractères"
+    * )
+    */
     private $details;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255),
+     * @Assert\NotBlank(message="Get creative and add of image!")
      */
     private $img;
 
