@@ -21,7 +21,6 @@
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  margin-left: -90px;
   z-index: 10;
   position: relative;
 }
@@ -50,13 +49,6 @@
 }
 /***********************gal s5***********************/
 @media screen and (max-width: 360px) {
-  #bodyy {
-    margin-left: 40px;
-    margin-right: -336px;
-  }
-  #content {
-    margin-left: 150px;
-  }
   #logoF {
     text-align: left;
     height: 40px;
@@ -117,7 +109,7 @@
     align-items: center;
     display: grid;
     grid-template-columns: 100px;
-    margin-right: 150px;
+    /* margin-right: 150px;*/
   }
   #sbox {
     display: flex;
@@ -194,7 +186,7 @@
   #insights_ibox img {
     height: 100px;
     width: 150px;
-    margin-right: 120px;
+    /*  margin-right: 120px;*/
   }
   #insights_ibox h1 {
     color: #576975;
@@ -207,13 +199,12 @@
     text-align: left;
     font-size: 0.8rem;
     margin-left: 20px;
-    margin-right: 140px;
+    /* margin-right: 140px;*/
   }
   #insights_ibox a {
     letter-spacing: 0.5px;
     font-size: 1rem;
     margin-bottom: 2px;
-    margin-right: 180px;
   }
   #img_contact {
     height: 30px;
@@ -306,45 +297,20 @@
     display: block;
     height: 200px;
   }
-  #seeIns {
-    margin-right: 900px;
-  }
 }
 /*****ipad pro ********/
 @media screen and (max-width: 1024px) {
   .navbar__logo {
     margin-left: 20px;
-    margin-right: -60px;
   }
   #navid {
     margin-left: 20px;
-    margin-right: -40px;
   }
 }
 
-/* Large screens ----------- */
-@media only screen and (min-width: 1824px) {
-  /* Styles */
-  .navbar__logo {
-    margin-left: -460px;
-  }
-}
-
-/* Large screens ----------- 
-@media only screen and (min-width: 360px) {
- 
-  .navbar__logo {
-    margin-left: -50px;
-   
-    height: 35px;
-    width: 120px;
-    margin-left: -170px;
-  }
-}*/
 .navbar__menu {
   list-style: none;
   text-align: center;
-  margin-right: 24px;
 }
 
 /***Desktops and laptops *************/
@@ -353,7 +319,6 @@
     margin-left: 24px;
     height: 81px;
     width: 284px;
-    margin-right: 293px;
   }
 }
 .navbar__menu--links {
@@ -412,7 +377,6 @@
   background-color: #f6f9fd;
   margin-top: 100px;
   margin-bottom: 100px;
-  margin-left: -20px;
 }
 .heroc {
   /*margin-left: 50px;
@@ -697,7 +661,7 @@
 @media screen and (max-width: 280px) {
   .hero__container--right h1 {
     font-size: 1.5rem;
-    font-weight: 700;
+
     font: 25px/40px "Montserrat", "trebuchet MS", "bold";
     color: #222121;
     text-align: left;
@@ -706,9 +670,7 @@
 
 .hero__container--right h2 {
   font-size: 2rem;
-
   margin-top: 1rem;
-  font-weight: 1700;
   font: 30px/40px "Montserrat", "trebuchet MS", "bold";
   color: #222121;
   text-align: left;
@@ -1666,16 +1628,13 @@ section {
 
 .container {
   max-width: 1140px;
-  margin-right: 150px;
-  margin-left: 30px;
+ 
 }
 
 .container-fluid {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
-  margin-right: 50px;
-  margin-left: 25px;
 }
 
 a:not([href]):not([tabindex]) {
@@ -2018,9 +1977,6 @@ hr,
   margin-left: -500px;
 }
 
-#seeIns {
-  margin-left: 900px;
-}
 @media only screen and (max-width: 768px) {
   .services {
     width: 100%;
@@ -2087,11 +2043,10 @@ hr,
     top: 22px;
     right: 20px;
     font-size: 2rem;
-    margin-right: -350px;
   }
   .navbar__logo {
     text-align: left;
-    margin-right: 350px;
+
     height: 70px;
   }
 }
@@ -2099,7 +2054,6 @@ hr,
 .navbar__menu {
   list-style: none;
   text-align: center;
-  margin-right: 24px;
 }
 
 @media screen and (max-width: 768px) {

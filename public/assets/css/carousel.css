@@ -92,23 +92,19 @@ Attribution required
 #caroussel_prev {
   font-size: 20px;
 
-  margin-left: -20px;
+  /*margin-left: -20px;*/
 }
 
 #caroussel_next {
   font-size: 20px;
-  margin-left: 160px;
-  margin-right: -80px;
 }
 
 #prev_ref {
   font-size: 20px;
-  margin-left: -80px;
 }
 
 #next_ref {
   font-size: 20px;
-  margin-right: -80px;
 }
 
 #carouselExample {
