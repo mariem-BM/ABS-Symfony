@@ -84,6 +84,7 @@ class PagesController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($page);
             $entityManager->flush();
+            $this->addFlash('success', 'Page Created!');
             return $this->redirectToRoute('pages');
         }
         return $this->render('pages/addPages.html.twig', [
@@ -129,6 +130,7 @@ class PagesController extends AbstractController
             }
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->flush();
+            $this->addFlash('success', 'Page Edited!');
             return $this->redirectToRoute('pages');
         }
         return $this->render('pages/editPages.html.twig', ['form' => $form->createView()]);
@@ -149,6 +151,7 @@ class PagesController extends AbstractController
         $entityManager->flush();
         $response = new Response();
         $response->send();
+        $this->addFlash('success', 'Page Deleted!');
         return $this->redirectToRoute('pages');
     }
     /********************************************front */

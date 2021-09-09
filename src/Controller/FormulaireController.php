@@ -37,6 +37,7 @@ class FormulaireController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($formulaire);
             $entityManager->flush();
+            $this->addFlash('success', 'Message Sent!');
             return $this->redirectToRoute('formulaire');
         }
         return $this->render('formulaire/addform.html.twig', [
@@ -59,6 +60,7 @@ class FormulaireController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->flush();
+            $this->addFlash('success', 'Message Edited!');
             return $this->redirectToRoute('formulaire');
         }
         return $this->render('formulaire/editform.html.twig', ['form' => $form->createView()]);
@@ -78,6 +80,7 @@ class FormulaireController extends AbstractController
         $entityManager->flush();
         $response = new Response();
         $response->send();
+        $this->addFlash('success', 'Message Deleted!');
         return $this->redirectToRoute('formulaire');
     }
     /**********************************front */
@@ -106,6 +109,7 @@ class FormulaireController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($formulaire);
             $entityManager->flush();
+            $this->addFlash('success', 'Message Sent Thank you for contacting us!');
             return $this->redirectToRoute('formulaire');
         }
         return $this->render('formulaire/addform.html.twig', [

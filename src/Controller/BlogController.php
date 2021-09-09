@@ -65,6 +65,7 @@ class BlogController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($article);
             $entityManager->flush();
+            $this->addFlash('success', 'Article Created!');
             return $this->redirectToRoute('blog');
         }
         return $this->render('blog/add.html.twig', [
@@ -123,6 +124,7 @@ class BlogController extends AbstractController
             }
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->flush();
+            $this->addFlash('success', 'Article Edited!');
             return $this->redirectToRoute('blog');
         }
         return $this->render('blog/edit.html.twig', ['form' => $form->createView()]);
@@ -142,6 +144,7 @@ class BlogController extends AbstractController
         $entityManager->flush();
         $response = new Response();
         $response->send();
+        $this->addFlash('success', 'Article Deleted!');
         return $this->redirectToRoute('blog');
     }
     /***********************front */
