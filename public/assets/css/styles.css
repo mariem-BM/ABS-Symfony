@@ -47,17 +47,14 @@
     font-size: 2rem;
   }
 }
+
 /***********************gal s5***********************/
 @media screen and (max-width: 360px) {
   #logoF {
     text-align: left;
     height: 40px;
-    margin-left: 12px;
   }
 
-  #menu_bar {
-    margin-right: 30px;
-  }
   #id_heroC {
     -ms-grid-columns: 300px;
     grid-template-columns: 300px;
@@ -120,7 +117,6 @@
     width: 200px;
     height: 250px;
     box-sizing: border-box;
-    margin: 15px;
     position: relative;
     background: white;
   }
@@ -143,7 +139,7 @@
   }
   #WWO {
     color: black;
-    margin-right: 162px;
+
     font-size: 20px;
   }
   #sboximg {
@@ -179,7 +175,7 @@
     width: 300px;
     height: 300px;
     box-sizing: border-box;
-    margin: 40px;
+
     position: relative;
     background: white;
   }
@@ -198,7 +194,7 @@
     color: rgba(87, 105, 117, 0.9);
     text-align: left;
     font-size: 0.8rem;
-    margin-left: 20px;
+
     /* margin-right: 140px;*/
   }
   #insights_ibox a {
@@ -230,7 +226,6 @@
     width: 105px;
     font: 11px/20px "Montserrat", "trebuchet MS", "Tahoma";
     border-radius: 40px;
-    margin-right: 191px;
   }
   #imgcontact {
     height: 200px;
@@ -238,7 +233,6 @@
   }
   #formcontact {
     width: 221px;
-    margin-right: 102px;
   }
   #footermini {
     display: flex;
@@ -251,7 +245,6 @@
 
   #imgfooter {
     display: block;
-    margin-right: 100px;
 
     height: 50px;
     width: 125px;
@@ -301,10 +294,10 @@
 /*****ipad pro ********/
 @media screen and (max-width: 1024px) {
   .navbar__logo {
-    margin-left: 20px;
+    /*margin-left: 20px;*/
   }
   #navid {
-    margin-left: 20px;
+    /*margin-left: 20px;*/
   }
 }
 
@@ -316,7 +309,6 @@
 /***Desktops and laptops *************/
 @media only screen and (max-width: 1224px) {
   .navbar__logo {
-    margin-left: 24px;
     height: 81px;
     width: 284px;
   }
@@ -766,7 +758,7 @@ a {
 .s-heading p {
   color: rgba(87, 105, 117, 0.6);
   font-size: 1rem;
-  margin: 5px;
+
   text-align: left;
 }
 .s-box-container {
@@ -862,9 +854,9 @@ a {
   .services {
     height: auto;
   }
-  .s-heading {
+  /*.s-heading {
     margin: 15px;
-  }
+  }*/
   .s-box {
     flex-grow: 1;
   }
@@ -1324,7 +1316,6 @@ input[type="submit" i] {
   max-width: 100%;
   border-left-width: 10px;
   border-left-color: #2075ad;
-  margin: 10px;
 }
 textarea.form-control {
   height: 150px;
@@ -1628,7 +1619,6 @@ section {
 
 .container {
   max-width: 1140px;
- 
 }
 
 .container-fluid {
@@ -1668,7 +1658,6 @@ a:not([href]):not([tabindex]) {
 }
 #imgfooter {
   display: block;
-  margin-right: 100px;
 
   height: 100px;
   width: 250px;
@@ -1968,13 +1957,8 @@ hr,
   margin-top: 1rem;
   margin-bottom: 1rem;
   border: 0;
-  margin-left: 70px;
-  margin-right: 70px;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-}
 
-#form_mg {
-  margin-left: -500px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 @media only screen and (max-width: 768px) {
@@ -2136,9 +2120,9 @@ hr,
   .services {
     height: auto;
   }
-  .s-heading {
+  /*  .s-heading {
     margin: 15px;
-  }
+  }*/
   .s-box {
     flex-grow: 1;
   }

@@ -152,7 +152,7 @@ class FirstController extends AbstractController
      */
     public function show($id)
     {
-        $service = $this->getDoctrine()->getRepository(Service::class)->find($id);
+        $service =  $this->getDoctrine()->getRepository(Service::class)->find($id);
 
         return $this->render(
             'first/details.html.twig',
