@@ -3,32 +3,34 @@
 		<section class="services" id="service-section">
 			<br>
 			<div class="s-heading">
+
 				<h4>OUR SERVICES</h4>
 				<br>
 				<h1 id="WWO">What We Offer</h1>
 			</div>
+			<div class="jumbotron">
 
+				<div class="s-box-container" id="sboxcontainer">
 
-			<div class="s-box-container" id="sboxcontainer">
-				{% for service in services %}
+					{% for service in services %}
+						<div class="w3-third">
+							<div id="sbox" class="s-box" {% if loop.index0 == 0 %} class="item active" {% else %} class="item" {% endif %} href="{{ path('servicefront') }}">
 
-					<div id="sbox" class="s-box" {% if loop.index0 == 0 %} class="item active" {% else %} class="item" {% endif %} href="{{ path('servicefront') }}">
+								<div class="bar"></div>
 
-						<div class="bar"></div>
+								<img id="sboximg" alt="1" src="{{asset('uploads/brochures/'~service.img)}}">
 
-						<img id="sboximg" alt="1" src="{{asset('uploads/brochures/'~service.img)}}">
+								<h1 id="#sboxh1">{{ service.nom }}</h1>
 
-						<h1 id="#sboxh1">{{ service.nom }}</h1>
+								<p id="sboxp">{{ service.description }}</p>
 
-						<p id="sboxp">{{ service.description }}</p>
+								<a id="sbtn" class="s-btn" href="{{ service.details }}">See More</a>
 
-						<a id="sbtn" class="s-btn" href="{{ service.details }}">See More</a>
-
-					</div>
-
-				{% endfor %}
+							</div>
+						</div>
+					{% endfor %}
+				</div>
 			</div>
-
 		</section>
 	</div>
 {% endif %}

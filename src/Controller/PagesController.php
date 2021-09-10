@@ -11,7 +11,7 @@ use App\Entity\Pages;
 use App\Form\PagesType;
 use Symfony\Component\HttpFoundation\File\Exception\FileException;
 use Twig\Extra\String\StringExtension;
-
+use Symfony\Component\Validator\Validator\ValidatorInterface;
 
 
 class PagesController extends AbstractController
@@ -53,12 +53,24 @@ class PagesController extends AbstractController
      * @Route("/addpages", name="addpages")
      */
 
-    public function addPages(Request $request)
+    public function addPages(Request $request, ValidatorInterface $validator)
     {
         $page = new Pages();
         $form = $this->createForm(PagesType::class, $page);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
+            $errors = $validator->validate($page);
+
+            if (count($errors) > 0) {
+                /*
+                 * Uses a __toString method on the $errors variable which is a
+                 * ConstraintViolationList object. This gives us a nice string
+                 * for debugging.
+                 */
+                $errorsString = (string) $errors;
+
+                return new Response($errorsString);
+            }
             $brochureFile = $form->get('imgPages')->getData();
             if ($brochureFile) {
                 $originalFilename = pathinfo($brochureFile->getClientOriginalName(), PATHINFO_FILENAME);

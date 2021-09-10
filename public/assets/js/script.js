@@ -84,7 +84,7 @@ $(document).ready(function(){
 	  carousels();
 	})(jQuery);
   })();
-  /**************************************************3thebbbbbbbbbbbbbbbbbbb*************************************************** */
+ 
   window.addEventListener('load', function () {
 	new Glider(document.querySelector('.glider'), {
 	  slidesToScroll: 10,
@@ -100,3 +100,5 @@ $(document).ready(function(){
 	  }
 	});
   })
+
+  

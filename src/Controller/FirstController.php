@@ -22,7 +22,7 @@ use App\Entity\References;
 use App\Form\RefrenceType;
 use App\Entity\Formulaire;
 use App\Form\FormulaireType;
-
+use Symfony\Component\Validator\Validator\ValidatorInterface;
 
 
 class FirstController extends AbstractController
@@ -107,13 +107,25 @@ class FirstController extends AbstractController
      * @Route("/service/new", name="service/new")
      * Method({"GET", "POST"})
      */
-    public function new(Request $request)
+    public function new(Request $request,ValidatorInterface $validator)
     {
 
         $service = new Service();
         $form = $this->createForm(ServiceType::class, $service);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
+            $errors = $validator->validate($service);
+
+            if (count($errors) > 0) {
+                /*
+                 * Uses a __toString method on the $errors variable which is a
+                 * ConstraintViolationList object. This gives us a nice string
+                 * for debugging.
+                 */
+                $errorsString = (string) $errors;
+        
+                return new Response($errorsString);
+            }
             $brochureFile = $form->get('img')->getData();
             if ($brochureFile) {
                 $originalFilename = pathinfo($brochureFile->getClientOriginalName(), PATHINFO_FILENAME);

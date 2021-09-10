@@ -4,34 +4,35 @@
 {% block title %}Ajouter Page
 {% endblock %}
 {% block content  %}
-	{{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
-	<div class="input-field col s12 m12 l12">
+	<form action="{{ path('addpages') }}" method="post" novalidate>
+		<div class="input-field col s12 m12 l12">
 
-		{{ form_widget(form.imgPages, {'attr': {'placeholder': 'Page title'}}) }}
-	</div>
-	<br>
-	<div class="input-field col s12 m6 l6">
+			{{ form_widget(form.imgPages, {'attr': {'placeholder': 'Page title'}}) }}
+			{{ form_errors(form.imgPages) }}
+		</div>
+		<br>
+		<div class="input-field col s12 m6 l6">
 
-		{{ form_widget(form.titre, {'attr': {'placeholder': 'Page title'}}) }}
+			{{ form_widget(form.titre, {'attr': {'placeholder': 'Page title'}}) }}
+			{{ form_errors(form.titre) }}
+		</div>
+		<br>
+		<div class="input-field col s12 m6 l6">
 
-	</div>
-	<br>
-	<div class="input-field col s12 m6 l6">
+			{{ form_widget(form.description, {'attr': {'placeholder': 'Page Description'}}) }}
+			{{ form_errors(form.description) }}
+		</div>
+		<br>
+		<div class="input-field col s12 m6 l6">
 
-		{{ form_widget(form.description, {'attr': {'placeholder': 'Page Description'}}) }}
+			{{ form_widget(form.pagesdetails, {'attr': {'placeholder': 'Page Details'}}) }}
+			{{ form_errors(form.pagesdetails) }}
+		</div>
+		<br>
+		<br>
 
-	</div>
-	<br>
-	<div class="input-field col s12 m6 l6">
-
-		{{ form_widget(form.pagesdetails, {'attr': {'placeholder': 'Page Details'}}) }}
-
-	</div>
-	<br>
-	<br>
-
-	<div class="input-field col s12 m12 l12">
-		<input type="submit" name="" value="Add Page" class="btn btn-primary">
-	</div>
-	{{ form_end(form) }}
+		<div class="input-field col s12 m12 l12">
+			<input type="submit" name="" value="Add Page" class="btn btn-primary">
+		</div>
+	</form>
 {% endblock %}

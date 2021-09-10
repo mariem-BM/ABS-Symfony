@@ -1,39 +1,39 @@
-{{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+<form action="{{ path('user_new') }}" method="post" novalidate>
 
-<div class="input-field col s12 m12 l12">
+	<div class="input-field col s12 m12 l12">
 
-	{{ form_widget(form.firstname, {'attr': {'class': 'materialize-textarea', 'placeholder': 'Firstname'}}) }}
+		{{ form_widget(form.firstname, {'attr': {'class': 'materialize-textarea', 'placeholder': 'Firstname'}}) }}
+		{{ form_errors(form.firstname) }}
+	</div>
+	<br>
+	<div class="input-field col s12 m12 l12">
 
-</div>
-<br>
-<div class="input-field col s12 m12 l12">
+		{{ form_widget(form.lastname, {'attr': {'class': 'materialize-textarea', 'placeholder': 'Lastname'}}) }}
+		{{ form_errors(form.lastname) }}
+	</div>
+	<br>
 
-	{{ form_widget(form.lastname, {'attr': {'class': 'materialize-textarea', 'placeholder': 'Lastname'}}) }}
+	<div class="input-field col s12 m12 l12">
 
-</div>
-<br>
+		{{ form_widget(form.email, {'attr': {'class': 'materialize-textarea', 'placeholder': 'Email'}}) }}
+		{{ form_errors(form.email) }}
+	</div>
+	<br>
 
-<div class="input-field col s12 m12 l12">
+	<div class="input-field col s12 m12 l12">
 
-	{{ form_widget(form.email, {'attr': {'class': 'materialize-textarea', 'placeholder': 'Email'}}) }}
+		{{ form_widget(form.roles, {'attr': {'class': 'materialize-textarea', 'placeholder': 'Roles'}}) }}
+		{{ form_errors(form.roles) }}
 
-</div>
-<br>
+	</div>
+	<br>
+	<div class="input-field col s12 m12 l12">
 
-<div class="input-field col s12 m12 l12">
+		{{ form_widget(form.password, {'attr': {'class': 'materialize-textarea', 'placeholder': 'Password'}}) }}
+		{{ form_errors(form.password) }}
 
-	{{ form_widget(form.roles, {'attr': {'class': 'materialize-textarea', 'placeholder': 'Roles'}}) }}
+	</div>
+	<br>
+	<button class="btn btn-primary">{{ button_label|default('Save') }}</button>
 
-
-</div>
-<br>
-<div class="input-field col s12 m12 l12">
-
-	{{ form_widget(form.password, {'attr': {'class': 'materialize-textarea', 'placeholder': 'Password'}}) }}
-
-
-</div>
-<br>
-<button class="btn btn-primary">{{ button_label|default('Save') }}</button>
-
-{{ form_end(form) }}
+</form>

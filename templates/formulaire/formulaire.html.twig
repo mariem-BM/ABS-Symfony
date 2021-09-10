@@ -4,8 +4,21 @@
 	Liste des formulaires
 {% endblock %}
 {% block content %}
+
+
+	<div class="row">
+		<div class="column">
+			<h1>List</h1>
+
+		</div>
+		<div class="column">
+			<a href="{{ path('addform') }}" class="btn btn-primary">Create new</a>.
+
+
+		</div>
+	</div>
 	{% if formulaires %}
-		<table id="formulaires" class="table table-striped">
+		<table id="formulaires" class="table table-striped table-bordered" style="width:100%">
 			<thead>
 				<tr>
 					<th>name</th>
@@ -24,9 +37,13 @@
 						<td>{{ formulaire.message }}</td>
 						<td>
 
-							<a href="/formulaire/edit/{{ formulaire.id }}" class="btn btn-dark">Modifier</a>
-							<a href="/formulaire/delete/{{ formulaire.id }}" class="btn btn-danger" onclick="return confirm('Etes-
-																																																																																																																																																vous sûr de supprimer cet article?');">Delete</a>
+							<a href="/formulaire/edit/{{ formulaire.id }}">
+								<i class="fa fa-pencil" aria-hidden="true" style=" font-size:14px"></i>
+							</a>
+							<a href="/formulaire/delete/{{ formulaire.id }}" onclick="return confirm('Etes-
+																																																																																																																																																																																																			vous sûr de supprimer cet article?');">
+								<i class="fa fa-trash" aria-hidden="true"></i>
+							</a>
 
 						</td>
 					</tr>
@@ -35,4 +52,6 @@
 		</tr>
 
 	{% endfor %}
-</tbody></table>{% else %}<p>Aucun Service</p>{% endif %}{% endblock %}
+</tbody></table>{% else %}<p>Aucun Service</p>{% endif %}<script src="{{ asset ('theme/vendor/jquery/jquery.min.js')}}"></script><script>$(document).ready(function () {
+$('#formulaires').DataTable();
+});</script>{% endblock %}

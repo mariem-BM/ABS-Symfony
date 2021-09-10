@@ -2,21 +2,22 @@
 {% block title %}Ajouter une réfernce
 {% endblock %}
 {% block content  %}
-	{{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+ <form action="{{ path('addref') }}" method="post" novalidate>
 
 	<div class="input-field col s12 m6 l6">
 
 		{{ form_widget(form.refNom, {'attr': {'placeholder': 'Refrence title '}}) }}
-
+	{{ form_errors(form.refNom) }}
 	</div>
 	<br>
 	<div class="input-field col s12 m12 l12">
 		{{ form_widget(form.imgRef, {'attr': {'placeholder': 'Refrence Image '}}) }}
+		{{ form_errors(form.imgRef) }}
 	</div>
 	<br>
 
 	<div class="input-field col s12 m12 l12">
 		<input type="submit" name="" value="Add Refrence" class="btn btn-primary">
 	</div>
-	{{ form_end(form) }}
+</form>
 {% endblock %}

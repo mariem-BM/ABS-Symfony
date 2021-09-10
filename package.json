@@ -16,7 +16,11 @@
         "build": "encore production --progress"
     },
     "dependencies": {
+        "bootstrap": "^5.1.1",
+        "datatables.net": "^1.11.2",
+        "datatables.net-bs4": "^1.11.2",
         "datatables.net-dt": "^1.11.2",
+        "install": "^0.13.0",
         "slick-carousel": "^1.8.1"
     }
 }
