@@ -15,6 +15,8 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\HttpFoundation\File\Exception\FileException;
 use Twig\Extra\String\StringExtension;
+use Symfony\Component\Validator\Validator\ValidatorInterface;
+
 
 
 
@@ -34,12 +36,29 @@ class BlogController extends AbstractController
     /**
      * @Route("/add", name="add")
      */
-    public function add(Request $request)
+    public function add(Request $request,ValidatorInterface $validator)
     {
         $article = new Article();
         $form = $this->createForm(ArticleType::class, $article);
         $form->handleRequest($request);
+      
+          
         if ($form->isSubmitted() && $form->isValid()) {
+
+            $errors = $validator->validate($article);
+
+            if (count($errors) > 0) {
+                /*
+                 * Uses a __toString method on the $errors variable which is a
+                 * ConstraintViolationList object. This gives us a nice string
+                 * for debugging.
+                 */
+                $errorsString = (string) $errors;
+        
+                return new Response($errorsString);
+            }
+            
+
             $brochureFile = $form->get('picture')->getData();
             if ($brochureFile) {
                 $originalFilename = pathinfo($brochureFile->getClientOriginalName(), PATHINFO_FILENAME);
@@ -69,7 +88,7 @@ class BlogController extends AbstractController
             return $this->redirectToRoute('blog');
         }
         return $this->render('blog/add.html.twig', [
-            'form' => $form->createView()
+            'form' => $form->createView(),
         ]);
     }
 

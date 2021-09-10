@@ -9,6 +9,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+use Symfony\Component\Validator\Validator\ValidatorInterface;
 
 class FormulaireController extends AbstractController
 {
@@ -26,13 +27,25 @@ class FormulaireController extends AbstractController
     /**
      * @Route("/addform", name="addform")
      */
-    public function addref(Request $request)
+    public function addref(Request $request,ValidatorInterface $validator)
     {
         $formulaire = new Formulaire();
         $form = $this->createForm(FormulaireType::class, $formulaire);
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
+            $errors = $validator->validate($article);
 
+            if (count($errors) > 0) {
+                /*
+                 * Uses a __toString method on the $errors variable which is a
+                 * ConstraintViolationList object. This gives us a nice string
+                 * for debugging.
+                 */
+                $errorsString = (string) $errors;
+        
+                return new Response($errorsString);
+            }
+            
             $formulaire = $form->getData();
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($formulaire);

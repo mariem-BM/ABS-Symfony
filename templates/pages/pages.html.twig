@@ -5,7 +5,10 @@
 {% endblock %}
 {% block content  %}
 	{% if pages %}
-		<table id="services" class="table table-striped">
+	<h1>List</h1>
+
+	<a href="{{ path('addpages') }}" class="btn btn-primary">Create new</a>
+		<table id="services" class="table table-striped table-bordered" style="width:100%">
 			<thead>
 				<tr>
 					<th>Img</th>
@@ -18,7 +21,7 @@
 			<tbody>
 				{% for page in pages %}
 					<tr>
-						<td>{{ page.imgPages }}</td>
+						<td><img src="{{asset('uploads/brochures/'~page.imgPages)}}" height="98" width="98"></td></td>
 						<td>{{ page.titre }}</td>
 						<td>{{ page.description }}</td>
 						<td>{{ page.pagesdetails }}</td>
@@ -34,4 +37,8 @@
 		</tr>
 
 	{% endfor %}
-</tbody></table>{% else %}<p>Aucun Service</p>{% endif %}{% endblock %}
+</tbody></table>{% else %}<p>Aucun Service</p>{% endif %}
+<script>$(document).ready(function() {
+    $('#services').DataTable();
+} ); </script>
+{% endblock %}

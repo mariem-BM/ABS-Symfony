@@ -5,7 +5,10 @@
 {% endblock %}
 {% block content  %}
 	{% if services %}
-		<table id="services" class="table table-striped">
+	<h1>List</h1>
+
+	<a href="{{ path('service/new') }}" class="btn btn-primary">Create new</a>
+		<table id="services" class="table table-striped table-bordered" style="width:100%">
 			<thead>
 				<tr>
 					<th>Img</th>
@@ -18,7 +21,7 @@
 			<tbody>
 				{% for service in services %}
 					<tr>
-						<td>{{ service.img }}</td>
+						<td> <img id="sboximg" alt="1" src="{{asset('uploads/brochures/'~service.img)}}"> </td>
 						<td>{{ service.nom }}</td>
 						<td>{{ service.description }}</td>
 						<td>{{ service.details }}</td>

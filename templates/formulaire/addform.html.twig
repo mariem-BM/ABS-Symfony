@@ -2,19 +2,21 @@
 {% block title %}Ajouter Service
 {% endblock %}
 {% block content  %}
-	{{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+<form action="{{ path('addform') }}" method="post" novalidate>
 	<tbody>
 		<tr>
 			<td>
 				<div class="input-field col s12 m12 l12">
 
 					{{ form_widget(form.name, {'attr': {'placeholder': 'Name'}}) }}
+					{{ form_errors(form.name) }}
 				</div>
 				<br>
 			</td>
 			<td>
 				<div class="input-field col s12 m6 l6">
 					{{ form_widget(form.lastname, {'attr': {'placeholder': 'Lastname'}}) }}
+					{{ form_errors(form.lastname) }}
 
 				</div>
 				<br>
@@ -22,11 +24,12 @@
 			<td>
 				<div class="input-field col s12 m12 l12">
 					{{ form_widget(form.email, {'attr': {'class': 'materialize-textarea', 'placeholder': 'e-mail'}}) }}
+				{{ form_errors(form.email) }}
 				</div>
 				<br>
 				<div class="input-field col s12 m12 l12">
 					{{ form_widget(form.message, {'attr': {'placeholder': 'message'}}) }}
-
+{{ form_errors(form.message) }}
 
 				</div>
 				<br>
@@ -35,5 +38,5 @@
 			</td>
 		</tr>
 	</tbody>
-	{{ form_end(form) }}
+   </form>
 {% endblock %}

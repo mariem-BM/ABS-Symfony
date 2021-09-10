@@ -5,9 +5,11 @@
 {% endblock %}
 {% block content  %}
 {% if articles %}
+<h1>List</h1>
 
+	<a href="{{ path('add') }}" class="btn btn-primary">Create new</a>
 
-	<table id="articles" class="table table-striped">
+	<table id="articles" class="table table-striped table-bordered" style="width:100%">
 		<thead>
 			<tr>
 				<th>picture</th>
@@ -17,7 +19,6 @@
 				<th>publicationDate</th>
 				<th>lastUpdateDate</th>
 				<th>isPublished</th>
-				<th>categories</th>
 				<th>Actions</th>
 			</tr>
 		</thead>
@@ -33,7 +34,7 @@
 
 					<td>
 
-						  <href="{{asset('uploads/brochures/'~article.picture)}}"></td>
+						  <img src="{{asset('uploads/brochures/'~article.picture)}}" height="98" width="98"></td>
 					</td>
 					<td>{{ article.title }}</td>
 					<td>{{ article.content }}</td>
@@ -50,5 +51,10 @@
 				</tr>
 			</a>
 		</tbody>
+		
 	</td>
-</tr></td></tbody></tr>{% endfor %}</tbody></table>{% else %}<p>Aucun Article</p>{% endif %}{% endblock %}
+</tr></td></tbody></tr>{% endfor %}</tbody></table>{% else %}<p>Aucun Article</p>{% endif %}
+	<script>$(document).ready(function() {
+    $('#articles').DataTable();
+} ); </script>
+{% endblock %}

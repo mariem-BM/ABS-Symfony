@@ -5,7 +5,10 @@
 {% endblock %}
 {% block content  %}
 {% if refrencess %}
-	<table id="refrencess" class="table table-striped">
+	<h1>List</h1>
+
+	<a href="{{ path('addref') }}" class="btn btn-primary">Create new</a>
+	<table id="refrencess" class="table table-striped table-bordered" style="width:100%">
 		<thead>
 			<tr>
 				<th>picture</th>
@@ -18,7 +21,7 @@
 			{% for refrences in refrencess %}
 				<tr>
 
-					<td>{{ refrences.imgRef }}</td>
+					<td><img src="{{asset('uploads/brochures/'~refrences.imgRef)}}" height="98" width="98"></td>
 
 					<td>{{ refrences.refNom }}</td>
 
@@ -32,4 +35,8 @@
 			</td>
 		</tbody>
 	</tr>
-</td></tbody></tr>{% endfor %}</tbody></table>{% else %}<p>Aucun Service</p>{% endif %}{% endblock %}
+</td></tbody></tr>{% endfor %}</tbody></table>{% else %}<p>Aucun Service</p>{% endif %}
+<script>$(document).ready(function() {
+    $('#refrencess').DataTable();
+} ); </script>
+{% endblock %}

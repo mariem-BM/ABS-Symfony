@@ -2,26 +2,31 @@
 {% block title %}Ajouter Service
 {% endblock %}
 {% block content  %}
-{{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+ <form action="{{ path('service/new') }}" method="post" novalidate>
 <div class="input-field col s12 m12 l12">
 
 	{{ form_widget(form.img, {'attr': {'placeholder': 'Service Image'}}) }}
+		{{ form_errors(form.img) }}
 </div>
 <br>
 <div class="input-field col s12 m6 l6">
 	{{ form_widget(form.nom, {'attr': {'placeholder': 'Titre de l\'service'}}) }}
+	{{ form_errors(form.nom) }}
 </div>
 <br>	<div class="input-field col s12 m12 l12">
 		 {{ form_widget(form.description, {'attr': {'class': 'materialize-textarea', 'placeholder': 'Service description'}}) }}
+	
+	{{ form_errors(form.description) }}
 	</div>
 <br>
 	<div class="input-field col s12 m12 l12">
 		{{ form_widget(form.details, {'attr': {'class': 'filled-in', 'placeholder': 'Service details '}}) }}
+		{{ form_errors(form.details) }}
 	</div>
 	<div class="input-field col s12 m12 l12">
 		<br>
 		<br>
 		<input type="submit" name="" value="Add Service" class="btn btn-primary">
 	</div>
-	{{ form_end(form) }}
+	</form>
 {% endblock %}

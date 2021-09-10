@@ -4,8 +4,11 @@
 	Liste des formulaires
 {% endblock %}
 {% block content %}
+<h1>List</h1>
+
+	<a href="{{ path('addform') }}" class="btn btn-primary">Create new</a>
 	{% if formulaires %}
-		<table id="formulaires" class="table table-striped">
+		<table id="formulaires" class="table table-striped table-bordered" style="width:100%">
 			<thead>
 				<tr>
 					<th>name</th>
@@ -35,4 +38,8 @@
 		</tr>
 
 	{% endfor %}
-</tbody></table>{% else %}<p>Aucun Service</p>{% endif %}{% endblock %}
+</tbody></table>{% else %}<p>Aucun Service</p>{% endif %}
+<script>$(document).ready(function() {
+    $('#formulaires').DataTable();
+} ); </script>
+{% endblock %}
