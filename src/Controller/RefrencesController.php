@@ -62,6 +62,7 @@ class RefrencesController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($refrences);
             $entityManager->flush();
+            $this->addFlash('success', 'Refrence Created!');
             return $this->redirectToRoute('refrences');
         }
         return $this->render('refrences/addref.html.twig', [
@@ -104,6 +105,7 @@ class RefrencesController extends AbstractController
             }
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->flush();
+            $this->addFlash('success', 'Refrence Edited!');
             return $this->redirectToRoute('refrences');
         }
         return $this->render('refrences/editref.html.twig', ['form' => $form->createView()]);
@@ -123,6 +125,7 @@ class RefrencesController extends AbstractController
         $entityManager->flush();
         $response = new Response();
         $response->send();
+        $this->addFlash('success', 'Refrence Deleted!');
         return $this->redirectToRoute('refrences');
     }
     /***********************************************test */

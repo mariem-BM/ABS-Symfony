@@ -40,7 +40,7 @@ class UserFixtures extends Fixture
     public function load(ObjectManager $manager)
     {
         $usersList = [
-                     [
+            [
 
                 'firstname' => 'Maryem',
                 'lastname' => 'BM',

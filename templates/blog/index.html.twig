@@ -24,31 +24,29 @@
 		<tbody>
 
 
-
 			{% for article in articles %}
 
-       		
+
 			</a>
-				<tr>
 
-					<td>
 
-						  <href="{{asset('uploads/brochures/'~article.picture)}}"></td>
-					</td>
-					<td>{{ article.title }}</td>
-					<td>{{ article.content }}</td>
-					<td>{{ article.readmore }}</td>
-					<td>{{ article.publicationDate }}</td>
-					<td>{{ article.lastUpdateDate }}</td>
-					<td>{{ article.isPublished }}</td>
+			<td>
 
-					<td>
-						<a href="/article/{{ article.id }}" class="btn btn-dark">Détails</a>
-						<a href="/article/edit/{{ article.id }}" class="btn btn-dark">Modifier</a>
-						<a href="/article/delete/{{ article.id }}" class="btn btn-danger" onclick="return confirm('Etes-vous sûr vous sûr de supprimer cet article?');">Delete</a>
-					</td>
-				</tr>
-			</a>
+				<img src="{{asset('uploads/brochures/'~article.picture)}}" alt="" height="70" width="70"/></td>
+
+
+			<td>{{ article.title }}</td>
+			<td>{{ article.content }}</td>
+			<td>{{ article.readmore }}</td>
+			<td>{{ article.publicationDate }}</td>
+			<td>{{ article.lastUpdateDate }}</td>
+			<td>{{ article.isPublished }}</td>
+
+			<td>
+				<a href="/article/{{ article.id }}" class="btn btn-dark">Détails</a>
+				<a href="/article/edit/{{ article.id }}" class="btn btn-dark">Modifier</a>
+				<a href="/article/delete/{{ article.id }}" class="btn btn-danger" onclick="return confirm('Etes-vous sûr vous sûr de supprimer cet article?');">Delete</a>
+			</td>
 		</tbody>
-	</td>
-</tr></td></tbody></tr>{% endfor %}</tbody></table>{% else %}<p>Aucun Article</p>{% endif %}{% endblock %}
+	</tr>
+</tbody></a></tbody></td></tr></td></tbody></tr>{% endfor %}</tbody> </table>{% else %} <p>Aucun Article</p>{% endif %}{% endblock %}

@@ -48,6 +48,7 @@ class FirstController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($formulaire);
             $entityManager->flush();
+            $this->addFlash('success', 'Message Sent Thank you for contacting us!');
             return $this->redirectToRoute('home');
         }
         return $this->render('base.html.twig', [
@@ -138,6 +139,7 @@ class FirstController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($service);
             $entityManager->flush();
+            $this->addFlash('success', 'Service Created!');
             return $this->redirectToRoute('service');
         }
         return $this->render('first/newService.html.twig', ['form' => $form->createView()]);
@@ -150,7 +152,7 @@ class FirstController extends AbstractController
      */
     public function show($id)
     {
-        $service = $this->getDoctrine()->getRepository(Service::class)->find($id);
+        $service =  $this->getDoctrine()->getRepository(Service::class)->find($id);
 
         return $this->render(
             'first/details.html.twig',
@@ -195,6 +197,7 @@ class FirstController extends AbstractController
             }
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->flush();
+            $this->addFlash('success', 'Service Edited!');
             return $this->redirectToRoute('service');
         }
         return $this->render('first/edit.html.twig', ['form' => $form->createView()]);
@@ -213,6 +216,7 @@ class FirstController extends AbstractController
         $entityManager->flush();
         $response = new Response();
         $response->send();
+        $this->addFlash('success', 'Service Deleted!');
         return $this->redirectToRoute('service');
     }
 

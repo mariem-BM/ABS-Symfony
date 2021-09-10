@@ -109,14 +109,32 @@
     "gedmo/doctrine-extensions": {
         "version": "v3.1.0"
     },
+    "illuminate/collections": {
+        "version": "v8.60.0"
+    },
+    "illuminate/contracts": {
+        "version": "v8.60.0"
+    },
+    "illuminate/macroable": {
+        "version": "v8.60.0"
+    },
+    "illuminate/support": {
+        "version": "v8.60.0"
+    },
     "laminas/laminas-code": {
         "version": "4.4.2"
+    },
+    "laracasts/flash": {
+        "version": "3.2"
     },
     "monolog/monolog": {
         "version": "1.26.1"
     },
     "myclabs/deep-copy": {
         "version": "1.10.2"
+    },
+    "nesbot/carbon": {
+        "version": "2.53.1"
     },
     "nikic/php-parser": {
         "version": "v4.12.0"
@@ -179,6 +197,9 @@
     },
     "psr/log": {
         "version": "1.1.4"
+    },
+    "psr/simple-cache": {
+        "version": "1.0.1"
     },
     "sebastian/cli-parser": {
         "version": "1.0.1"
@@ -648,6 +669,9 @@
     },
     "twig/twig": {
         "version": "v3.3.2"
+    },
+    "voku/portable-ascii": {
+        "version": "1.5.6"
     },
     "webmozart/assert": {
         "version": "1.10.0"

@@ -21,7 +21,7 @@
 		<link rel="stylesheet" href="{{ asset ('theme/css/sb-admin-2.min.css')}}">
 
 	</head>
-</html>
+
 <body
 	id="page-top">
 	<!-- Main Content -->
@@ -190,7 +190,7 @@
 				<!-- Nav Item - User Information -->
 				<li class="nav-item dropdown no-arrow">
 					<a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						<span class="mr-2 d-none d-lg-inline text-gray-600 small">Maryem Ben Massaoud</span>
+						<span class="mr-2 d-none d-lg-inline text-gray-600 small">{% if app.user %}{{ app.user.username }}{% endif %}</span>
 						<img class="img-profile rounded-circle" src="  {{ asset ('theme/img/undraw_profile.svg')}}">
 
 					</a>
@@ -214,7 +214,11 @@
 
 			</ul>
 		</nav>
-		<body>
+	 {% for message in app.flashes('success') %}
+            <div class="alert alert-success">
+                {{ message }}
+            </div>
+        {% endfor %}
 			<div id="content1"> {% block content %}{% endblock %}
 				</div>
 				<!-- Footer -->
@@ -228,7 +232,20 @@
 
 				</footer>
 				<!-- End of Footer -->
-			</body>
-		</html>
+					<!-- End of Content Wrapper -->
+			<script src="{{ asset ('theme/vendor/jquery/jquery.min.js')}}"></script>
+			<script src="{{ asset ('theme/vendor/bootstrap/js/bootstrap.bundle.min.js')}}">
+			</script><!-- Core plugin JavaScript-->
+			<script src="{{ asset ('theme/vendor/jquery-easing/jquery.easing.min.js')}}">
+			</script><!-- Custom scripts for all pages-->
+			<script src="{{ asset ('theme/js/sb-admin-2.min.js')}}"></script>
+			<!-- Page level plugins --><script src="{{ asset ('theme/vendor/chart.js/Chart.min.js')}}"></script>
+			<!-- Page level custom scripts --><script src="{{ asset ('theme/js/demo/chart-area-demo.js')}}"></script>
+	
+	
+	
+			<script src="{{ asset ('theme/js/demo/chart-pie-demo.js')}}"></script>
+</body>	
+</html>
 		<!-- End of Content Wrapper -->
-	</body>
+	

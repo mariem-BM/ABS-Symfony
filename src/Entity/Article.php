@@ -6,7 +6,7 @@ use App\Repository\ArticleRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Gedmo\Mapping\Annotation as Gedmo;
-
+use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -22,17 +22,32 @@ class Article
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
+     * @ORM\Column(type="string", length=255, nullable=true),
+     *@Assert\NotBlank(message="Get creative and add of a picture!")
      */
     private $picture;
 
     /**
-     * @ORM\Column(type="string", length=255)
+    * @ORM\Column(type="string", length=255)
+    *@Assert\NotBlank(message="Get creative and think of a title!"),
+    * @Assert\Length(
+    * min = 3,
+    * max = 30,
+    * minMessage = "Le titre doit comporter au moins {{ limit }} caractères",
+    * maxMessage = "Le titre doit comporter au plus {{ limit }} caractères"
+    * )
      */
     private $title;
 
     /**
      * @ORM\Column(type="text", nullable=true)
+    *@Assert\NotBlank(message="Get creative and think of some content!"),
+    * @Assert\Length(
+    * min = 5,
+    * max = 500,
+    * minMessage = "Le content doit comporter au moins {{ limit }} caractères",
+    * maxMessage = "Le content doit comporter au plus {{ limit }} caractères"
+    * )
      */
     private $content;
 
@@ -53,25 +68,17 @@ class Article
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="Get creative and think of some content!"),
+    * @Assert\Length(
+    * min = 5,
+    * max = 500,
+    * minMessage = "doit comporter au moins {{ limit }} caractères",
+    * maxMessage = "doit comporter au plus {{ limit }} caractères"
+    * )
      */
     private $readmore;
 
-    /**
-     * @ORM\Column(type="string", length=255, unique=true)
-     */
-    private $slug;
-
-    public function getSlug(): ?string
-    {
-        return $this->slug;
-    }
-
-    public function setSlug(string $slug): self
-    {
-        $this->slug = $slug;
-
-        return $this;
-    }
+    
 
     public function getId(): ?int
     {

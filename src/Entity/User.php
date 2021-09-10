@@ -5,6 +5,7 @@ namespace App\Entity;
 use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=UserRepository::class)
@@ -20,27 +21,31 @@ class User implements UserInterface
 
     /**
      * @ORM\Column(type="string", length=255, unique=true, nullable=true)
+     * @Assert\NotBlank(message="add your email please!")
      */
     private $email;
 
     /**
      * @ORM\Column(type="json")
+     * 
      */
     private $roles = [];
 
     /**
-     * @var string The hashed password
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\NotBlank(message="add your password please!")
      */
     private $password;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="add your first name please!")
      */
     private $firstname;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="add your last name please!")
      */
     private $lastname;
 

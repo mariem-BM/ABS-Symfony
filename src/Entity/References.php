@@ -5,6 +5,7 @@ namespace App\Entity;
 use App\Repository\ReferencesRepository;
 use Doctrine\ORM\Mapping as ORM;
 use Gedmo\Mapping\Annotation as Gedmo;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=ReferencesRepository::class)
@@ -21,11 +22,19 @@ class References
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+       * @Assert\NotBlank(message="get creative with the title!"),
+    * @Assert\Length(
+    * min = 5,
+    * max = 50,
+    * minMessage = "Le titre doit comporter au moins {{ limit }} caractères",
+    * maxMessage = "Le titre doit comporter au plus {{ limit }} caractères"
+    * )
      */
     private $refNom;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\NotBlank(message="get creative and add an image!")
      */
     private $imgRef;
 
